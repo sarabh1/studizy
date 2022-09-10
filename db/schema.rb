@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_10_090512) do
+
+ActiveRecord::Schema.define(version: 2022_09_10_100118) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "courses", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "status"
+    t.bigint "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_sessions_on_course_id"
+  end
+
+  create_table "student_courses", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_student_courses_on_course_id"
+    t.index ["user_id"], name: "index_student_courses_on_user_id"
+  end
+
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,9 +58,13 @@ ActiveRecord::Schema.define(version: 2022_09_10_090512) do
     t.string "last_name"
     t.string "school"
     t.string "study"
-    t.boolean "teacher"
+    t.boolean "teacher", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "courses", "users"
+  add_foreign_key "sessions", "courses"
+  add_foreign_key "student_courses", "courses"
+  add_foreign_key "student_courses", "users"
 end
