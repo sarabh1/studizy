@@ -1,0 +1,41 @@
+.global-dash{
+
+display: flex;
+
+}
+.menu {
+  background-color: #F7F5F0;
+}
+a.btncourses{
+  text-decoration: none;
+  color: whte;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(235, 171, 92);
+  border-radius: 8px;
+  width: 200px;
+}
+a.btndoc{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(168, 150, 244);
+  border-radius: 8px;
+}
+a.btnresults{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(249, 133, 133);
+  border-radius: 8px;
+}
+a.btnchat{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(127, 252, 231);
+  border-radius: 8px;
+}
