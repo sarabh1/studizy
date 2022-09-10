@@ -1,20 +1,42 @@
 .global-dash{
 
 display: flex;
+border-radius: 6px;
+flex-direction: row;
+margin: 0 auto;
 
 }
 .menu {
   background-color: #F7F5F0;
+  box-shadow: 0 0 1px rgb(176, 173, 173);
+  // a degager apres*
+  height: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 12px 20px;
+  text-align: center;
+
+}
+
+.menu a{
+  margin: 10px 0;
+  display: block;
 }
 a.btncourses{
   text-decoration: none;
-  color: whte;
+  color: white;
   font-size: 16px;
   padding: 6px 12px;
-  background-color: rgb(235, 171, 92);
+  background-color: rgb(232, 187, 132);
   border-radius: 8px;
-  width: 200px;
 }
+a.btncourses:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(249, 179, 93);
+}
+// **
+
 a.btndoc{
   text-decoration: none;
   color: white;
@@ -23,6 +45,14 @@ a.btndoc{
   background-color: rgb(168, 150, 244);
   border-radius: 8px;
 }
+a.btndoc:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(181, 133, 244);
+}
+// **
+
+
 a.btnresults{
   text-decoration: none;
   color: white;
@@ -31,6 +61,13 @@ a.btnresults{
   background-color: rgb(249, 133, 133);
   border-radius: 8px;
 }
+a.btnresults:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(223, 107, 75);
+}
+// **
+
 a.btnchat{
   text-decoration: none;
   color: white;
@@ -38,4 +75,9 @@ a.btnchat{
   padding: 6px 12px;
   background-color: rgb(127, 252, 231);
   border-radius: 8px;
+}
+a.btnchat:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(66, 224, 214);
 }
