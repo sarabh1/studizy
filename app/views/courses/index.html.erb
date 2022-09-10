@@ -1,1 +1,17 @@
 <h1>List of courses</h1>
+
+<div class= "result">
+
+    <% @courses.each do |course| %>
+        <div class="card-course">
+        <img src="https://loremflickr.com/1080/1080/all" />
+            <div class="card-course-infos">
+                <h2> <%= course.title %></h2>
+                <p> <%= course.description %></p>
+                <%= link_to "View course", @course, class: "btn btn-flat" %>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-course-teacher avatar-bordered" />
+            </div>
+        </div>
+    <% end %>
+</div>
+    
