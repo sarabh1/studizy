@@ -6,6 +6,10 @@ flex-direction: row;
 margin: 0 auto;
 
 }
+ h1{
+  text-align: center;
+  color: rgb(84, 97, 97);
+}
 .menu {
   background-color: #F7F5F0;
   box-shadow: 0 0 1px rgb(176, 173, 173);
@@ -80,4 +84,31 @@ a.btnchat:hover{
   color: white;
   font-weight: bold;
   background-color: rgb(66, 224, 214);
+}
+
+
+.results-graph{
+
+  background-color: #F7F5F0;
+  box-shadow: 0 0 1px rgb(176, 173, 173);
+  // a degager apres*
+  // height: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 12px 20px;
+  text-align: center;
+
+
+}
+
+.deadlines {
+  background-color: #F7F5F0;
+  box-shadow: 0 0 1px rgb(176, 173, 173);
+  // a degager apres*
+  // height: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 12px 20px;
+  text-align: center;
+
 }
