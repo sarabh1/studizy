@@ -14,9 +14,14 @@
     <br>
     <br>
     <br>
-    <p>Monday 14th septembre</p>
-    <p>2022</p>
-    <p>#inclure module JS pour date et heure actualisée</p>
+
+    <p>Today:</p>
+
+      <input id="Aujourdhui" type="date" name="date" value="" readonly>
+        <script>
+          document.getElementById("Aujourdhui").valueAsDate = new Date();
+        </script>
+
 
   </div>
 
