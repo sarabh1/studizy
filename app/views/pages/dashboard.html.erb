@@ -3,20 +3,25 @@
 <div class="global-dash">
 
   <div class="menu">
-    <a href="#" class="btncourses">Courses</a>
+     <%= link_to "Courses", courses_path, class:"btncourses" %>
     <hr>
-    <a href="#" class="btndoc">Documents</a>
+    <%=  link_to "Documents", "#", class:"btndoc" %>
     <hr>
-    <a href="#" class="btnresults">Results</a>
+    <%= link_to "Results", "#", class:'btnresults' %>
     <hr>
-    <a href="#" class="btnchat">Chat</a>
+    <%= link_to "Chat", "#", class:"btnchat" %>
     <hr>
     <br>
     <br>
     <br>
-    <p>Monday 14th septembre</p>
-    <p>2022</p>
-    <p>#inclure module JS pour date et heure actualisée</p>
+
+    <p>Today:</p>
+
+      <input id="Aujourdhui" type="date" name="date" value="" readonly>
+        <script>
+          document.getElementById("Aujourdhui").valueAsDate = new Date();
+        </script>
+
 
   </div>
 
@@ -41,6 +46,10 @@
 
     <div class="week-schedule">
       <h4>Weekly schedule : From 14th to 18th septembre 2022</h4>
+
+
+      </div>
+
 
     </div>
 

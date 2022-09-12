@@ -1,6 +1,5 @@
 class CoursesController < ApplicationController
 
-
     def index
         @courses = Course.all
     end
@@ -8,6 +7,6 @@ class CoursesController < ApplicationController
     def show
       @user = current_user
       @course = Course.find(params[:id])
-    end
 
-end
+    end
+  end
