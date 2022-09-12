@@ -1,7 +1,7 @@
-<h1> la show d'un seul cours </h1>
-
-<h3>Add a document here:</h3>
-<br>
-<input type="file"
-       id="student-doc" name="document"
-       accept="image/png, image/jpeg, .pdf, .doc">
+<div>
+    <h1>Course <strong>n°</b><%= @course.title %></strong></h1>
+</div>
+<ul>
+<li>Title :  <%= @course.title %></li>
+<li>Description : <%= @course.description %></li>
+</ul>
