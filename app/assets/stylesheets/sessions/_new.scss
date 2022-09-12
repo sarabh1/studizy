@@ -1,0 +1,49 @@
+.logform {
+  margin: 0 auto;
+  width: 300px;
+  background-color: rgb(254, 251, 247);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 0 1px 1px rgb(182, 178, 178);
+}
+h2 {
+  text-align: center;
+}
+a{
+  text-decoration: none;
+
+}
+h1{
+  color: rgb(73, 73, 123);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.down{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.up{
+  margin: 16px auto;
+}
+.up p{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(234, 137, 33);
+}
+.fond{
+  width: 400px;
+}
+
+.logbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(246, 227, 195);
+}
+.logbox h1{
+  text-align: center;
+}
