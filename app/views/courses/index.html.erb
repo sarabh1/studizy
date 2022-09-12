@@ -8,10 +8,9 @@
             <div class="card-course-infos">
                 <h2> <%= course.title %></h2>
                 <p> <%= course.description %></p>
-                <%= link_to "View course", @course, class: "btn btn-flat" %>
+                <%= link_to "View course", course_path(course.id), class: "btn btn-flat" %>
                 <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-course-teacher avatar-bordered" />
             </div>
         </div>
     <% end %>
 </div>
-    

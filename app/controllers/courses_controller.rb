@@ -8,7 +8,6 @@ class CoursesController < ApplicationController
     def show
       @user = current_user
       @course = Course.find(params[:id])
-      authorize @course
     end
 
 end
