@@ -11,3 +11,6 @@ Course.destroy_all
 course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est un triangle... mais prouve le !", user_id: 1)
 course_2 =  Course.create(title: "ALGEBRE", description: "Bienvenue dans le monde des (in)égalités", user_id: 1)
 course_3 =  Course.create(title: "PROBABILITE", description: "Ici pour gagner au loto ?", user_id: 1)
+
+
+# Faudra mettre tout en anglais pour la real version ;)
