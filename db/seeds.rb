@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'date'
+
 
 Course.destroy_all
 
@@ -18,3 +20,7 @@ course_4 = Course.create(title: "HISTOIRE DES MATHS", description: "Des maths ma
 # Faudra mettre tout en anglais pour la real version ;)
 # session_1 = Session.create(start_date: DateTime.new(2022, 9, 15, 8), end_date: DateTime.new(2022, 9, 15, 10), status: 2, course_id: 44)
 
+session_1 = Session.create(start_date: DateTime.new(2022,9,15,8,30), end_date: DateTime.new(2022,9,15,10,30), status: 1, course_id: 54)
+session_2 = Session.create(start_date: DateTime.new(2022,9,16,8,30), end_date: DateTime.new(2022,9,16,8,30), status: 1, course_id: 55)
+session_3 = Session.create(start_date: DateTime.new(2022,9,19,10,30), end_date: DateTime.new(2022,9,19,12,30), status: 1, course_id: 54)
+session_4 = Session.create(start_date: DateTime.new(2022,9,20,8,30), end_date: DateTime.new(2022,9,20,8,30), status: 1, course_id: 53)
