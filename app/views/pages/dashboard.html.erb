@@ -14,13 +14,19 @@
     <br>
     <br>
     <br>
+  <div class="today">
+    <h3>Today:</h3>
+    <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
 
-    <p>Today:</p>
 
-      <input id="Aujourdhui" type="date" name="date" value="" readonly>
+  </div>
+
+
+
+      <%# <input id="Aujourdhui" type="date" name="date" value="" readonly>
         <script>
           document.getElementById("Aujourdhui").valueAsDate = new Date();
-        </script>
+        </script> %>
 
 
   </div>
@@ -45,11 +51,16 @@
     </div>
 
     <div class="week-schedule">
-      <h4>Weekly schedule : From 14th to 18th septembre 2022</h4>
+    <br>
+      <h4>Your next 2 weeks Schedule for : <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
+
+      <br>
 
       <%= week_calendar(number_of_weeks: 2) do |date| %>
-        <%= date %>
+        <%= date.day %>
       <% end %>
+
+
 
 
       </div>
