@@ -13,6 +13,7 @@ Course.destroy_all
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
 course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est un triangle... mais prouve le !", user_id: 1)
 course_1.photo.attach(io: file_1, filename: 'geometrie.jpeg', content_type: 'image/jpeg')
+#attach est une méthode d'active storage ! (pour ça qu'on le fait en pls temps)
 
 file_2 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663091017/l7me3qjih824vj0kxkx9.jpg')
 course_2 =  Course.create(title: "ALGEBRE", description: "Bienvenue dans le monde des (in)égalités", user_id: 1)
