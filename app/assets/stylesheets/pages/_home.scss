@@ -1,6 +1,9 @@
 // Specific CSS for your home-page
 .homebox{
   text-align: center;
+
+  margin: 0 auto;
+
 }
 .homebox h1{
   color: rgb(65, 65, 113);
@@ -8,6 +11,89 @@
 .homebox h3 {
   color: rgb(20, 162, 115);
 }
-.homebox p{
-  color: rgb(225, 66, 66);
+.homepage {
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1663095390/Studeasy/STUDIZY_The_best_way_to_pass_your_exams_easily_bv9wxv.png');
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  position: relative;
+}
+.homepage .liens {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 400px;
+position: absolute;
+bottom: 80px;
+right: 0px;
+
+}
+.liens .btn-signup{
+  text-decoration: none;
+  background-color: rgb(248, 224, 87);
+  color: coral;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 18px;
+}
+.liens .btn-signup:hover{
+  box-shadow: 0 0 1px rgb(173, 169, 169);
+  background-color:coral ;
+  color:rgb(248, 224, 87) ;
+}
+.liens .btn-login{
+  text-decoration: none;
+  background-color: rgb(139, 209, 115);
+  color: rgb(248, 224, 87);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.liens .btn-login:hover{
+  box-shadow: 0 0 1px rgb(173, 169, 169);
+  background-color: rgb(123, 123, 241) ;
+  color: rgb(201, 248, 113) ;
+}
+
+
+.footer {
+  text-align: center;
+  line-height: 8px;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  // margin-left: 100px;
+  // margin-right: 100px;
+}
+
+.footer li {
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+
+}
+
+.footer p{
+  font-size: 10px;
+}
+
+.footer .info i{
+  font-size: 16px;
+}
+.footer .follow {
+  font-size: 16px;
+}
+.footer ul{
+  padding-left: 0;
+}
+.footer i {
+  font-size: 24px;
+  padding: 16px;
+}
+.footer a {
+  color: #0A98DD;
+}
+.footer a:hover {
+  color: #7897ab;
 }
