@@ -1,0 +1,12 @@
+<h1> <%= course.title %>'s' sessions</h1>
+
+
+
+  <% @sessions.each do |session| %>
+
+  <br>
+    <li><%= link_to "session's date", session_path(session.id) %> <%= session.id %></li>
+    <br/>
+    <li>  Date: <%= session.start_date %></li>
+  <br>
+    <li>  <%= link_to "Open", course_session %></li>

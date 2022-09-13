@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'home', to: 'pages#home'
 
-  resources :courses
+  # get 'sessions', to: 'courses#course/sessions'
+
+  resources :courses do
+    resources :sessions, controller: 'courses/sessions'
+  end
   resources :student_courses
 end

@@ -70,7 +70,7 @@ class StudentCoursesController < ApplicationController
     if @student_course.update(student_course_params_update)
       redirect_to student_course_path
     else
-      render :edit
+        render :edit
     end
   end
 
