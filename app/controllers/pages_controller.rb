@@ -7,4 +7,10 @@ class PagesController < ApplicationController
   def dashboard
   end
 
+  def mail
+    @user = current_user
+    @user.email
+
+  end
+
 end
