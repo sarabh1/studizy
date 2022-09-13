@@ -1,1 +1,121 @@
-<h1>Dashboard</h1>
+<h3>Welcome "User first_name" ! </h3>
+
+<div class="global-dash">
+
+  <div class="menu">
+     <%= link_to "Courses", courses_path, class:"btncourses" %>
+    <hr>
+    <%=  link_to "Documents", "#", class:"btndoc" %>
+    <hr>
+    <%= link_to "Results", "#", class:'btnresults' %>
+    <hr>
+    <%= link_to "Chat", "#", class:"btnchat" %>
+    <hr>
+    <br>
+    <br>
+    <br>
+  <div class="today">
+    <h3>Today:</h3>
+    <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
+
+
+  </div>
+
+
+
+      <%# <input id="Aujourdhui" type="date" name="date" value="" readonly>
+        <script>
+          document.getElementById("Aujourdhui").valueAsDate = new Date();
+        </script> %>
+
+
+  </div>
+
+
+  <div class="modules">
+
+    <div class="up">
+
+      <div class="results-graph">
+
+        <%=  image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662828611/Studeasy/pool_7_mgpdrc.png", width:"150px" %>
+
+      </div>
+
+      <div class="deadlines">
+
+      <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
+
+      </div>
+
+    </div>
+
+    <div class="week-schedule">
+    <br>
+      <h4>Your next 2 weeks Schedule for : <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
+
+      <br>
+
+      <%= week_calendar(number_of_weeks: 2) do |date| %>
+        <%= date.day %>
+      <% end %>
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

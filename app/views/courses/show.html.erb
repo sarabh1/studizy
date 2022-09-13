@@ -1,0 +1,37 @@
+
+<div>
+    <h1><strong><%= @course.title %></strong></h1>
+</div>
+
+
+  <ul>
+    <li>Title :  <%= @course.title %></li>
+    <li>Description : <%= @course.description %></li>
+  </ul>
+
+
+
+<% @course.sessions.each do |session| %>
+  <div class="courses-sessions">
+    <br>
+      <li><%= link_to "session's date", session_path(session.id) %> <%= session.id %></li>
+      <br>
+      <li> Start Date: <%= session.start_date %></li>
+      <li> End Date: <%= session.end_date %></li>
+      <li> Status: <%= session.status %></li>
+    <br>
+    <li><%= link_to "Open", session %></li>
+  </div>
+<% end %>
+
+<%# <br>
+<hr>
+<h3> Add a document</h3>
+<p>
+<input type="file"
+  id="student-doc" name="document"
+  accept="image/png, image/jpeg, .pdf, .doc">
+</p>
+<br>
+<hr> %>
+<%= link_to "Back to all courses", courses_path %>

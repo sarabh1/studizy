@@ -7,8 +7,14 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "simple_calendar";
+
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import "courses/index";
+@import "pages/dashboard";
+@import "pages/home";
+@import "sessions/new";
+@import "registrations/new";

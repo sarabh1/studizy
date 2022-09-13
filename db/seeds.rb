@@ -12,3 +12,9 @@ course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est
 course_2 =  Course.create(title: "ALGEBRE", description: "Bienvenue dans le monde des (in)égalités", user_id: 1)
 course_3 =  Course.create(title: "PROBABILITE", description: "Ici pour gagner au loto ?", user_id: 1)
 course_4 = Course.create(title: "HISTOIRE DES MATHS", description: "Des maths mais sans se casser la tête", user_id: 1)
+
+
+
+# Faudra mettre tout en anglais pour la real version ;)
+# session_1 = Session.create(start_date: DateTime.new(2022, 9, 15, 8), end_date: DateTime.new(2022, 9, 15, 10), status: 2, course_id: 44)
+
