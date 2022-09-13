@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(version: 2022_09_13_181444) do
     t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
