@@ -4,12 +4,15 @@
 
     <% @courses.each do |course| %>
         <div class="card-course">
-        <img src="https://loremflickr.com/1080/1080/all" />
+        <%= cl_image_tag course.photo.key %>
             <div class="card-course-infos">
                 <h2> <%= course.title %></h2>
                 <p> <%= course.description %></p>
+                <p> Created by Professor (user_id) <%= course.user_id %></p>
+                <p>Teacher ? <%= current_user.teacher? %></p>
+                <br>
                 <%= link_to "View course", course_path(course.id), class: "btn btn-flat" %>
-                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-course-teacher avatar-bordered" />
+                <img src="https://loremflickr.com/1080/1080/portrait" class="card-course-teacher avatar-bordered" />
             </div>
         </div>
     <% end %>

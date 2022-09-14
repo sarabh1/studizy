@@ -1,11 +1,35 @@
 <div class="homebox">
 
-    <h1>Welcome to the app that's gonna change your life!</h1>
+  <div class="homepage">
 
-    <h3>The best way to pass your exams, easily!</h3>
+      <%# <h1>Welcome to the app that's gonna change your life!</h1>
 
-    <p><i class="fa-solid fa-wrench"></i>... Page under construction ... <i class="fa-solid fa-wrench"></i></p>
+      <h3>The best way to pass your exams, easily!</h3>
 
-    <%= image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1662821983/Studeasy/pool_3_ff7ubx.png", width:"600px" %>
+      <p><i class="fa-solid fa-wrench"></i>... Page under construction ... <i class="fa-solid fa-wrench"></i></p> %>
+      <div class="liens">
+        <%= link_to "Sing up !", new_user_registration_path, class:"btn-signup" %>
+        <%= link_to "Log in !", new_user_session_path, class:"btn-login" %>
+
+      </div>
+
+
+  </div>
+
+
+  <div class="footer">
+
+    <p class="follow">Follow Us !</p>
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+      </ul>
+      <p class="info">Studizy - 18, Marble Street - LONDON </p>
+      <p>Copyright www.studizy.com - All rights reserved.
+      <a href="#">contact@studizy.com</a></p>
+  </div>
+
+
 
 </div>

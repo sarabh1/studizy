@@ -1,8 +1,11 @@
-<h3>Welcome "User first_name" ! </h3>
+
 
 <div class="global-dash">
 
   <div class="menu">
+
+    <p class="wel">Welcome <span class="user"><%= current_user.email %> !</span> </p>
+    <hr>
      <%= link_to "Courses", courses_path, class:"btncourses" %>
     <hr>
     <%=  link_to "Documents", "#", class:"btndoc" %>
@@ -14,13 +17,19 @@
     <br>
     <br>
     <br>
+  <div class="today">
+   <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1663155422/Studeasy/Sans_titre_37_ph2ll9.png", width:"120px"%>
+    <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
 
-    <p>Today:</p>
 
-      <input id="Aujourdhui" type="date" name="date" value="" readonly>
+  </div>
+
+
+
+      <%# <input id="Aujourdhui" type="date" name="date" value="" readonly>
         <script>
           document.getElementById("Aujourdhui").valueAsDate = new Date();
-        </script>
+        </script> %>
 
 
   </div>
@@ -45,7 +54,25 @@
     </div>
 
     <div class="week-schedule">
-      <h4>Weekly schedule : From 14th to 18th septembre 2022</h4>
+    <br>
+      <h4>Ongoing week Schedule for : <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
+
+      <br>
+
+      <%= week_calendar(number_of_weeks: 4) do |date| %>
+        <%= date.day %>
+      <% end %>
+
+      <%# <%= week_calendar(events: @sessions) do |date, sessions| %>
+       <%# <%= date %>
+
+       <%# <% sessions.each do |session| %>
+        <%#  <div>
+            <%= session.course_id %>
+        <%#  </div>
+        <% end %>
+     <%# <% end %>
+
 
 
       </div>

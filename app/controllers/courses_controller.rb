@@ -9,4 +9,5 @@ class CoursesController < ApplicationController
       @course = Course.find(params[:id])
       @sessions = Session.where(course_id: @course.id)
     end
+
   end

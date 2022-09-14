@@ -19,7 +19,7 @@ width: 100%;
   // height: 700px;
   padding: 20px;
   border-radius: 10px;
-  margin: 12px 20px;
+  margin: 26px 20px;
   text-align: center;
   max-width: 200px;
 
@@ -127,7 +127,7 @@ a.btnchat:hover{
   background-color: #F7F5F0;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 500px;
+  min-height: 500px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;
@@ -143,5 +143,25 @@ a.btnchat:hover{
   border: none;
   justify-content: center;
   color: rgb(225, 113, 109);
+
+}
+.today p{
+  color: rgb(225, 113, 109);
   font-weight: bold;
+}
+span.current-month {
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(225, 113, 109);
+
+}
+span.user {
+  color: rgb(102, 207, 102);
+
+
+}
+
+p.wel {
+  padding-top: 20px;
+  // padding-left: 24px;
 }
