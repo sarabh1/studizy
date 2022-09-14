@@ -7,6 +7,6 @@ class CoursesController < ApplicationController
     def show
       @user = current_user
       @course = Course.find(params[:id])
-
+      @sessions = Session.where(course_id: @course.id)
     end
   end
