@@ -30,7 +30,7 @@ course_4 = Course.create(title: "HISTOIRE DES MATHS", description: "Des maths ma
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
-session_1 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1",)
+session_1 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
 
 
 # Faudra mettre tout en anglais pour la real version ;)
