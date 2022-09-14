@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'date'
 
-
 require "open-uri"
 
 Course.destroy_all
+Session.destroy_all
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
 course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est un triangle... mais prouve le !", user_id: 1)
@@ -30,11 +30,13 @@ course_4 = Course.create(title: "HISTOIRE DES MATHS", description: "Des maths ma
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
+session_1 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1",)
+
 
 # Faudra mettre tout en anglais pour la real version ;)
 # session_1 = Session.create(start_date: DateTime.new(2022, 9, 15, 8), end_date: DateTime.new(2022, 9, 15, 10), status: 2, course_id: 44)
 
-session_1 = Session.create(start_date: DateTime.new(2022,9,15,8,30), end_date: DateTime.new(2022,9,15,10,30), status: 1, course_id: 54)
-session_2 = Session.create(start_date: DateTime.new(2022,9,16,8,30), end_date: DateTime.new(2022,9,16,8,30), status: 1, course_id: 55)
-session_3 = Session.create(start_date: DateTime.new(2022,9,19,10,30), end_date: DateTime.new(2022,9,19,12,30), status: 1, course_id: 54)
-session_4 = Session.create(start_date: DateTime.new(2022,9,20,8,30), end_date: DateTime.new(2022,9,20,8,30), status: 1, course_id: 53)
+# session_1 = Session.create(start_date: DateTime.new(2022,9,15,8,30), end_date: DateTime.new(2022,9,15,10,30), status: 1, course_id: 54)
+# session_2 = Session.create(start_date: DateTime.new(2022,9,16,8,30), end_date: DateTime.new(2022,9,16,8,30), status: 1, course_id: 55)
+# session_3 = Session.create(start_date: DateTime.new(2022,9,19,10,30), end_date: DateTime.new(2022,9,19,12,30), status: 1, course_id: 54)
+# session_4 = Session.create(start_date: DateTime.new(2022,9,20,8,30), end_date: DateTime.new(2022,9,20,8,30), status: 1, course_id: 53)

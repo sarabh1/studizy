@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   # get 'sessions', to: 'courses#course/sessions'
 
+  resources :sessions
+
   resources :courses do
     resources :sessions, controller: 'courses/sessions'
   end
