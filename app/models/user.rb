@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :courses
-
-#Youhouuu
+  has_many :student_courses
+  has_many :courses, through: :student_courses
+  has_many :sessions, through: :courses
 end
