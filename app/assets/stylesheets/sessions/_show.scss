@@ -15,7 +15,20 @@ th {
 tr {
   border-bottom: 1px solid #ddd;
 }
-tr:hover {background-color: #D6EEEE;}
+tr:hover {background-color: #D6EEEE;
+}
+
+td.inc{
+  color: rgb(99, 247, 99);
+}
+td.today{
+  color: orange
+}
+
+td.passed{
+  color: rgb(90, 93, 119);
+}
+
 
 .docbox{
   margin: 0 auto;
@@ -23,10 +36,10 @@ tr:hover {background-color: #D6EEEE;}
   display: flex;
   flex-direction: column;
 }
-.Doctitle{
+.doctitle{
   height: 160px;
 }
-.Doctitle h1{
+.doctitle h1{
   padding: 24px 0;
 }
 .board{
