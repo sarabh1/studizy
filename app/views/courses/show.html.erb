@@ -59,18 +59,18 @@ tableau à implémenter
       <table>
         <tr>
           <th>Session's date</th>
-          <th>Title = Course.id</th>
-          <th>Desription</th>
-          <th>Professor</th>
+          <th> Course</th>
+          <th>Description</th>
           <th>Download resources</th>
           <th>Upload a file</th>
         </tr>
 
         <tr>
-          <td>12/09/22</td>
-          <td>Functions part 1</td>
-          <td> Use the basic functions</td>
-          <td>M. Watson</td>
+
+        <% @sessions.each do |session| %>
+          <td> <%= session.start_date  %> </td>
+          <td> <%= @course.title %> </td>
+          <td> <%= @course.description %></td>
           <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" download>
             <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" width="40px" alt="Lesson 3">
               </a></td>
@@ -78,8 +78,9 @@ tableau à implémenter
             id="file" name="file"
             accept="image/png, image/jpeg"></td>
         </tr>
+        <% end %>
 
-        <tr>
+        <%# <tr>
           <td>15/09/22</td>
           <td>Functions part 2</td>
           <td> Use the basic functions</td>
@@ -129,7 +130,7 @@ tableau à implémenter
           <td><input type="file"
             id="file" name="file"
             accept="image/png, image/jpeg"></td>
-        </tr>
+        </tr> %>
 
 
       </table>
