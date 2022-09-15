@@ -10,6 +10,9 @@
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
+    /* background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1663241799/Studeasy/Sans_titre_41_fm65qu.png');
+    background-position: center;
+    background-size: contain; */
   }
 
   .rails-default-error-page div.dialog {
@@ -23,7 +26,7 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    /* border-top: #B00100 solid 4px; */
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-color: white;
@@ -56,11 +59,20 @@
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+  <div class="500">
+
+    <div class="logo500">
+      <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663241799/Studeasy/Sans_titre_41_fm65qu.png" alt="500">
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+
+
+    <div class="dialog">
+        <div>
+          <h1>We're sorry, but something went wrong.</h1>
+        </div>
+        <p>If you are the application owner check the logs for more information.</p>
+    </div>
+
   </div>
 </body>
 </html>
