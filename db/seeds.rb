@@ -32,6 +32,13 @@ course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 
 
 
 session_1 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_2 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_3 = Session.create(course: course_2, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
+session_4 = Session.create(course: course_2, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_5 = Session.create(course: course_3, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
+session_6 = Session.create(course: course_3, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_7 = Session.create(course: course_4, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
+session_8 = Session.create(course: course_4, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
 
 
 # Faudra mettre tout en anglais pour la real version ;)
