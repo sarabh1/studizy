@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
+    background-color: white;
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
+    height: 600px;
   }
 
   .rails-default-error-page div.dialog {
@@ -23,7 +24,7 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    /* border-top: #B00100 solid 4px; */
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-color: white;
@@ -33,7 +34,7 @@
 
   .rails-default-error-page h1 {
     font-size: 100%;
-    color: #730E15;
+    color: #ee6854;
     line-height: 1.5em;
   }
 
@@ -47,8 +48,8 @@
     border-bottom-color: #999;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
+    /* border-top-color: #DADADA; */
+    color: rgb(9, 160, 145);
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
   </style>
@@ -56,11 +57,19 @@
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+
+  <div class="500">
+
+    <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663241799/Studeasy/Sans_titre_41_fm65qu.png" alt="500">
+
+
+
+      <div class="dialog">
+        <div>
+          <h1>We're sorry, but something went wrong.</h1>
+        </div>
+        <p>If you are the application owner check the logs for more information.</p>
+      </div>
   </div>
 </body>
 </html>
