@@ -1,64 +1,67 @@
 
-<div>
-    <h1><strong><%= @course.title %></strong></h1>
-</div>
-
-
-  <ul>
-    <li>Title :  <%= @course.title %></li>
-    <li>Description : <%= @course.description %></li>
-  </ul>
 
 
 
+<%#
 <% @course.sessions.each do |session| %>
-  <div class="courses-sessions">
+  <%# <div class="courses-sessions">
     <br>
 
       <li><%#= link_to "session's date", session_path(session.id) = session.id %></li>
-
+<%#
       <br>
       <li> Name: <%= session.name %></li>
-      <li> Start Date: <%= session.start_date %></li>
-      <li> End Date: <%= session.end_date %></li>
-      <li> Status: <%= session.status %></li>
-    <br>
-
+      <%# <li> Start Date: <%= session.start_date %></li>
+      <%# <li> End Date: <%= session.end_date %></li>
+      <%# <li> Status: <%= session.status %></li>
+    <%# <br>
+<%#
     <li><%#= link_to "Documents", session %></li>
 
-  </div>
-<% end %>
+  <%# </div> %>
+<%# <% end %>
 
-<h3> Your personnal documents</h3>
-<%# <%= @course.file.key, height: 300, width: 400, crop: :fill %> %>
+<%# <h3> Your personnal documents</h3> %>
+<%# <%= @course.file.key, height: 300, width: 400, crop: :fill %>
 
-<h3> Add a personnal document</h3>
+<%# <h3> Add a personnal document</h3>
 
-<%= link_to "Add a personnal document", edit_student_course_path(@course) %>
+<%= link_to "Upload file", edit_student_course_path(@course) %>
 <br>
 
-<%= link_to "Back to all courses", courses_path %>
 
 
 
-=====================================================================================
 
-tableau à implémenter
+
 
 
 <div class="docbox">
 
   <div class="Doctitle">
-    <h1>Documents</h1>
+    <h1><strong><%= @course.title %></strong></h1>
   </div>
+
+   <ul>
+    <li>Title :  <%= @course.title %></li>
+    <li>Description : <%= @course.description %></li>
+  </ul>
+  <br>
+  <br>
+
+
+
+  <hr>
+
 
 
   <div class="board">
 
-    <p>test view tableau à implémenter _ ligne à supprimer par la suite</p>
+    <%# <p>test view tableau à implémenter _ ligne à supprimer par la suite</p> %>
 
       <table>
         <tr>
+          <th> Status</th>
           <th>Session's date</th>
           <th> Course</th>
           <th>Description</th>
@@ -69,15 +72,14 @@ tableau à implémenter
         <tr>
 
         <% @sessions.each do |session| %>
+          <td> <%= session.status %></td>
           <td> <%= session.start_date  %> </td>
           <td> <%= @course.title %> </td>
           <td> <%= @course.description %></td>
           <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" download>
             <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" width="40px" alt="Lesson 3">
               </a></td>
-          <td><input type="file"
-            id="file" name="file"
-            accept="image/png, image/jpeg"></td>
+          <td><%= link_to "Upload file", edit_student_course_path(@course) %></td>
         </tr>
         <% end %>
 
