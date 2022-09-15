@@ -1,6 +1,5 @@
-<h1>Documents</h1>
-<br>
-<hr>
+
+<%# <hr>
 <h3>ressources</h3>
 
 <label for="avatar">Download available ressources :</label>
@@ -19,9 +18,9 @@
        id="file" name="file"
        accept="image/png, image/jpeg">
 
-<hr>
+<hr> %>
 
-<p>test view tableau</p>
+<%# <p>test view tableau</p>
 
 <table>
   <tr>
@@ -97,11 +96,100 @@
        id="file" name="file"
        accept="image/png, image/jpeg"></td>
   </tr>
-</table>
+</table> %>
+
+<div class="docbox">
+
+  <div class="Doctitle">
+    <h1>Documents</h1>
+  </div>
 
 
+  <div class="board">
 
+    <p>test view tableau à implémenter _ ligne à supprimer par la suite</p>
+
+      <table>
+        <tr>
+          <th>Session's date</th>
+          <th>Title = Course.id</th>
+          <th>Desription</th>
+          <th>Professor</th>
+          <th>Download resources</th>
+          <th>Upload a file</th>
+        </tr>
+
+        <tr>
+          <td>12/09/22</td>
+          <td>Functions part 1</td>
+          <td> Use the basic functions</td>
+          <td>M. Watson</td>
+          <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" download>
+            <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" width="40px" alt="Lesson 3">
+              </a></td>
+          <td><input type="file"
+            id="file" name="file"
+            accept="image/png, image/jpeg"></td>
+        </tr>
+
+        <tr>
+          <td>15/09/22</td>
+          <td>Functions part 2</td>
+          <td> Use the basic functions</td>
+          <td>M. Watson</td>
+          <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240085/Studeasy/pexels-max-fischer-5212316_ixkpyx.jpg" download>
+            <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240085/Studeasy/pexels-max-fischer-5212316_ixkpyx.jpg" width="40px" alt="Lesson 3">
+              </a></td>
+          <td><input type="file"
+            id="file" name="file"
+            accept="image/png, image/jpeg"></td>
+        </tr>
+
+        <tr>
+          <td>19/09/22</td>
+          <td>Probabilities part 1/3</td>
+          <td> understand the basis</td>
+          <td>Ms Johnson</td>
+          <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240291/Studeasy/pexels-vanessa-garcia-6325944_qzimf9.jpg" download>
+            <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240291/Studeasy/pexels-vanessa-garcia-6325944_qzimf9.jpg" width="40px" alt="Lesson 3">
+              </a></td>
+          <td><input type="file"
+            id="file" name="file"
+            accept="image/png, image/jpeg"></td>
+        </tr>
+
+        <tr>
+          <td>20/09/22</td>
+          <td>Probabilities part 2/3</td>
+          <td> use basic probabilities</td>
+          <td>Ms Johnson</td>
+          <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-katerina-holmes-5905475_psy0d7.jpg" download>
+            <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-katerina-holmes-5905475_psy0d7.jpg" width="40px" alt="Lesson 3">
+              </a></td>
+          <td><input type="file"
+            id="file" name="file"
+            accept="image/png, image/jpeg"></td>
+        </tr>
+
+        <tr>
+          <td>22/09/22</td>
+          <td>Probabilities part 3/3</td>
+          <td> advanced prob</td>
+          <td>M. White</td>
+          <td><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240074/Studeasy/pexels-jeswin-thomas-3781338_shttvz.jpg" download>
+            <img src="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240074/Studeasy/pexels-jeswin-thomas-3781338_shttvz.jpg" width="40px" alt="Lesson 3">
+              </a></td>
+          <td><input type="file"
+            id="file" name="file"
+            accept="image/png, image/jpeg"></td>
+        </tr>
+
+
+      </table>
+  </div>
+
+</div>
 
 <br>
 <br>
-
+<%= link_to "View course", courses_path, class: "btn btn-flat" %>
