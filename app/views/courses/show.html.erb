@@ -14,13 +14,13 @@
 <% @course.sessions.each do |session| %>
   <div class="courses-sessions">
     <br>
-      <li><%= link_to "session's date", session_path(session.id) %> <%= session.id %></li>
+      <%#= link_to "session's date", session_path(session.id) %> <%#= session.id %>
       <br>
       <li> Start Date: <%= session.start_date %></li>
       <li> End Date: <%= session.end_date %></li>
       <li> Status: <%= session.status %></li>
     <br>
-    <li><%= link_to "Documents", session %></li>
+    <%#= link_to "Documents", session %>
   </div>
 <% end %>
 

@@ -9,8 +9,9 @@ require 'date'
 
 require "open-uri"
 
+
 Course.destroy_all
-Session.destroy_all
+
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
 course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est un triangle... mais prouve le !", user_id: 1)
@@ -30,7 +31,14 @@ course_4 = Course.create(title: "HISTOIRE DES MATHS", description: "Des maths ma
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
-session_1 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1",)
+session_1 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_2 = Session.create(course: course_1, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_3 = Session.create(course: course_2, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
+session_4 = Session.create(course: course_2, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_5 = Session.create(course: course_3, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
+session_6 = Session.create(course: course_3, start_date: Date.today - 6, end_date: Date.today - 1, status: "1")
+session_7 = Session.create(course: course_4, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
+session_8 = Session.create(course: course_4, start_date: Date.today - 6, end_date: Date.today - 1, status: "0")
 
 
 # Faudra mettre tout en anglais pour la real version ;)
