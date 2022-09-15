@@ -1,0 +1,18 @@
+<h1>Add your personal document ! </h1>
+
+<%= simple_form_for(@student_course) do |f| %>
+    <div class="form-inputs">
+        <%= f.input :title, disabled: true, hint: 'You cannot change the title of the class.' %>
+        <%= f.input :description, disabled: true, hint: 'You cannot change the description of the course.' %>
+        <%= f.input :file, as: :file %>
+
+    </div>
+
+    <div class="form-actions">
+        <%= f.button :submit %>
+    </div>
+<% end %>
+
+ <li><a href="uploadwidget.html">Upload Files Using the Upload Widget</a></li><br>
+
+<%= link_to "Back to all courses", courses_path %>
