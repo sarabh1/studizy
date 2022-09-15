@@ -72,7 +72,13 @@
         <tr>
 
         <% @sessions.each do |session| %>
-          <td> <%= session.status %></td>
+        <% if session.start_date > DateTime.now %>
+          <td> <%= session.status = "A venir" %></td>
+          <% elsif session.start_date == DateTime.now %>
+            <td> <%= session.status = "Aujourd'hui" %></td>
+          <% else %>
+          <td> <%= session.status = "Passé" %></td>
+          <% end %>
           <td> <%= session.start_date  %> </td>
           <td> <%= @course.title %> </td>
           <td> <%= @course.description %></td>
