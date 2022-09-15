@@ -10,8 +10,11 @@ Rails.application.routes.draw do
 
   # get 'sessions', to: 'courses#course/sessions'
 
+  resources :sessions
+
   resources :courses do
     resources :sessions, controller: 'courses/sessions'
   end
-  resources :student_courses, only: [:edit, :update]
+
+  resources :student_courses, only: [ :edit, :update ]
 end

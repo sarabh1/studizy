@@ -20,7 +20,7 @@
       <li> End Date: <%= session.end_date %></li>
       <li> Status: <%= session.status %></li>
     <br>
-    <li><%= link_to "Open", session %></li>
+    <li><%= link_to "Documents", session %></li>
   </div>
 <% end %>
 
@@ -31,4 +31,5 @@
 
 <%= link_to "Add a personnal document", edit_student_course_path(@course) %>
 <br>
+
 <%= link_to "Back to all courses", courses_path %>

@@ -1,8 +1,11 @@
-<h3 class="wel">Welcome <span class="user"><%= current_user.email %> !</span> </h3>
+
 
 <div class="global-dash">
 
   <div class="menu">
+
+    <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
+    <hr>
      <%= link_to "Courses", courses_path, class:"btncourses" %>
     <hr>
     <%=  link_to "Documents", "#", class:"btndoc" %>
@@ -15,7 +18,7 @@
     <br>
     <br>
   <div class="today">
-    <h3>Today:</h3>
+   <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1663155422/Studeasy/Sans_titre_37_ph2ll9.png", width:"120px"%>
     <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
 
 
@@ -46,29 +49,30 @@
 
       <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
 
+
       </div>
 
     </div>
 
     <div class="week-schedule">
     <br>
-      <h4>Your next 2 weeks Schedule for : <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
+      <h4>Ongoing week Schedule for : <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
 
       <br>
 
-      <%= week_calendar(number_of_weeks: 4) do |date| %>
+      <%= week_calendar(number_of_weeks: 2) do |date| %>
         <%= date.day %>
       <% end %>
+<%# ==================== %>
+     <%# <%= week_calendar(events: @sessions) do |date, sessions| %>
+      <%# <%= date.day %>
 
-      <%# <%= week_calendar(events: @sessions) do |date, sessions| %>
-       <%# <%= date %>
-
-       <%# <% sessions.each do |session| %>
-        <%#  <div>
-            <%= session.course_id %>
-        <%#  </div>
-        <% end %>
-     <%# <% end %>
+      <%# <% session.each do |session| %>
+       <%# <div>
+         <%= course.title %>
+       <%# </div>
+      <% end %>
+    <%# <% end %>
 
 
 
