@@ -5,7 +5,7 @@
     <h1><strong><%= @course.title %></strong></h1>
     <br>
     <br>
-    <h4>Description : <%= @course.description %></h4>
+    <h5>Description : <%= @course.description %></h5>
     <br>
     <hr>
   </div>
@@ -39,7 +39,7 @@
           <td class="dl"><a href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663240075/Studeasy/pexels-nothing-ahead-3729557_urnt4c.jpg" download>
             <i class="fa-solid fa-download" width="50px"></i>
               </a></td>
-          <td><%= link_to "Upload file", edit_student_course_path(@course) %></td>
+          <td><%= link_to "Add file", edit_student_course_path(@course) %></td>
       </tr>
       <% end %>
     </table>
