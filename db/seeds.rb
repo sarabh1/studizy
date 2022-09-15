@@ -9,8 +9,9 @@ require 'date'
 
 require "open-uri"
 
+
 Course.destroy_all
-Session.destroy_all
+
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
 course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est un triangle... mais prouve le !", user_id: 1)
