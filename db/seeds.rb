@@ -14,20 +14,21 @@ Course.destroy_all
 
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
-course_1 = Course.create(title: "GEOMETRIE", description: "Oui on voit que c'est un triangle... mais prouve le !", user_id: 1)
+course_1 = Course.create(title: "GEOMETRY", description: "Geometry (from Ancient Greek γεωμετρία (geōmetría) 'land measurement', is, with arithmetic, one of the oldest branches of mathematics.", user_id: 1)
 course_1.photo.attach(io: file_1, filename: 'geometrie.jpeg', content_type: 'image/jpeg')
 #attach est une méthode d'active storage ! (pour ça qu'on le fait en pls temps)
 
 file_2 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663091017/l7me3qjih824vj0kxkx9.jpg')
-course_2 =  Course.create(title: "ALGEBRE", description: "Bienvenue dans le monde des (in)égalités", user_id: 1)
+course_2 =  Course.create(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.", user_id: 1)
 course_2.photo.attach(io: file_2, filename: 'algebre.jpeg', content_type: 'image/jpeg')
 
 file_3 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095197/pexels-lil-artsy-1111597_tpmuq3.jpg')
-course_3 =  Course.create(title: "PROBABILITE", description: "Ici pour gagner au loto ?", user_id: 1)
+course_3 =  Course.create(title: "PROBABILITIES", description: "Probability is the branch of mathematics concerning numerical descriptions of how likely an event is to occur, or how likely it is that a proposition is true.", user_id: 1)
 course_3.photo.attach(io: file_3, filename: 'probabilite.jpeg', content_type: 'image/jpeg')
 
 file_4 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095374/800px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes_zwdpo6.jpg')
-course_4 = Course.create(title: "HISTOIRE DES MATHS", description: "Des maths mais sans se casser la tête", user_id: 1)
+course_4 = Course.create(title: "MATHS HISTORY", description: "
+  Mathematics is used in science for modeling phenomena, which then allows predictions to be made from experimental laws.", user_id: 1)
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
@@ -46,3 +47,6 @@ session_12 = Session.create(course: course_1, name: course_1.title, start_date: 
 session_13 = Session.create(course: course_4, name: course_4.title, start_date: Faker::Time.between(from: Date.today + 1, to: Date.today + 2), end_date: Faker::Time.between(from: Date.today, to: Date.today + 6))
 session_14 = Session.create(course: course_2, name: course_2.title, start_date: Faker::Time.between(from: Date.today + 1, to: Date.today + 2), end_date: Faker::Time.between(from: Date.today, to: Date.today + 6))
 session_15 = Session.create(course: course_2, name: course_2.title, start_date: Faker::Time.between(from: Date.today + 1, to: Date.today + 2), end_date: Faker::Time.between(from: Date.today, to: Date.today + 6))
+session_16 = Session.create(course: course_2, name: course_2.title, start_date: Faker::Time.between(from: Date.today, to: Date.today), end_date: Faker::Time.between(from: Date.today, to: Date.today))
+session_17 = Session.create(course: course_1, name: course_1.title, start_date: Faker::Time.between(from: Date.today, to: Date.today), end_date: Faker::Time.between(from: Date.today, to: Date.today))
+session_18 = Session.create(course: course_3, name: course_3.title, start_date:Date.today, end_date:Date.today)

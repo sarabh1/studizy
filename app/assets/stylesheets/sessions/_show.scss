@@ -17,9 +17,13 @@ tr {
 }
 tr:hover {background-color: #D6EEEE;
 }
+td.dl{
+  text-align: center;
+}
 
 td.inc{
-  color: rgb(99, 247, 99);
+  color: rgb(31, 193, 31);
+  font-weight: bold;
 }
 td.today{
   color: orange
@@ -28,23 +32,31 @@ td.today{
 td.passed{
   color: rgb(90, 93, 119);
 }
-
+i{
+  text-align: center;
+  color: rgb(47, 53, 91);
+}
+i:hover{
+  color: rgb(78, 138, 234);
+}
 
 .docbox{
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
+
+
+
+
 }
 .doctitle{
-  height: 160px;
+  // height: 160px;
+  text-align: center;
 }
 .doctitle h1{
   padding: 24px 0;
 }
 .board{
   margin: 0 auto;
-}
-.board td img{
-  text-align: center;
 }
