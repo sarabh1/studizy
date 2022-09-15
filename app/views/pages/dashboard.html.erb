@@ -63,16 +63,21 @@
       <%= week_calendar(number_of_weeks: 2) do |date| %>
         <%= date.day %>
       <% end %>
+
+
+
+
 <%# ==================== %>
-     <%# <%= week_calendar(events: @sessions) do |date, sessions| %>
+    <%# <%= week_calendar(events: @sessions) do |date, session| %>
       <%# <%= date.day %>
 
-      <%# <% session.each do |session| %>
-       <%# <div>
-         <%= course.title %>
-       <%# </div>
+      <%# <% @sessions.each do |session| %>
+         <%# <div>
+          <%= session.name %>
+         <%# </div>
       <% end %>
-    <%# <% end %>
+
+    <%# <% end %> 
 
 
 
@@ -83,52 +88,4 @@
 
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
