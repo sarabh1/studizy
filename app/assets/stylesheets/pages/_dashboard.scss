@@ -96,26 +96,32 @@ a.btnchat:hover{
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 250px;
+  height: 300px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;
   text-align: center;
   flex-grow: 1;
+  min-width: 400px;
+  max-width: fit-content;
 
-
+}
+.results-graph .chartp{
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: bold;
 }
 
 .deadlines {
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 250px;
+  height: 300px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;
   text-align: center;
-  flex-grow: 2;
+  flex-grow: 1;
 
 }
 .up{
@@ -165,4 +171,7 @@ span.user {
 p.wel {
   padding-top: 20px;
   // padding-left: 24px;
+}
+.anychart-credits{
+  display: none;
 }
