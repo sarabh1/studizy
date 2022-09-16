@@ -11,6 +11,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+     <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <style type="text/css">
+      html, body, #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -19,4 +29,60 @@
 
     <%= yield %>
   </body>
+
+  <script>
+    anychart.onDocumentReady(function () {
+    // our data from bulbapedia
+      var data1 = [
+        {x: "Maths basics", value: 69},
+        {x: "Probabilities", value: 52},
+        {x: "Algebra", value: 43},
+        {x: "Geometry", value: 60},
+        {x: "Statistics", value: 62},
+        {x: "Maths History", value: 35},
+      ];
+
+      var data2 = [
+        {x: "Maths basics", value: 59},
+        {x: "Probabilities", value: 62},
+        {x: "Algebra", value: 40},
+        {x: "Geometry", value: 65},
+        {x: "Statistics", value: 59},
+        {x: "Maths History", value: 55},
+      ];
+
+      var data3 = [
+        {x: "Maths basics", value: 64},
+        {x: "Probabilities", value: 62},
+        {x: "Algebra", value: 39},
+        {x: "Geometry", value: 61},
+        {x: "Statistics", value: 70},
+        {x: "Maths History", value: 48},
+      ];
+
+      // create radar chart
+      var chart = anychart.radar();
+      // set chart yScale settings
+      chart.yScale()
+        .minimum(35)
+        .maximum(65)
+        .ticks({'interval':5});
+
+      // create first series
+      chart.line(data1)
+      // create second series
+      chart.line(data2)
+      // create third series
+      chart.line(data3)
+
+      // set chart title
+      chart.title("Last 3 exams sessions results");
+
+      // set container id for the chart
+      chart.container('container');
+      // initiate chart drawing
+      chart.draw();
+
+    });
+  </script>
 </html>
