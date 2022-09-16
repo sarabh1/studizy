@@ -22,10 +22,27 @@
   font-weight: bold;
   text-align: center;
 }
+.head1 i{
+  color: gray;
+  font-size: 24px;
+}
 .head2{
   border-bottom: 1px solid grey;
   color: rgb(178, 168, 219);
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+}
+.head2 i{
+  color: gray;
+  font-size: 24px;
+}
+.documents{
+  display: flex;
+  flex-wrap: wrap;
+}
+i{
+  font-size: 40px;
+  padding: 15px;
+  color: rgb(149, 140, 164);
 }
