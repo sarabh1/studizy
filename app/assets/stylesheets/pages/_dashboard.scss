@@ -96,7 +96,7 @@ a.btnchat:hover{
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 250px;
+  height: 300px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;
@@ -105,14 +105,17 @@ a.btnchat:hover{
   min-width: 400px;
   max-width: fit-content;
 
-
+}
+.results-graph .chartp{
+  margin: 0;
+  font-size: 13.5px;
 }
 
 .deadlines {
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 250px;
+  height: 300px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;

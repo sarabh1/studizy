@@ -34,12 +34,12 @@
     anychart.onDocumentReady(function () {
     // our data from bulbapedia
       var data1 = [
-        {x: "Maths basics", value: 69},
-        {x: "Probabilities", value: 52},
-        {x: "Algebra", value: 43},
-        {x: "Geometry", value: 60},
-        {x: "Statistics", value: 62},
-        {x: "Maths History", value: 55},
+        {x: "Maths basics", value: 17},
+        {x: "Probabilities", value: 11},
+        {x: "Algebra", value: 9.5},
+        {x: "Geometry", value: 15},
+        {x: "Statistics", value: 16},
+        {x: "Maths History", value: 14},
       ];
 
       // var data2 = [
@@ -52,20 +52,20 @@
       // ];
 
       var data3 = [
-        {x: "Maths basics", value: 34},
-        {x: "Probabilities", value: 62},
-        {x: "Algebra", value: 59},
-        {x: "Geometry", value: 61},
-        {x: "Statistics", value: 70},
-        {x: "Maths History", value: 48},
+        {x: "Maths basics", value: 9},
+        {x: "Probabilities", value: 16},
+        {x: "Algebra", value: 13},
+        {x: "Geometry", value: 16},
+        {x: "Statistics", value: 18},
+        {x: "Maths History", value: 9},
       ];
 
       // create radar chart
       var chart = anychart.radar();
       // set chart yScale settings
       chart.yScale()
-        .minimum(35)
-        .maximum(65)
+        .minimum(0)
+        .maximum(20)
         .ticks({'interval':5});
 
       // create first series
@@ -82,7 +82,7 @@
       chart.area(data3).name('January 22').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
 
       // set chart title
-      // chart.title("Last 3 exams sessions results");
+      // chart.title("Last exams sessions results");
       // .legend(true);
 
       // set container id for the chart
