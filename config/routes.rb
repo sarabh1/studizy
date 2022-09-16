@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'pages#dashboard'
   get 'home', to: 'pages#home'
+  get 'documents', to: 'pages#documents'
 
   # get 'sessions', to: 'courses#course/sessions'
 

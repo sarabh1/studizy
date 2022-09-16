@@ -15,23 +15,51 @@ th {
 tr {
   border-bottom: 1px solid #ddd;
 }
-tr:hover {background-color: #D6EEEE;}
+tr:hover {background-color: #D6EEEE;
+}
+td.dl{
+  text-align: center;
+}
+
+td.inc{
+  color: rgb(31, 193, 31);
+  font-weight: bold;
+}
+td.today{
+  color: orange
+}
+
+td.passed{
+  color: rgb(90, 93, 119);
+}
+i{
+  text-align: center;
+  color: rgb(47, 53, 91);
+}
+i:hover{
+  color: rgb(78, 138, 234);
+}
 
 .docbox{
   margin: 0 auto;
-  width: 100%;
+  // width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px;
 }
-.Doctitle{
-  height: 160px;
+.doctitle{
+  // max-width: 800px;
+  text-align: center;
 }
-.Doctitle h1{
+.doctitle h1{
   padding: 24px 0;
 }
+// .doctitle h4{
+//   max-width: 800px;
+//   text-align: center;
+// }
 .board{
   margin: 0 auto;
-}
-.board td img{
-  text-align: center;
+  width: auto;
 }
