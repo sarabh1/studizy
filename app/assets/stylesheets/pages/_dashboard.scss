@@ -102,6 +102,8 @@ a.btnchat:hover{
   margin: 12px 20px;
   text-align: center;
   flex-grow: 1;
+  min-width: 400px;
+  max-width: fit-content;
 
 
 }
@@ -165,4 +167,7 @@ span.user {
 p.wel {
   padding-top: 20px;
   // padding-left: 24px;
+}
+.anychart-credits{
+  display: none;
 }
