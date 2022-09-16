@@ -54,7 +54,7 @@
       var data3 = [
         {x: "Maths basics", value: 64},
         {x: "Probabilities", value: 62},
-        {x: "Algebra", value: 39},
+        {x: "Algebra", value: 59},
         {x: "Geometry", value: 61},
         {x: "Statistics", value: 70},
         {x: "Maths History", value: 48},
@@ -74,9 +74,16 @@
       chart.line(data2)
       // create third series
       chart.line(data3)
+        // create first series
+      chart.area(data1).name('September 21').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+      // create second series
+      chart.area(data2).name('January 22').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
+      // create third series
+      chart.area(data3).name('May 22').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
 
       // set chart title
       chart.title("Last 3 exams sessions results");
+      // .legend(true);
 
       // set container id for the chart
       chart.container('container');
