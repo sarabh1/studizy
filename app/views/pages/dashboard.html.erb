@@ -20,9 +20,11 @@
   <div class="today">
    <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1663155422/Studeasy/Sans_titre_37_ph2ll9.png", width:"120px"%>
     <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
-
-
   </div>
+
+  <%# <div class="avatar">
+    <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1663353326/Studeasy/Sans_titre_45_ksvex8.png', width:"100px" %>
+  <%# </div> %>
 
 
 
@@ -64,24 +66,39 @@
 
       <br>
 
-      <%= week_calendar(number_of_weeks: 2) do |date| %>
+      <%# <%= week_calendar(number_of_weeks: 2) do |date| %>
+        <%# <%= date.day %>
+      <%# <% end %>
+
+      <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
         <%= date.day %>
+
+        <% sessions.each do |session| %>
+          <div>
+            <%= session.name %>
+            <%= link_to "go" %>
+          </div>
+
+        <% end %>
       <% end %>
 
 
 
 
-<%# ==================== %>
-    <%# <%= week_calendar(events: @sessions) do |date, session| %>
-      <%# <%= date.day %>
+<%# =============================================================================
+      <%= week_calendar(number_of_weeks:2, attribute: :start_date, events: @sessions) do |date, sessions| %>
+        <%# <%= date.day %>
 
-      <%# <% @sessions.each do |session| %>
-         <%# <div>
-          <%= session.name %>
-         <%# </div>
-      <% end %>
+        <%# <% sessions.each do |session, name| %>
+          <%# <div>
+            <%= @session %>
+          <%# </div>
+        <% end %>
+      <%# <% end %>
+<%# ============================================================================== %>
 
-    <%# <% end %>
+
+
 
 
 
