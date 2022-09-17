@@ -75,8 +75,7 @@
 
         <% sessions.each do |session| %>
           <div>
-            <%= session.name %>
-            <%= link_to "go" %>
+            <%= link_to session.name, "#" %>
           </div>
 
         <% end %>
