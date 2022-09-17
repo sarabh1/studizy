@@ -1,6 +1,7 @@
 <h1>Chatroom</h1>
 
 <p>Welcome <%= current_user.nickname %>, let's chat and share with your classmates !</p>
+<%# <%= linkt_to "chatrooms", chatrooms_path %> 
 
 
 <div class="container chatroom"
@@ -33,5 +34,3 @@
   <%= f.submit "Send", class: "btn btn-primary" %>
 <% end %>
 </div>
-
-
