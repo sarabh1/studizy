@@ -1,7 +1,7 @@
 <h1>Chatroom</h1>
 
 <p>Welcome <%= current_user.nickname %>, let's chat and share with your classmates !</p>
-<%# <%= linkt_to "chatrooms", chatrooms_path %> 
+<%# <%= linkt_to "chatrooms", chatrooms_path %>
 
 
 <div class="container chatroom"
@@ -13,12 +13,14 @@
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <div id="message-<%= message.id %>">
-        <small>
+        <%= render "messages/message", message: message %>
+    <% end %>
+        <%# <small>
           <strong><%= message.user.nickname %></strong>
-          <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-        </small>
+          <%# <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+        <%# </small>
         <p><%= message.content %></p>
-      </div>
+      <%# </div>
     <% end %>
   </div>
 
@@ -34,3 +36,5 @@
   <%= f.submit "Send", class: "btn btn-primary" %>
 <% end %>
 </div>
+
+
