@@ -50,3 +50,10 @@ session_15 = Session.create(course: course_2, name: "functions - theory", start_
 session_16 = Session.create(course: course_2, name: "Theorems", start_date: Faker::Time.between(from: Date.today, to: Date.today), end_date: Faker::Time.between(from: Date.today, to: Date.today))
 session_17 = Session.create(course: course_1, name: "Triangles", start_date: Faker::Time.between(from: Date.today, to: Date.today), end_date: Faker::Time.between(from: Date.today, to: Date.today))
 session_18 = Session.create(course: course_3, name: "Probabilties in work", start_date:Date.today, end_date:Date.today)
+
+
+chatroom_1 = Chatroom.create(name: "general")
+
+user_1 = User.create(email: "sara@studizy.com", nickname: "sbahhar", password: "123456")
+
+user_2 = User.create(email: "oph@studizy.com", nickname: "ophng", password: "123456")
