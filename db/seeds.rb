@@ -9,6 +9,8 @@ require 'date'
 
 require "open-uri"
 
+Session.destroy_all
+Course.destroy_all
 
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
