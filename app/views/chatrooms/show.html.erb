@@ -3,10 +3,13 @@
 <p>Welcome <%= current_user.nickname %>, let's chat and share with your classmates !</p>
 
 
-<div class="container chatroom">
+<div class="container chatroom"
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+>
   <h1>#<%= @chatroom.name %></h1>
 
-  <div class="messages">
+  <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <div id="message-<%= message.id %>">
         <small>
@@ -30,3 +33,5 @@
   <%= f.submit "Send", class: "btn btn-primary" %>
 <% end %>
 </div>
+
+
