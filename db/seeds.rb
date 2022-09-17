@@ -10,8 +10,6 @@ require 'date'
 require "open-uri"
 
 
-Course.destroy_all
-
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
 course_1 = Course.create(title: "GEOMETRY", description: "Geometry (from Ancient Greek γεωμετρία (geōmetría) 'land measurement', is, with arithmetic, one of the oldest branches of mathematics.", user_id: 1)
