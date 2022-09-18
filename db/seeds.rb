@@ -35,7 +35,7 @@ course_4 = Course.create!(title: "MATHS HISTORY", description: "
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
-session_1 = Session.create!(course: course_1, name: "Pythagore theorem", start_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 7), end_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 10))
+session_1 = Session.create!(course: course_1, name: "Pythagore theorem", start_date: Time.today, end_date: Time.today)
 session_2 = Session.create!(course: course_1, name: "Systems x + y", start_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 7), end_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 10))
 session_3 = Session.create!(course: course_2, name: "{A + B} + 2", start_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 2), end_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 10))
 session_4 = Session.create!(course: course_2, name: "ax + cy = d", start_date: Faker::Time.between(from: DateTime.now + 5, to: DateTime.now + 8), end_date: Faker::Time.between(from: DateTime.now + 6, to: DateTime.now + 12))

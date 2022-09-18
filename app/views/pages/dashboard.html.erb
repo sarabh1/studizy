@@ -73,11 +73,19 @@
       <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
         <%= date.day %>
 
-        <% sessions.each do |session| %>
-          <div>
-            <%= link_to session.name, "#" %>
-          </div>
 
+        <%# <% 8.upto(17).each do |hour| %>
+          <%# <div>
+            <%= Time.parse("#{hour}:00").strftime("%l %P") %>
+          <%# </div>
+        <% end %>
+
+
+        <% sessions.each do |session| %>
+        <%= session.start_time %> <%= session.end_date %>
+          <div>
+            <%= link_to session.name, '#' %>
+          </div>
         <% end %>
       <% end %>
 

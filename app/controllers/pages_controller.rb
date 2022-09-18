@@ -15,5 +15,5 @@ class PagesController < ApplicationController
 
   def chatroom
   end
-  
+
 end
