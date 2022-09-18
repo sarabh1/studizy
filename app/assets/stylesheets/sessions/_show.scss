@@ -1,42 +1,42 @@
-table, th, td {
+.show, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-th, td {
+.show th, td {
   border-color: #96D4D4;
   padding: 15px;
 }
 
-th {
+.show th {
   text-align: left;
   background-color:#aae3e3; ;
 }
 
-tr {
+.show tr {
   border-bottom: 1px solid #ddd;
 }
-tr:hover {background-color: #D6EEEE;
+.show tr:hover {background-color: #D6EEEE;
 }
-td.dl{
+.show td.dl{
   text-align: center;
 }
 
-td.inc{
+.show td.inc{
   color: rgb(31, 193, 31);
   font-weight: bold;
 }
-td.today{
+.show td.today{
   color: orange
 }
 
-td.passed{
+.show td.passed{
   color: rgb(90, 93, 119);
 }
-i{
+.show i{
   text-align: center;
   color: rgb(47, 53, 91);
 }
-i:hover{
+.show i:hover{
   color: rgb(78, 138, 234);
 }
 

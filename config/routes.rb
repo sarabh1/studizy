@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  
+
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   get 'documents', to: 'pages#documents'
 
-  # get 'sessions', to: 'courses#course/sessions'
+  # get '/courses/:id/', to: 'courses#show'
+
 
 
   resources :courses do

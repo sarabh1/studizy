@@ -16,4 +16,7 @@ class PagesController < ApplicationController
   def chatroom
   end
 
+  def course
+  end
+
 end
