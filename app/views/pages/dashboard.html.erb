@@ -72,6 +72,7 @@
 
       <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
         <%= date.day %>
+        <br>
 
 
         <%# <% 8.upto(17).each do |hour| %>
@@ -82,8 +83,8 @@
 
 
         <% sessions.each do |session| %>
-        <%= session.start_time %> <%= session.end_date %>
-          <div>
+          <div class= "event">
+            <%= session.start_time.to_formatted_s(:short)  %> <br> <%= session.end_date.to_formatted_s(:short)  %> <br>
             <%= link_to session.name, '#' %>
           </div>
         <% end %>
