@@ -13,7 +13,6 @@ Session.destroy_all
 Course.destroy_all
 
 user_1 = User.create!(email: "sara@studizy.com", nickname: "sbahhar", password: "123456")
-
 user_2 = User.create!(email: "oph@studizy.com", nickname: "ophng", password: "123456")
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
@@ -35,7 +34,7 @@ course_4 = Course.create!(title: "MATHS HISTORY", description: "
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
-session_1 = Session.create!(course: course_1, name: "Pythagore theorem", start_date: Time.today, end_date: Time.today)
+session_1 = Session.create!(course: course_1, name: "Pythagore theorem", start_date: Time.today, end_date: Time.today + 2)
 session_2 = Session.create!(course: course_1, name: "Systems x + y", start_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 7), end_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 10))
 session_3 = Session.create!(course: course_2, name: "{A + B} + 2", start_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 2), end_date: Faker::Time.between(from: 2.days.ago, to: DateTime.now + 10))
 session_4 = Session.create!(course: course_2, name: "ax + cy = d", start_date: Faker::Time.between(from: DateTime.now + 5, to: DateTime.now + 8), end_date: Faker::Time.between(from: DateTime.now + 6, to: DateTime.now + 12))
@@ -56,3 +55,8 @@ session_18 = Session.create!(course: course_3, name: "Probabilties in work", sta
 
 
 chatroom_1 = Chatroom.create!(name: "general")
+chatroom_2 = Chatroom.create!(name: "Geometry")
+chatroom_3 = Chatroom.create!(name: "Algebra")
+chatroom_4 = Chatroom.create!(name: "Probabilities")
+chatroom_5 = Chatroom.create!(name: "History of Maths")
+chatroom_6 = Chatroom.create!(name: "Professors room")
