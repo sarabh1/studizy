@@ -85,7 +85,7 @@
         <% sessions.each do |session| %>
           <div class= "event">
             <%= session.start_time.to_formatted_s(:short)  %> <br> <%= session.end_date.to_formatted_s(:short)  %> <br>
-            <%= link_to session.name, '#' %>
+            <%= link_to session.name, "#" %>
           </div>
         <% end %>
       <% end %>

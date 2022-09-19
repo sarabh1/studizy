@@ -180,7 +180,16 @@ p.wel {
   display: none;
 }
 .event {
-  background-color: rgb(244, 209, 174);
+  background-color: rgb(211, 225, 252);
   border-radius: 8px;
   margin-bottom: 6px;
+  padding-bottom: 6px;
+  
+
+}
+.event:hover{
+  background-color: rgb(133, 190, 246);
+  font-weight: 600;
+  color: white;
+
 }

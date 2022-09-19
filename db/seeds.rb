@@ -37,7 +37,7 @@ course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 
 session_1 = Session.create!(course: course_2, name: "Exam - Algebra", start_date: DateTime.new(2022, 9, 21, 8, 00), end_date: DateTime.new(2022, 9, 21, 10, 00))
 session_2 = Session.create!(course: course_1, name: "Systems x + y", start_date: DateTime.new(2022, 9, 20, 10, 00), end_date: DateTime.new(2022, 9, 20, 12, 00))
 session_3 = Session.create!(course: course_2, name: "{A + B} + 2", start_date: DateTime.new(2022, 9, 19, 8, 30), end_date: DateTime.new(2022, 9, 19, 10, 30))
-session_4 = Session.create!(course: course_2, name: "ax + cy = d", start_date: DateTime.new(2022, 9, 21, 14, 00), end_date: DateTime.new(2022, 9, 21, 15, 00))
+session_4 = Session.create!(course: course_2, name: "ax + cy = d", start_date: DateTime.new(2022, 9, 30, 14, 00), end_date: DateTime.new(2022, 9, 30, 15, 00))
 session_5 = Session.create!(course: course_3, name: "Dice Probabilities", start_date: DateTime.new(2022, 9, 23, 8, 30), end_date: DateTime.new(2022, 9, 23, 10, 30))
 session_6 = Session.create!(course: course_3, name: "Loto game", start_date: DateTime.new(2022, 9, 22, 8, 00), end_date: DateTime.new(2022, 9, 22, 10, 00))
 session_7 = Session.create!(course: course_4, name: "Da Vinci", start_date: DateTime.new(2022, 9, 24, 8, 45), end_date: DateTime.new(2022, 9, 24, 10, 15))
@@ -52,6 +52,14 @@ session_15 = Session.create!(course: course_2, name: "functions - theory", start
 session_16 = Session.create!(course: course_1, name: "Exam - Triangles", start_date: DateTime.new(2022, 9, 28, 8, 00), end_date: DateTime.new(2022, 9, 28, 10, 00))
 session_17 = Session.create!(course: course_1, name: "Revisions Triangles", start_date: DateTime.new(2022, 9, 25, 10, 00), end_date: DateTime.new(2022, 9, 25, 12, 00))
 session_18 = Session.create!(course: course_3, name: "Probabilties in work", start_date: DateTime.new(2022, 10, 4, 8, 30), end_date: DateTime.new(2022, 10, 04, 10, 30))
+session_19 = Session.create!(course: course_1, name: "Squares", start_date: DateTime.new(2022, 9, 19, 8, 30), end_date: DateTime.new(2022, 9, 19, 10, 30))
+session_20 = Session.create!(course: course_4, name: "Vasco de Gama", start_date: DateTime.new(2022, 9, 16, 8, 30), end_date: DateTime.new(2022, 9, 16, 10, 30))
+session_21 = Session.create!(course: course_2, name: "Arythmetic", start_date: DateTime.new(2022, 9, 20, 8, 30), end_date: DateTime.new(2022, 9, 20, 10, 30))
+session_22 = Session.create!(course: course_3, name: "Probabilities - Intro", start_date: DateTime.new(2022, 9, 14, 8, 30), end_date: DateTime.new(2022, 9, 14, 10, 30))
+session_23 = Session.create!(course: course_1, name: "Circles", start_date: DateTime.new(2022, 9, 15, 8, 30), end_date: DateTime.new(2022, 9, 15, 10, 30))
+session_24 = Session.create!(course: course_2, name: "Arythmetic", start_date: DateTime.new(2022, 9, 13, 8, 30), end_date: DateTime.new(2022, 9, 13, 10, 30))
+
+
 
 
 chatroom_1 = Chatroom.create!(name: "General")

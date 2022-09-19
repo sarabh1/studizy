@@ -1,0 +1,44 @@
+.chatchat{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1663538705/Studeasy/pexels-luna-lovegood-4087177_pd0k4v.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.chatindex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(234, 241, 248, 0.8);
+  font-size: 20px;
+  width: 100%;
+  padding-top: 16px;
+
+
+}
+.chatindex a{
+  text-decoration: none;
+  color: rgb(118, 121, 142);
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.chatindex a:hover {
+  color: rgb(74, 164, 242);
+}
+.chatitle{
+  text-align: center;
+}
+.chatitle p{
+  color: rgb(254, 107, 84);
+  font-weight: bold;
+  font-size: 24px;
+  font-family: sans-serif;
+
+}

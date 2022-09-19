@@ -14,7 +14,7 @@
 
   <div class="board">
 
-    <table>
+    <table class="show">
       <tr>
         <th> Status</th>
         <th>Session's date</th>
@@ -28,7 +28,7 @@
         <% @sessions.each do |session| %>
         <% if session.start_date > DateTime.now %>
           <td class="inc"> <%= session.status = "Incoming" %></td>
-          <% elsif session.start_date == DateTime.now %>
+          <% elsif session.start_date == DateTime.now. %>
             <td class="today"> <%= session.status = "Today" %></td>
           <% else %>
           <td class ="passed"> <%= session.status = "Passed" %></td>
