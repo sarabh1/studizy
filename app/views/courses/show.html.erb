@@ -28,8 +28,8 @@
         <% @sessions.each do |session| %>
         <% if session.start_date > DateTime.now %>
           <td class="inc"> <%= session.status = "Incoming" %></td>
-          <% elsif session.start_date == DateTime.now. %>
-            <td class="today"> <%= session.status = "Today" %></td>
+          <% elsif session.start_date == DateTime.now %>
+          <td class="today"> <%= session.status = "Today" %></td>
           <% else %>
           <td class ="passed"> <%= session.status = "Passed" %></td>
         <% end %>
