@@ -25,7 +25,7 @@
       </tr>
 
       <tr>
-        <% @sessions.each do |session| %>
+        <% @sessions.sort_by(&:start_date).each do |session| %>
         <% if session.start_date > DateTime.now %>
           <td class="inc"> <%= session.status = "Incoming" %></td>
           <% elsif session.start_date == DateTime.now %>
