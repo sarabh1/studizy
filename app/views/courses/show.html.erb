@@ -8,6 +8,15 @@
     <h5>Description : <%= @course.description %></h5>
     <br>
     <hr>
+
+  <div class="search">
+
+  <input type="search" id="research" name="searchQuery" placeholder="Search for documents...">
+
+  <%# <input id="search" onkeyup="search_documents()" type="text"
+        name="search" placeholder="Search document.."> %>
+  </div>
+
   </div>
 
 
@@ -35,7 +44,7 @@
         <% end %>
           <td> <%= session.start_date %> </td>
           <td> <%= @course.title %> </td>
-          <td> <%= session.name %></td>
+          <td class ="searched"><%= session.name %> </td>
           <td class="dl"><a href="http://exo7.emath.fr/cours/livre-algebre-1.pdf" target = "blank"download>
             <i class="fa-solid fa-download" width="50px"></i>
               </a></td>
