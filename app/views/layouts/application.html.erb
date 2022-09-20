@@ -47,6 +47,15 @@
 }
   </script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://johannburkard.de/resources/Johann/jquery.highlight-4.js"></script>
+  <script>
+    $('#research').keyup(function() {
+      var search_term = $('#research').val();
+      $('.searched').removeHighlight().highlight(search_term);
+    });
+  </script>
+
   <script>
     anychart.onDocumentReady(function () {
     // our data from bulbapedia
