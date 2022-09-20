@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   get 'documents', to: 'pages#documents'
 
+
   # get '/courses/:id/', to: 'courses#show'
 
 
