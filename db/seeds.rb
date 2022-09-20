@@ -9,9 +9,10 @@ require 'date'
 
 require "open-uri"
 
-User.destroy_all
+Message.destroy_all
 Session.destroy_all
 Course.destroy_all
+User.destroy_all
 
 
 user_1 = User.create!(email: "sara@studizy.com", nickname: "sbahhar", password: "123456")
