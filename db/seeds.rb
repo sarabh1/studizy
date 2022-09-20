@@ -10,6 +10,7 @@ require 'date'
 require "open-uri"
 
 Message.destroy_all
+Chatroom.destroy_all
 Session.destroy_all
 Course.destroy_all
 User.destroy_all
