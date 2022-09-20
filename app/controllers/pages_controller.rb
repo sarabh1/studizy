@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   end
 
   def course
+    @course = courses_path(course.id)
   end
 
 end

@@ -82,10 +82,10 @@
         <% end %>
 
 
-        <% sessions.each do |session| %>
+        <% sessions.sort_by(&:start_date).each do |session| %>
           <div class= "event">
             <%= session.start_time.to_formatted_s(:short)  %> <br> <%= session.end_date.to_formatted_s(:short)  %> <br>
-            <%= link_to session.name, "#" %>
+            <%= link_to session.name, courses_path %>
           </div>
         <% end %>
       <% end %>
