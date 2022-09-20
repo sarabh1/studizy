@@ -9,6 +9,11 @@
 
   </div>
 
+  <div class="study">
+    <p class="classs">The Pythagor University - class Maths L2</p>
+    <p class="usermail"><%= current_user.email %> </p>
+  </div>
+
   <div class="chatindex">
     <% @chatrooms.each do |chatroom| %>
       <%= link_to chatroom.name, chatroom_path(chatroom)  %>
