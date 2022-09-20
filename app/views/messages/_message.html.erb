@@ -1,6 +1,10 @@
 <div id="message-<%= message.id %>">
   <small>
+    <% if message.user.nickname == nil %>
+    <strong><%= message.user.email %></strong>
+    <% else %>
     <strong><%= message.user.nickname %></strong>
+    <% end %>
     <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
   </small>
   <p><%= message.content %></p>
