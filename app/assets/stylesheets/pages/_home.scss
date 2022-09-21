@@ -81,6 +81,9 @@ span.easy{
   margin: 12px 12px;
   border-radius: 15px;
   box-shadow: gray 1px solid;
+  max-width: 300px;
+  color: #484958;
+  font-family: sans-serif;
 
 
 }
@@ -92,6 +95,9 @@ span.easy{
   margin: 12px 12px;
   border-radius: 15px;
   box-shadow: gray 1px solid;
+  max-width: 300px;
+  color: #484958;
+  font-family: sans-serif;
 
 }
 .slogan{
@@ -102,6 +108,10 @@ span.easy{
   margin: 12px 12px;
   border-radius: 15px;
   box-shadow: gray 1px solid;
+  max-width: 300px;
+  color: #484958;
+  font-family: sans-serif;
+
 
 }
 
@@ -127,7 +137,7 @@ span.easy{
   background-color:#f5dd65;
   color: rgb(239, 135, 94);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
 }
 .landing-links a.signup:hover {
 
@@ -146,7 +156,7 @@ span.easy{
   text-decoration: none;
   color: rgb(253, 252, 252);
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
 }
 .landing-links a.login:hover {
   background-color:#8de0db;
@@ -194,16 +204,36 @@ span.easy{
 
 
 .studescription {
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content:space-evenly;
   // margin: 0 auto;
   padding: 0 30px;
 //   background-color: #f4af8951;
 }
-
-
+.slog{
+  color: #eb4f4f;
+  font-weight: bold;
+}
+.izy {
+  color:#eb4f4f;
+  background-color: #f9db46;
+  font-weight: bold;
+  padding: 2px 3px;
+  border-radius: 8px;
+}
+.bleu{
+  color: #6e7583;
+}
+.vert{
+  color: rgb(144, 158, 144);
+}
+.youpi {
+  color: rgb(122, 215, 122);
+  font-family: sans-serif;
+  font-weight: 700;
+}
 
 // =======================VERSION 1 ========================
 
