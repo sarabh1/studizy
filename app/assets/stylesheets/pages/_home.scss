@@ -64,7 +64,7 @@ span.easy{
 }
 
 .landing-content{
-  height: 500px;
+  height: 600px;
   background-image : url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_46/v1662564690/Studeasy/Sans_titre_28_nxv0qx.png');
   // background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_38/v1662551988/Studeasy/pexels-fox-1595385_snr5wa.jpg');
   // background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_34/v1662562842/Studeasy/pexels-yan-krukov-8199562_oydm05.jpg');
@@ -75,6 +75,7 @@ span.easy{
 
 .central {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 12px 12px;
@@ -86,6 +87,7 @@ span.easy{
 .docshare{
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 12px 12px;
   border-radius: 15px;
@@ -95,6 +97,7 @@ span.easy{
 .slogan{
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 12px 12px;
   border-radius: 15px;
