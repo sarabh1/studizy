@@ -7,9 +7,11 @@
       <hr>
 
     <div class="today">
+      <br>
      <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/o_55/v1663708205/Studeasy/Sans_titre_46_wq4lgq.png", width:"90px"%>
-      <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
+      <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
     </div>
+      <br>
       <hr>
 
 
@@ -57,7 +59,7 @@
 
       <div class="deadlines">
        <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
-      
+
 
 
       </div>
