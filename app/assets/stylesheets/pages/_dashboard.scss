@@ -97,7 +97,7 @@ a.btnchat:hover{
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 300px;
+  height: 450px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;
@@ -117,17 +117,20 @@ a.btnchat:hover{
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 300px;
+  height: 200px;
   padding: 20px;
   border-radius: 10px;
   margin: 12px 20px;
   text-align: center;
-  flex-grow: 1;
+  max-width: 400px;
+  // flex-grow: 1;
 
 }
 .up{
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
+  flex-direction: column;
+  // align-items: center;
 
 }
 
@@ -138,17 +141,24 @@ a.btnchat:hover{
   min-height: 500px;
   padding: 20px;
   border-radius: 10px;
-  margin: 12px 20px;
+  margin: 26px 20px 16px;
   text-align: center;
+  flex-grow: 1;
 
 }
 .week-schedule h4{
   color: rgb(65, 57, 88);
+  // margin: 0;
+  // font-size: 16px;
+}
+.week-schedule .time{
+  font-size: 14px;
+  margin: 0;
 }
 
-.modules{
-  flex-grow: 1;
-}
+// .modules{
+//   flex-grow: 1;
+// }
 #Aujourdhui {
   text-align: center;
   border: none;
@@ -162,7 +172,7 @@ a.btnchat:hover{
 }
 span.current-month {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 24px;
   color: rgb(225, 113, 109);
 
 }
@@ -184,7 +194,7 @@ p.wel {
   border-radius: 8px;
   margin-bottom: 6px;
   padding-bottom: 6px;
-  
+
 
 }
 .event:hover{
