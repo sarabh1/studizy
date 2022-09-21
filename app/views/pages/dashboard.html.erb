@@ -61,8 +61,61 @@
        <%# <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
         <h6> <i class="fa-solid fa-hourglass-end"> </i> Due dates reminder:</h6>
         <br>
+
+<%# ============================================================================ %>
+<%# TEST pour colorer les session.name selon start_date %>
+        <%# <% @sessions.each do |session| %>
+        <%# <% if session.start_date >= DateTime.now+ 6 %>
+          <%# <p><%= session.name</p> %>
+          <%# <style>
+            p {
+              color: green;
+            }
+          </style> %>
+
+        <%# <% elsif session.start_date <= DateTime.now + 1 %>
+          <%# <p><%= session.name</p> %>
+          <%# <style> %>
+            <%# /* p {
+              color: red;
+            }
+          </style> %>
+
+        <%# <% elsif session.start_date < DateTime.now + 5 %>
+          <%# <p><%= session.name</p>
+          <%# <style>
+            p {
+              color: yellow;
+            }
+          </style> %>
+
+        <%# <% elsif session.start_date > DateTime.now + 2 %>
+          <%# <p><%= session.name</p>
+          <%# <style>
+            p {
+              color: yellow;
+            }
+          </style>
+        <% end %>
+
+<%# ============================================================================= %>
+
+
+<%# ================================================================================= %>
+      <%# Test pour implémenter les 4 évènements les plus proches %>
+
+      <%# <% @sessions.first(4).each do |session| %>
+        <%# <% if session.start_date = DateTime.now %>
+          <%# <p><%= session.name</p> %>
+          <%# <style>
+            p {
+              color: green;
+            }
+          </style> %> 
+
+
         <div class="reminder4">
-          <p class ="todo"> TODAY : Exam Algebra</p>
+          <p class ="todo"> TODAY : Exam </p>
         </div>
         <div class="reminder3">
           <p class ="todo"> D - 1 : Homework Probs</p>
@@ -73,8 +126,10 @@
         <div class="reminder1">
           <p class ="todo"> D - 6 : Exam History of Maths</p>
         </div>
-      </div>
 
+      </div>
+<%#
+================================================================================== %>
 
       <div class="results-graph">
         <%# <%=  image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662828611/Studeasy/pool_7_mgpdrc.png", width:"150px" %>
@@ -89,3 +144,4 @@
 
 
 </div>
+<%# <%end %>
