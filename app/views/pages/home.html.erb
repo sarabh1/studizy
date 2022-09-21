@@ -1,23 +1,90 @@
-<div class="homebox">
 
-  <div class="homepage">
+<%# =============== VERSION 2 ===================== %>
 
-      <%# <h1>Welcome to the app that's gonna change your life!</h1>
+<div class="landingbox">
 
-      <h3>The best way to pass your exams, easily!</h3>
+  <div class="landing-content">
 
-      <p><i class="fa-solid fa-wrench"></i>... Page under construction ... <i class="fa-solid fa-wrench"></i></p> %>
-      <div class="liens">
-        <%= link_to "Sing up !", new_user_registration_path, class:"btn-signup" %>
-        <%= link_to "Log in !", new_user_session_path, class:"btn-login" %>
-
+      <div class="landing-text">
+        <h1>Studizy</h1>
+        <h3>The best way to pass your exams, easily !</h3>
       </div>
 
+      <div class="landing-links">
+        <%= link_to "Sign Up", new_user_registration_path, class:'signup'  %>
+        <%= link_to "Login", new_user_session_path, class:'login' %>
+      </div>
 
-  </div>
+    </div>
+
+    <div class="footer">
+
+        <div class="foot">
+          <p>Studizy</p>
+          <p>35, Republic Street - London</p>
+          <p>contac@studeasy.com</p>
+        </div>
+
+        <div class="icons">
+          <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          </ul>
+        </div>
 
 
-  <div class="footer">
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# ========================================= VERSION 1============================================
+
+<div class="homebox">
+
+  <div class="homepage"> %>
+
+
+      <%# <div class="liens">
+        <%= link_to "Sing up !", new_user_registration_path, class:"btn-signup" %>
+        <%# <%= link_to "Log in !", new_user_session_path, class:"btn-login" %>
+
+      <%# </div> %>
+
+
+  <%# </div> %>
+
+
+  <%# <div class="footer">
 
     <p class="follow">Follow Us !</p>
       <ul>
@@ -28,8 +95,8 @@
       <p class="info">Studizy - 18, Marble Street - LONDON </p>
       <p>Copyright www.studizy.com - All rights reserved.
       <a href="#">contact@studizy.com</a></p>
-  </div>
+  </div> %>
 
 
 
-</div>
+<%# </div> %>

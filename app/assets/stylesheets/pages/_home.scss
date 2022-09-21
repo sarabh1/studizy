@@ -1,99 +1,227 @@
 // Specific CSS for your home-page
-.homebox{
-  text-align: center;
 
+// ==================VERSION 2========================
+
+// Specific CSS for your home-page
+.landingbox{
   margin: 0 auto;
-
-}
-.homebox h1{
-  color: rgb(65, 65, 113);
-}
-.homebox h3 {
-  color: rgb(20, 162, 115);
-}
-.homepage {
-  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1663095390/Studeasy/STUDIZY_The_best_way_to_pass_your_exams_easily_bv9wxv.png');
-  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-color: rgba(49, 195, 193, 0.474);
+  // background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_38/v1662551988/Studeasy/pexels-fox-1595385_snr5wa.jpg');
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_34/v1662562842/Studeasy/pexels-yan-krukov-8199562_oydm05.jpg');
   background-size: cover;
-  height: 800px;
-  position: relative;
-}
-.homepage .liens {
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-width: 400px;
-position: absolute;
-bottom: 80px;
-right: 0px;
+  background-position: center;
 
 }
-.liens .btn-signup{
+// .landing-content{
+// //   display: flex;
+// //   flex-direction: column;
+// //   justify-content: flex-end;
+// //
+//   // position: relative;
+// }
+.landing-text{
+  margin-top: 30px;
+}
+
+.landing-text h1 {
+  font-weight: bold;
+  font-size: 120px;
+  color: rgb(212, 104, 104);
+}
+span.e{
+  color: rgb(39, 165, 155);
+}
+.landing-links{
+  // height: 100px;
+  // vertical-align: middle;
+  justify-content: center;
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+    // margin-bottom: 20px;
+  padding-top: 20px;
+  // position: absolute;
+  // bottom: 16px
+}
+.landing-links a.signup {
+  padding: 8px 12px;
   text-decoration: none;
-  background-color: rgb(248, 224, 87);
-  color: coral;
+  border-radius: 6px;
+  background-color:#d46868;
+  color: white;
   font-weight: bold;
   font-size: 20px;
-  border-radius: 10px;
-  padding: 10px 18px;
 }
-.liens .btn-signup:hover{
-  box-shadow: 0 0 1px rgb(173, 169, 169);
-  background-color:coral ;
-  color:rgb(248, 224, 87) ;
-}
-.liens .btn-login{
+.landing-links a.signup:hover {
+
+  border-radius: 6px;
   text-decoration: none;
-  background-color: rgb(139, 209, 115);
-  color: rgb(248, 224, 87);
+  background-color: white;
+  color: rgb(240, 164, 132);
+
+  font-weight: bold;
+}
+
+.landing-links a.login {
+  padding: 8px 20px;
+  background-color: rgb(50, 161, 152);
+  border-radius: 6px;
+  text-decoration: none;
+  color: rgb(253, 252, 252);
   font-weight: bold;
   font-size: 20px;
-  border-radius: 10px;
-  padding: 10px 20px;
 }
-.liens .btn-login:hover{
-  box-shadow: 0 0 1px rgb(173, 169, 169);
-  background-color: rgb(123, 123, 241) ;
-  color: rgb(201, 248, 113) ;
+.landing-links a.login:hover {
+  background-color:#41d1c8;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
-
-
 .footer {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  // height: 160px;
   text-align: center;
-  line-height: 8px;
-  padding-top: 32px;
-  padding-bottom: 8px;
-  // margin-left: 100px;
-  // margin-right: 100px;
-}
-
-.footer li {
-  text-decoration: none;
-  display: inline;
-  text-align: center;
-
-}
-
-.footer p{
-  font-size: 10px;
-}
-
-.footer .info i{
-  font-size: 16px;
-}
-.footer .follow {
-  font-size: 16px;
-}
-.footer ul{
-  padding-left: 0;
-}
-.footer i {
-  font-size: 24px;
   padding: 16px;
 }
-.footer a {
-  color: #0A98DD;
+.footer  p{
+  font-size: 10px;
+  margin-bottom: 0;
+
 }
-.footer a:hover {
-  color: #7897ab;
+.footer ul{
+  list-style: none ;
+  display: inline;
+  padding-left: 0;
 }
+.footer li{
+  padding-left: 0;
+  display: inline;
+}
+.footer i {
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 18px;
+  color: rgb(171, 164, 164);
+}
+.footer i:hover {
+  color: rgb(50, 161, 152);
+}
+.foot{
+  padding: 8px;
+}
+
+
+
+
+
+
+
+
+// =======================VERSION 1 ========================
+
+// .homebox{
+//   text-align: center;
+
+//   margin: 0 auto;
+
+// }
+// .homebox h1{
+//   color: rgb(65, 65, 113);
+// }
+// .homebox h3 {
+//   color: rgb(20, 162, 115);
+// }
+// .homepage {
+//   background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1663095390/Studeasy/STUDIZY_The_best_way_to_pass_your_exams_easily_bv9wxv.png');
+//   background-position: center;
+//   background-size: cover;
+//   height: 800px;
+//   position: relative;
+// }
+// .homepage .liens {
+// display: flex;
+// flex-direction: row;
+// justify-content: space-evenly;
+// width: 400px;
+// position: absolute;
+// bottom: 80px;
+// right: 0px;
+
+// }
+// .liens .btn-signup{
+//   text-decoration: none;
+//   background-color: rgb(248, 224, 87);
+//   color: coral;
+//   font-weight: bold;
+//   font-size: 20px;
+//   border-radius: 10px;
+//   padding: 10px 18px;
+// }
+// .liens .btn-signup:hover{
+//   box-shadow: 0 0 1px rgb(173, 169, 169);
+//   background-color:coral ;
+//   color:rgb(248, 224, 87) ;
+// }
+// .liens .btn-login{
+//   text-decoration: none;
+//   background-color: rgb(139, 209, 115);
+//   color: rgb(248, 224, 87);
+//   font-weight: bold;
+//   font-size: 20px;
+//   border-radius: 10px;
+//   padding: 10px 20px;
+// }
+// .liens .btn-login:hover{
+//   box-shadow: 0 0 1px rgb(173, 169, 169);
+//   background-color: rgb(123, 123, 241) ;
+//   color: rgb(201, 248, 113) ;
+// }
+
+
+// .footer {
+//   text-align: center;
+//   line-height: 8px;
+//   padding-top: 32px;
+//   padding-bottom: 8px;
+//   // margin-left: 100px;
+//   // margin-right: 100px;
+// }
+
+// .footer li {
+//   text-decoration: none;
+//   display: inline;
+//   text-align: center;
+
+// }
+
+// .footer p{
+//   font-size: 10px;
+// }
+
+// .footer .info i{
+//   font-size: 16px;
+// }
+// .footer .follow {
+//   font-size: 16px;
+// }
+// .footer ul{
+//   padding-left: 0;
+// }
+// .footer i {
+//   font-size: 24px;
+//   padding: 16px;
+// }
+// .footer a {
+//   color: #0A98DD;
+// }
+// .footer a:hover {
+//   color: #7897ab;
+// }

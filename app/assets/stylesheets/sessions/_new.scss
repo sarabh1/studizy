@@ -1,49 +1,101 @@
-.logform {
-  margin: 0 auto;
-  width: 300px;
-  background-color: rgb(254, 251, 247);
-  border-radius: 10px;
-  padding: 16px;
-  box-shadow: 0 0 1px 1px rgb(182, 178, 178);
-}
-h2 {
-  text-align: center;
-}
-a{
-  text-decoration: none;
 
-}
-h1{
-  color: rgb(73, 73, 123);
+// ========VERSION 2 ==================
+
+// Specific CSS for your home-page
+h2.title {
+  text-align: center;
+  color: rgb(212, 104, 104);
   font-size: 60px;
-  font-weight: bold;
-}
+  padding-top: 20px;
 
-.down{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 50px auto;
 }
+  span.s{
+    color: rgb(250, 122, 94);
+  }
+  span.t{
+    color: rgb(239, 106, 223);
+  }
+  span.u{
+    color: rgb(233, 199, 63);
+  }
+  span.d{
+    color: rgb(92, 221, 49);
+  }
+  span.i{
+    color: rgb(77, 228, 215);
+  }
+  span.z{
+    color: rgb(77, 160, 243);
+  }
+  span.y{
+    color: rgb(187, 101, 249);
+  }
 
-.up{
-  margin: 16px auto;
-}
-.up p{
-  text-align: center;
-  font-size: 20px;
-  color: rgb(234, 137, 33);
-}
-.fond{
-  width: 400px;
-}
+  .loginbox{
+    background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_51/v1662566617/Studeasy/Sans_titre_29_ya9euw.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin: 0 auto;
+  }
 
-.logbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(246, 227, 195);
-}
-.logbox h1{
-  text-align: center;
-}
+  .logformbox{
+  background-color: rgb(244, 246, 246);
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 1px 1px rgba(214, 212, 212, .5);
+  }
+
+// ========VERSION 1 ===================
+
+// .logform {
+//   margin: 0 auto;
+//   width: 300px;
+//   background-color: rgb(254, 251, 247);
+//   border-radius: 10px;
+//   padding: 16px;
+//   box-shadow: 0 0 1px 1px rgb(182, 178, 178);
+// }
+// h2 {
+//   text-align: center;
+// }
+// a{
+//   text-decoration: none;
+
+// }
+// h1{
+//   color: rgb(73, 73, 123);
+//   font-size: 60px;
+//   font-weight: bold;
+// }
+
+// .down{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   margin: 50px auto;
+// }
+
+// .up{
+//   margin: 16px auto;
+// }
+// .up p{
+//   text-align: center;
+//   font-size: 20px;
+//   color: rgb(234, 137, 33);
+// }
+// .fond{
+//   width: 400px;
+// }
+
+// .logbox {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   background-color: rgb(246, 227, 195);
+// }
+// .logbox h1{
+//   text-align: center;
+// }
