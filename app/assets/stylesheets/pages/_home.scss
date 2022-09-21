@@ -9,9 +9,10 @@
   display: flex;
   flex-direction: column;
   height: 600px;
-  background-color: rgba(49, 195, 193, 0.474);
+  // background-color: rgba(49, 195, 193, 0.474);
+  background-image : url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_46/v1662564690/Studeasy/Sans_titre_28_nxv0qx.png');
   // background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_38/v1662551988/Studeasy/pexels-fox-1595385_snr5wa.jpg');
-  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_34/v1662562842/Studeasy/pexels-yan-krukov-8199562_oydm05.jpg');
+  // background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_34/v1662562842/Studeasy/pexels-yan-krukov-8199562_oydm05.jpg');
   background-size: cover;
   background-position: center;
 
@@ -31,10 +32,41 @@
   font-weight: bold;
   font-size: 120px;
   color: rgb(212, 104, 104);
+  letter-spacing: 0;
 }
-span.e{
-  color: rgb(39, 165, 155);
+span.s{
+  color: rgb(250, 122, 94);
 }
+span.t{
+  color: rgb(239, 106, 223);
+}
+span.u{
+  color: rgb(233, 199, 63);
+}
+span.d{
+  color: rgb(92, 221, 49);
+}
+span.i{
+  color: rgb(77, 228, 215);
+}
+span.z{
+  color: rgb(77, 160, 243);
+}
+span.y{
+  color: rgb(187, 101, 249);
+}
+h3{
+  color:#fd9861;
+  background-color: white;
+  // width: 400px;
+  // text-align: center;
+  padding: 8px;
+}
+span.easy{
+  color: #eb4f4f;
+  font-weight: bold;
+}
+
 .landing-links{
   // height: 100px;
   // vertical-align: middle;
@@ -47,36 +79,39 @@ span.e{
   // position: absolute;
   // bottom: 16px
 }
+.landing-links a{
+  margin: 0 30px;
+}
 .landing-links a.signup {
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 6px;
-  background-color:#d46868;
-  color: white;
+  background-color:#f5dd65;
+  color: rgb(239, 135, 94);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 .landing-links a.signup:hover {
 
   border-radius: 6px;
   text-decoration: none;
-  background-color: white;
-  color: rgb(240, 164, 132);
+  background-color: rgb(239, 135, 94);
+  color: #f5dd65;
 
   font-weight: bold;
 }
 
 .landing-links a.login {
   padding: 8px 20px;
-  background-color: rgb(50, 161, 152);
+  background-color: rgb(55, 190, 179);
   border-radius: 6px;
   text-decoration: none;
   color: rgb(253, 252, 252);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 .landing-links a.login:hover {
-  background-color:#41d1c8;
+  background-color:#8de0db;
   border-radius: 6px;
   text-decoration: none;
   color: white;
