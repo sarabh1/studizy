@@ -7,9 +7,11 @@
       <hr>
 
     <div class="today">
+      <br>
      <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/o_55/v1663708205/Studeasy/Sans_titre_46_wq4lgq.png", width:"90px"%>
-      <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
+      <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
     </div>
+      <br>
       <hr>
 
 
@@ -56,10 +58,21 @@
     <div class="up">
 
       <div class="deadlines">
-       <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
-      
-
-
+       <%# <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
+        <h6> <i class="fa-solid fa-hourglass-end"> </i> Due dates reminder:</h6>
+        <br>
+        <div class="reminder4">
+          <p class ="todo"> TODAY : Exam Algebra</p>
+        </div>
+        <div class="reminder3">
+          <p class ="todo"> D - 1 : Homework Probs</p>
+        </div>
+        <div class="reminder2">
+          <p class ="todo"> D - 4 : TD Geometry</p>
+        </div>
+        <div class="reminder1">
+          <p class ="todo"> D - 6 : Exam History of Maths</p>
+        </div>
       </div>
 
 
