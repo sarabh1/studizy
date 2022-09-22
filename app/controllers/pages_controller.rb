@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @sessions = current_user.sessions
     @courses = current_user.courses
 
+
     start_date = params.fetch(:start_date, Date.today).to_date
     @sessions = Session.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
@@ -16,8 +17,8 @@ class PagesController < ApplicationController
   def chatroom
   end
 
-  def course
-    @course = courses_path(course.id)
-  end
+  # def course
+  #   @course = courses_path(course.id)
+  # end
 
 end

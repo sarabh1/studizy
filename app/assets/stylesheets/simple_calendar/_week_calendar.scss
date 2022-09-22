@@ -2,6 +2,7 @@
 .simple-calendar {
   .day a{
   color: rgb(135, 83, 200);
+  text-decoration: none;
   }
   .day a:hover {
     color: rgb(56, 70, 190);
@@ -10,9 +11,23 @@
   .calendar{
     height: 500px;
   }
+  .calendar-heading a{
+    text-decoration: none;
+    color: rgb(106, 102, 129);
+    font-weight: bold;
+  }
 
-  // .day {}
-  // .day:hover{
+  .calendar-heading a:hover{
+    text-decoration: none;
+    color: rgb(114, 101, 188);
+    font-weight: bold;
+  }
+  .day {
+    background-color: rgba(231, 236, 243, 0.632);
+  }
+  .day:hover{
+    background-color: rgb(255, 255, 255);
+  }
   //   color: orange;
   // }
 
@@ -21,10 +36,12 @@
   // .wday-2 {}
   // .wday-3 {}
   // .wday-4 {}
-  // .wday-5 {}
-  // .wday-6 {}
 
-  // .today {}
+
+
+  .today {
+    background-color: rgba(146, 194, 145, 0.3);
+  }
   // .past {}
   // .future {}
 
