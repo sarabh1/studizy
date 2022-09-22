@@ -35,7 +35,7 @@
     <h4> <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
 
 
-
+<%# <%raise %>
     <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
       <%= date.day %>
        <br>
@@ -62,59 +62,49 @@
         <h6> <i class="fa-solid fa-hourglass-end"> </i> Due dates reminder:</h6>
         <br>
 
-<%# ============================================================================ %>
-<%# TEST pour colorer les session.name selon start_date %>
-        <%# <% @sessions.each do |session| %>
-        <%# <% if session.start_date >= DateTime.now+ 6 %>
-          <%# <p><%= session.name</p> %>
-          <%# <style>
-            p {
-              color: green;
-            }
-          </style> %>
-
-        <%# <% elsif session.start_date <= DateTime.now + 1 %>
-          <%# <p><%= session.name</p> %>
-          <%# <style> %>
-            <%# /* p {
-              color: red;
-            }
-          </style> %>
-
-        <%# <% elsif session.start_date < DateTime.now + 5 %>
-          <%# <p><%= session.name</p>
-          <%# <style>
-            p {
-              color: yellow;
-            }
-          </style> %>
-
-        <%# <% elsif session.start_date > DateTime.now + 2 %>
-          <%# <p><%= session.name</p>
-          <%# <style>
-            p {
-              color: yellow;
-            }
-          </style>
+        <% if @red_sessions %>
+          <% @red_sessions.each do |session|%>
+            <p class ="dead1">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead1 {
+                    background-color: rgb(244, 203, 192);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
         <% end %>
 
-<%# ============================================================================= %>
-
-
-<%# ================================================================================= %>
-      <%# Test pour implémenter les 4 évènements les plus proches %>
-
-        <% @sessions.each do |session| %>
-          <% if session.start_date > DateTime.now %>
-            <p class ="dead"> <% @sessions.first(4) %>
-              <%= link_to session.start_time.to_formatted_s(:short), session.course %> >> <%= session.course.title %> : <%= session.name %>  </p>
-              <style>
-                .dead {
-                  color: green;
-                 }
-              </style>
+        <% if @yellow_sessions %>
+          <% @yellow_sessions.each do |session|%>
+            <p class ="dead2">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead2 {
+                    background-color: rgb(246, 245, 196);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
           <%end%>
-         <%end %>
+        <% end %>
+
+        <% if @green_sessions %>
+          <% @green_sessions.each do |session|%>
+            <p class ="dead3">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead3 {
+                    background-color: rgb(199, 243, 200);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
+        <% end %>
+
+
 
 
 
@@ -150,4 +140,3 @@
 
 
 </div>
-<%# <%end %>

@@ -8,7 +8,10 @@ class SessionsController < ApplicationController
   def index
     # Scope your query to the dates being shown:
     start_date = params.fetch(:start_date, Date.today).to_date
-    @sessions = Session.where(starts_at: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @sessions = Session.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @sessions_fourth = @sessions.select {|session| session.start_date > DateTime.now}.sort_by(&:start_time).first(4)
+    @red_sessions = @sessions_fourth.select {|session| session.start_date <= DateTime.now + 2}
+    raise
   end
 
   private
@@ -16,7 +19,6 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:name, :tag_list) ## Rails 4 strong params usage
   end
-
 end
 
 
