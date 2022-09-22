@@ -16,7 +16,6 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:name, :tag_list) ## Rails 4 strong params usage
   end
-
 end
 
 

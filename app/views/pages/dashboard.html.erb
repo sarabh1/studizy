@@ -104,18 +104,21 @@
 <%# ================================================================================= %>
       <%# Test pour implémenter les 4 évènements les plus proches %>
 
-        <% @sessions.each do |session| %>
-          <% if session.start_date > DateTime.now %>
-            <p class ="dead"> <% @sessions.first(4) %>
-              <%= link_to session.start_time.to_formatted_s(:short), session.course %> >> <%= session.course.title %> : <%= session.name %>  </p>
-              <style>
-                .dead {
-                  color: green;
-                 }
-              </style>
-          <%end%>
-         <%end %>
+      <% @sessions.sort_by(&:start_time).each do |session| %>
+          <% if session.start_date >= DateTime.now + 6 %>
+              <%# <% @sessions.first(4) %>
+              <p class ="dead">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead {
+                    background-color: rgb(199, 243, 200);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
 
+          <%end%>
+      <%end %>
 
 
 
