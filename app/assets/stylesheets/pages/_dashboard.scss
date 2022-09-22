@@ -98,7 +98,7 @@ a.btnchat:hover{
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
   height: 450px;
-  // padding: 20px;
+  padding: 16px;
   border-radius: 10px;
   margin: 12px 20px;
   text-align: center;
@@ -125,13 +125,33 @@ a.btnchat:hover{
   max-width: 400px;
   flex-grow: 1;
 }
-.dead{
+.dead1{
   font-size: 14px;
   font-family: sans-serif;
   color: gray;
 
 }
-.dead a{
+.dead1 a{
+  text-decoration: none;
+
+}
+.dead2{
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
+
+}
+.dead2 a{
+  text-decoration: none;
+
+}
+.dead3{
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
+
+}
+.dead3{
   text-decoration: none;
 
 }
