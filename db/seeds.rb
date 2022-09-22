@@ -63,7 +63,7 @@ session_22 = Session.create!(course: course_3, name: "Probabilities - Intro", st
 session_23 = Session.create!(course: course_1, name: "Circles", start_date: DateTime.new(2022, 9, 15, 8, 30), end_date: DateTime.new(2022, 9, 15, 10, 30))
 session_24 = Session.create!(course: course_2, name: "Arythmetic", start_date: DateTime.new(2022, 9, 13, 8, 30), end_date: DateTime.new(2022, 9, 13, 10, 30))
 
-session_25 = Session.create!(course: course_2, name: "Homework - Algebra", start_date: DateTime.new(2022, 4, 14, 00), end_date: DateTime.new(2022, 10, 04, 15, 00))
+session_25 = Session.create!(course: course_2, name: "Homework - Algebra", start_date: DateTime.new(2022, 10, 5, 14,00), end_date: DateTime.new(2022, 10, 5, 15, 00))
 session_26 = Session.create!(course: course_1, name: "Circles area", start_date: DateTime.new(2022, 10, 05, 8, 30), end_date: DateTime.new(2022, 10, 5, 10, 30))
 session_27 = Session.create!(course: course_2, name: "{A + B} ~2Z", start_date: DateTime.new(2022, 10, 05, 15, 30), end_date: DateTime.new(2022, 10, 5, 17, 30))
 session_28 = Session.create!(course: course_2, name: "Functions & systems", start_date: DateTime.new(2022, 10, 6, 14, 00), end_date: DateTime.new(2022, 10, 6, 15, 00))
