@@ -104,17 +104,22 @@
 <%# ================================================================================= %>
       <%# Test pour implémenter les 4 évènements les plus proches %>
 
-      <%# <% @sessions.first(4).each do |session| %>
-        <%# <% if session.start_date = DateTime.now %>
-          <%# <p><%= session.name</p> %>
-          <%# <style>
-            p {
-              color: green;
-            }
-          </style> %> 
+        <% @sessions.first(5).each do |session| %>
+          <% if session.start_date > DateTime.now %>
+            <p class ="dead"><%= link_to session.start_time.to_formatted_s(:short), session.course %> >> <%= session.course.title %> : <%= session.name %>  </p>
+              <style>
+                .dead {
+                  color: green;
+                 }
+              </style>
+          <%end%>
+         <%end %>
 
 
-        <div class="reminder4">
+
+
+
+        <%# <div class="reminder4">
           <p class ="todo"> TODAY : Exam </p>
         </div>
         <div class="reminder3">
@@ -125,7 +130,7 @@
         </div>
         <div class="reminder1">
           <p class ="todo"> D - 6 : Exam History of Maths</p>
-        </div>
+        </div> %>
 
       </div>
 <%#
