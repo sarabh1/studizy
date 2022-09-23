@@ -41,7 +41,7 @@ course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 
 session_1 = Session.create!(course: course_2, name: "Exam - limits X", start_date: DateTime.new(2022, 9, 29, 14, 00), end_date: DateTime.new(2022, 9, 29, 16, 00))
 session_2 = Session.create!(course: course_1, name: "Systems x + y", start_date: DateTime.new(2022, 9, 20, 10, 00), end_date: DateTime.new(2022, 9, 20, 12, 00))
 session_3 = Session.create!(course: course_2, name: "{A + B} + 2", start_date: DateTime.new(2022, 9, 19, 8, 30), end_date: DateTime.new(2022, 9, 19, 10, 30))
-session_4 = Session.create!(course: course_2, name: "ax + cy = d", start_date: DateTime.new(2022, 9, 30, 14, 00), end_date: DateTime.new(2022, 9, 30, 15, 00))
+session_4 = Session.create!(course: course_2, name: "Homework -  (ax + cy = d)", start_date: DateTime.new(2022, 9, 30, 14, 00), end_date: DateTime.new(2022, 9, 30, 15, 00))
 session_5 = Session.create!(course: course_3, name: "Dice Probabilities", start_date: DateTime.new(2022, 9, 23, 8, 30), end_date: DateTime.new(2022, 9, 23, 10, 30))
 session_6 = Session.create!(course: course_3, name: "Loto game", start_date: DateTime.new(2022, 9, 22, 8, 00), end_date: DateTime.new(2022, 9, 22, 10, 00))
 session_7 = Session.create!(course: course_4, name: "Da Vinci", start_date: DateTime.new(2022, 10, 3, 8, 45), end_date: DateTime.new(2022, 10, 3, 10, 15))
@@ -72,7 +72,7 @@ session_30 = Session.create!(course: course_3, name: "TD: Probs", start_date: Da
 session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 10, 8, 45), end_date: DateTime.new(2022, 10, 10, 10, 15))
 session_32 = Session.create!(course: course_1, name: "Calculation", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
 session_33 = Session.create!(course: course_4, name: "Homework - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
-
+session_34 = Session.create!(course: course_1, name: "Exam - (a + b )/ x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
 
 
 chatroom_1 = Chatroom.create!(name: "General")
