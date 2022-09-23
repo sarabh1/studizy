@@ -49,13 +49,19 @@
             <p class="td"><%= link_to session.name, session.course %></p>
             <style>
                   .td{
-                    background-color: rgb(245, 216, 160);
-                    margin-bottom: 0;
+                    /* background-color: rgb(245, 216, 160); */
+                    margin-bottom: 6px;
                     border-radius : 8px;
+                  }
+                  .td:hover{
+                    background-color : rgb(242, 202, 121);
                   }
                   .event-td{
                     background-color: rgb(245, 216, 160);
                     border-radius : 8px;
+                  }
+                  .event-td:hover{
+                    background-color : rgb(242, 202, 121);
                   }
                 </style>
 
@@ -66,16 +72,22 @@
           <p class="exam"><%= link_to session.name, session.course %></p>
             <style>
                   .exam {
-                    background-color: rgb(244, 203, 192);
-                    margin-bottom: 0;
+                    /* background-color: rgb(244, 203, 192); */
+                    margin-bottom: 6px;
                     border-radius : 8px;
                   }
+                  /* .exam:hover{
+                    background-color: rgb(241, 164, 142);
+                  } */
                   .event-exam{
                     background-color: rgb(244, 203, 192);
                     border-radius : 8px;
                     margin-bottom: 6px;
                   }
-                </style>
+                  .event-exam:hover{
+                    background-color: rgb(241, 164, 142);
+                  }
+            </style>
 
 
           <% elsif session.name.include?("Homework")  %>
@@ -84,15 +96,21 @@
           <p class="hm"><%= link_to session.name, session.course %></p>
             <style>
                   .hm {
-                     background-color: rgb(116, 211, 226);
-                     margin-bottom: 0;
+                     /* background-color: rgb(116, 211, 226); */
+                     margin-bottom: 6px;
                      border-radius : 8px;
                    }
+                   /* .hm:hover{
+                    background-color:  rgb(201, 233, 238);
+                   } */
                    .event-hm{
-                     background-color: rgb(116, 211, 226);
+                     background-color:rgb(201, 233, 238);
                      border-radius : 8px;
                      margin-bottom: 6px;
                    }
+                   .event-hm:hover{
+                    background-color: rgb(116, 211, 226);
+                  }
             </style>
 
 
@@ -104,6 +122,9 @@
                   .ev {
                       margin-bottom: 0;
                       margin-bottom: 6px;
+                   }
+                   .ev:hover{
+                    color: rgb(111, 95, 177);
                    }
             </style>
           <% end %>

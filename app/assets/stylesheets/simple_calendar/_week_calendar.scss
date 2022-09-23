@@ -3,10 +3,12 @@
   .day a{
   color: rgb(102, 98, 186);
   text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
   }
   .day a:hover {
-    color: rgb(105, 106, 107);
-  font-weight:bold;
+    color: rgb(102, 98, 186);
+    font-weight:bold;
   }
   .calendar{
     height: 500px;
@@ -32,7 +34,7 @@
   //   color: orange;
   // }
   .lol{
-    color: rgb(116, 211, 226);
+    color: rgb(231, 232, 234);
   }
 
   // .wday-0 {}
