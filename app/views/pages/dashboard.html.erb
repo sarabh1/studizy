@@ -35,14 +35,103 @@
     <h4> <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
 
 
-
+<%# <%raise %>
     <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
       <%= date.day %>
        <br>
       <% sessions.sort_by(&:start_date).each do |session| %>
-        <div class= "event">
+        <% if session.name.include?("TD")  %>
+        <div class= "event-td">
           <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
-          <%= link_to session.name, session.course %>
+          <%# <%= link_to session.name, session.course %>
+          <%# ========================== %>
+
+            <p class="td"><%= link_to session.name, session.course %></p>
+            <style>
+                  .td{
+                    /* background-color: rgb(245, 216, 160); */
+                    margin-bottom: 6px;
+                    border-radius : 8px;
+                  }
+                  .td:hover{
+                    background-color : rgb(242, 202, 121);
+                  }
+                  .event-td{
+                    background-color: rgb(245, 216, 160);
+                    border-radius : 8px;
+                  }
+                  .event-td:hover{
+                    background-color : rgb(242, 202, 121);
+                  }
+                </style>
+
+
+          <% elsif session.name.include?("Exam") %>
+          <div class= "event-exam">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+          <p class="exam"><%= link_to session.name, session.course %></p>
+            <style>
+                  .exam {
+                    /* background-color: rgb(244, 203, 192); */
+                    margin-bottom: 6px;
+                    border-radius : 8px;
+                  }
+                  /* .exam:hover{
+                    background-color: rgb(241, 164, 142);
+                  } */
+                  .event-exam{
+                    background-color: rgb(244, 203, 192);
+                    border-radius : 8px;
+                    margin-bottom: 6px;
+                  }
+                  .event-exam:hover{
+                    background-color: rgb(241, 164, 142);
+                  }
+            </style>
+
+
+          <% elsif session.name.include?("Homework")  %>
+          <div class= "event-hm">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+          <p class="hm"><%= link_to session.name, session.course %></p>
+            <style>
+                  .hm {
+                     /* background-color: rgb(116, 211, 226); */
+                     margin-bottom: 6px;
+                     border-radius : 8px;
+                   }
+                   /* .hm:hover{
+                    background-color:  rgb(201, 233, 238);
+                   } */
+                   .event-hm{
+                     background-color:rgb(201, 233, 238);
+                     border-radius : 8px;
+                     margin-bottom: 6px;
+                   }
+                   .event-hm:hover{
+                    background-color: rgb(116, 211, 226);
+                  }
+            </style>
+
+
+          <% else %>
+          <div class= "event">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+           <p class ="ev"> <%= link_to session.name, session.course %> </p>
+            <style>
+                  .ev {
+                      margin-bottom: 0;
+                      margin-bottom: 6px;
+                   }
+                   .ev:hover{
+                    color: rgb(111, 95, 177);
+                   }
+            </style>
+          <% end %>
+
+
+<%#
+          ========================== %>
         </div>
       <% end %>
     <% end %>
@@ -62,59 +151,49 @@
         <h6> <i class="fa-solid fa-hourglass-end"> </i> Due dates reminder:</h6>
         <br>
 
-<%# ============================================================================ %>
-<%# TEST pour colorer les session.name selon start_date %>
-        <%# <% @sessions.each do |session| %>
-        <%# <% if session.start_date >= DateTime.now+ 6 %>
-          <%# <p><%= session.name</p> %>
-          <%# <style>
-            p {
-              color: green;
-            }
-          </style> %>
-
-        <%# <% elsif session.start_date <= DateTime.now + 1 %>
-          <%# <p><%= session.name</p> %>
-          <%# <style> %>
-            <%# /* p {
-              color: red;
-            }
-          </style> %>
-
-        <%# <% elsif session.start_date < DateTime.now + 5 %>
-          <%# <p><%= session.name</p>
-          <%# <style>
-            p {
-              color: yellow;
-            }
-          </style> %>
-
-        <%# <% elsif session.start_date > DateTime.now + 2 %>
-          <%# <p><%= session.name</p>
-          <%# <style>
-            p {
-              color: yellow;
-            }
-          </style>
+        <% if @red_sessions %>
+          <% @red_sessions.each do |session|%>
+            <p class ="dead1">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead1 {
+                    background-color: rgb(244, 203, 192);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
         <% end %>
 
-<%# ============================================================================= %>
-
-
-<%# ================================================================================= %>
-      <%# Test pour implémenter les 4 évènements les plus proches %>
-
-        <% @sessions.each do |session| %>
-          <% if session.start_date > DateTime.now %>
-            <p class ="dead"> <% @sessions.first(4) %>
-              <%= link_to session.start_time.to_formatted_s(:short), session.course %> >> <%= session.course.title %> : <%= session.name %>  </p>
-              <style>
-                .dead {
-                  color: green;
-                 }
-              </style>
+        <% if @yellow_sessions %>
+          <% @yellow_sessions.each do |session|%>
+            <p class ="dead2">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead2 {
+                    background-color: rgb(246, 245, 196);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
           <%end%>
-         <%end %>
+        <% end %>
+
+        <% if @green_sessions %>
+          <% @green_sessions.each do |session|%>
+            <p class ="dead3">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead3 {
+                    background-color: rgb(199, 243, 200);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
+        <% end %>
+
+
 
 
 
@@ -150,4 +229,3 @@
 
 
 </div>
-<%# <%end %>
