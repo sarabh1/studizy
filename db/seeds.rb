@@ -72,7 +72,7 @@ session_30 = Session.create!(course: course_3, name: "TD: Probs", start_date: Da
 session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 10, 8, 45), end_date: DateTime.new(2022, 10, 10, 10, 15))
 session_32 = Session.create!(course: course_1, name: "Calculation", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
 session_33 = Session.create!(course: course_4, name: "Homework - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
-session_34 = Session.create!(course: course_1, name: "Exam - (a + b )/ x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
+session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
 
 
 chatroom_1 = Chatroom.create!(name: "General")
