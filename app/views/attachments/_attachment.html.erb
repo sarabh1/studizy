@@ -1,0 +1,13 @@
+<div id="attachment-<%= message.id %>">
+  <small>
+    <strong><%= attachment.user.nickname %></strong>
+    <i><%= attachment.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+  </small>
+  <p>
+    <% @message.attachments.each do |attachment| %>
+      <%# <%= cl_image_tag attachment.key, height: 300, width: 400, crop: :fill %>
+      <%= link_to 'Download', message.attachment %>
+       <%= @message.attachments.attach(params[:attachments]) %>
+    <% end %>
+  </p>
+</div>
