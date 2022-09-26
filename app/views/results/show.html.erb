@@ -11,7 +11,7 @@
 
 
        <tr>
-        <%  @results.each do |result| %>
+        <%  @results.sort_by(&:date).reverse.each do |result| %>
           <td><%= result.date.strftime("%Y/%b/%d")  %></td>
           <td><%= result.value %></td>
       </tr>
