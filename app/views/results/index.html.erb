@@ -1,4 +1,4 @@
-<h1>Your Results</h1>
+<h1 class= "notes-title">Your Results</h1>
 
 
 <%# <h3> <%= link_to "Algebra" , @results %> </h3>
@@ -11,13 +11,28 @@
 
 
 <%# <h3><%= link_to "History of Maths" , @results %> </h3>
+<div class="bigbox">
 
- <div class= "notes">
-      <% @courses.each do |course| %>
-              <div class="notes-infos">
-                  <h2> <%= course.title %></h2>
-                  <br>
-                  <%= link_to "View results", result_path(course.id)%>
-              <div>
-      <% end %>
+  <div class="resultbox">
+        <% @courses.each do |course| %>
+          <div class= "notes-info">
+                    <h2> <%= course.title %></h2>
+                    <br>
+                    <%= link_to "View results", result_path(course.id)%>
+          </div>
+        <% end %>
   </div>
+
+  <div class="photo">
+    <%# <h1 class="stud">
+            <span class ="s">S</span>
+            <span class ="t">t</span>
+            <span class ="u">u</span>
+            <span class ="d">d</span>
+            <span class ="i">i</span>
+            <span class ="z">z</span>
+            <span class ="y">y</span>
+    </h1> %>
+  </div>
+
+</div>
