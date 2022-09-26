@@ -1,0 +1,108 @@
+.boardbox{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  height: 700px;
+  // width: 800px;
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1664226485/Studeasy/pexels-olia-danilevich-5088017_rwercq.jpg');
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+
+
+}
+.bg{
+  background-color: rgba(244, 247, 249, 0.453);
+  padding: 50px;
+  border-radius: 10px;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+
+}
+.board {
+  margin: auto;
+
+}
+.notes{
+  margin: 0 auto;
+  background-color: rgb(240, 233, 233);
+  border-radius: 6px;
+
+}
+.high th{
+  border-color: rgb(123, 126, 125);
+  }
+
+
+.notes td, th{
+  font-family: sans-serif;
+  text-align: center;
+  padding: 24px;
+}
+.notes .notevalue {
+  color: rgb(7, 151, 218);
+  font-weight: bold;
+  border-color: rgb(157, 157, 157);
+}
+.notes .datetd{
+  color: rgb(169, 169, 169);
+  border-color: rgb(157, 157, 157);
+}
+
+.course-title{
+  text-align: left;
+  padding: 12px 20px 0;
+  margin-bottom: 0;
+}
+
+.avgs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 200px;
+}
+.your-avg{
+  height: 100px;
+  // width: 300px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 24px 0;
+  background-color: rgba(242, 243, 248, 0.852);
+}
+.class-avg{
+  height: 100px;
+  // width: 300px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 24px 0;
+  background-color: rgba(242, 243, 248, 0.852);
+}
+
+.h6avg{
+  color: rgb(109, 109, 121);
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.your-avg p{
+  color: rgb(92, 191, 92);
+  font-weight: bold;
+  font-size: 16px;
+}
+.class-avg p{
+  color: coral;
+  font-weight: bold;
+  font-size: 16px;
+}
