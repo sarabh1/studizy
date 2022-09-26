@@ -21,6 +21,8 @@ class PagesController < ApplicationController
   def chatroom
   end
 
+
+
   # def course
   #   @course = courses_path(course.id)
   # end

@@ -1,0 +1,14 @@
+<h1> <%= @course.title %> </h1>
+<br><br>
+
+<hr>
+
+<%  @results.each do |result| %>
+ <%= result.date.strftime("%y/%b/%d")  %> <%= result.value %>
+<% end %>
+
+
+
+<br><br><br>
+
+<p> <%= link_to "Back" , results_path %> </p>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_17_070034) do
+ActiveRecord::Schema.define(version: 2022_09_26_105424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,17 @@ ActiveRecord::Schema.define(version: 2022_09_17_070034) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.float "value"
+    t.bigint "user_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.date "date"
+    t.index ["course_id"], name: "index_results_on_course_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -142,6 +153,8 @@ ActiveRecord::Schema.define(version: 2022_09_17_070034) do
   add_foreign_key "courses", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "results", "courses"
+  add_foreign_key "results", "users"
   add_foreign_key "sessions", "courses"
   add_foreign_key "student_courses", "courses"
   add_foreign_key "student_courses", "users"

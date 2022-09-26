@@ -1,0 +1,23 @@
+<h1>Your Results</h1>
+
+
+<%# <h3> <%= link_to "Algebra" , @results %> </h3>
+
+
+<%# <h3><%= link_to "Geometry" , @results%> </h3>
+
+
+<%# <h3><%= link_to "Probabilities" , @results %> </h3>
+
+
+<%# <h3><%= link_to "History of Maths" , @results %> </h3>
+
+ <div class= "notes">
+      <% @courses.each do |course| %>
+              <div class="notes-infos">
+                  <h2> <%= course.title %></h2>
+                  <br>
+                  <%= link_to "View results", result_path(course.id)%>
+              <div>
+      <% end %>
+  </div>
