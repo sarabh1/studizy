@@ -4,11 +4,15 @@
     <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
   </small>
   <p><%= message.content %>
+
   <% @message.attachments.each do |attachment| %>
-    <%= link_to attachment, :download => 'File'  do %>
+    <%# option dowload a file mais mauvais file inside
+    <%= link_to @attachment, :download => 'File'  do %>
+
+    <%= link_to attachment, :download => 'File', target: "_blank" do %>
       <%= cl_image_tag attachment.key, height: 200, width: 300, :crop=>"scale" %>
     <% end %>
-    <%# <%= cl_image_tag attachment.key, height: 300, width: 400, crop: :fill %>
+
   <% end %>
   </p>
 </div>

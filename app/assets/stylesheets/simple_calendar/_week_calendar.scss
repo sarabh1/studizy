@@ -9,6 +9,7 @@
   .day a:hover {
     color: rgb(102, 98, 186);
     font-weight:bold;
+
   }
   .calendar{
     height: 500px;
@@ -27,8 +28,12 @@
   // .day {
   //   background-color: rgba(231, 236, 243, 0.632);
   // }
-  // .day:hover{
-  //   border-bottom: solid gray 1px;
+  .day:hover{
+    // border-right: solid gray 1px;
+    border-bottom: solid rgb(65, 67, 66) 1px;
+    // border-left: solid gray 1px;
+
+  }
   //   background-color:rgba(226, 237, 252, 0.993) ;
   // }
   //   color: orange;

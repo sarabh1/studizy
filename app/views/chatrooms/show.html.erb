@@ -14,9 +14,9 @@
     <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
     <% end %>
-    <% @message.attachments.each do |attachment| %>
-          <%= render "attachments/attachment", attachment: attachment %>
-    <% end %>
+    <%# <% @message.attachments.each do |attachment| %>
+          <%# <%= render "attachments/attachment", attachment: attachment %>
+    <%# <% end %> 
 
   </div>
 
@@ -26,7 +26,7 @@
       <% @message.attachments.each do |attachment| %>
           <%# <%= render "attachments/attachment", attachment: attachment %>
       <%# <% end %>
-  <%# </div> %> 
+  <%# </div> %>
 
 <%# === %>
 
