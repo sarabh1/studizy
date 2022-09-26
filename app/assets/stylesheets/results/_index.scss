@@ -24,6 +24,9 @@
   background-color: rgb(255, 255, 255);
   height: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 .notes-info h2{
@@ -36,11 +39,15 @@
   padding: 4px 6px;
   box-shadow: solid lightgrey 1px;
   font-family: sans-serif;
+  border: 1px lightgray solid;
+  margin: 0 100px;
+  // width: fit-content;
+  // text-align: center;
 }
 .notes-info a:hover{
   text-decoration: none;
   color: rgb(146, 167, 212);
-  font-weight: bold;
+  // font-weight: bold;
   border-radius: 6px;
   padding: 4px 6px;
   box-shadow: solid lightgrey 1px;
