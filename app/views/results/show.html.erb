@@ -3,9 +3,20 @@
 
 <hr>
 
-<%  @results.each do |result| %>
- <%= result.date.strftime("%Y/%b/%d")  %> <%= result.value %>
-<% end %>
+<table class="notes">
+      <tr>
+        <th>Exam's date</th>
+        <th> Result</th>
+      </tr>
+
+
+       <tr>
+        <%  @results.each do |result| %>
+          <td><%= result.date.strftime("%Y/%b/%d")  %></td>
+          <td><%= result.value %></td>
+      </tr>
+        <% end %>
+</table>
 
 
 
