@@ -16,7 +16,7 @@ Course.destroy_all
 User.destroy_all
 
 
-user_1 = User.create!(email: "sarah@studizy.com", nickname: "shbahhar", password: "123456")
+user_1 = User.create!(email: "sara@studizy.com", nickname: "shbahhar", password: "123456")
 user_2 = User.create!(email: "ophe@studizy.com", nickname: "ophphng", password: "123456")
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')

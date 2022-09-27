@@ -16,7 +16,7 @@
     <% end %>
     <%# <% @message.attachments.each do |attachment| %>
           <%# <%= render "attachments/attachment", attachment: attachment %>
-    <%# <% end %> 
+    <%# <% end %>
 
   </div>
 
@@ -36,6 +36,7 @@
     <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}", wrapper_html: {class: "flex-grow-1"} %>
     <%= f.input :attachments, as: :file, input_html: { multiple: true } %>
     <%= f.submit "Send", class: "btn btn-primary" %>
+
   <% end %>
 
 
