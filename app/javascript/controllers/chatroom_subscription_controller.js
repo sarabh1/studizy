@@ -3,26 +3,25 @@ import consumer from "../channels/consumer"
 
 export default class extends Controller {
   static values = { chatroomId: Number }
-  static targets = ["messages", "attachments"]
+  static targets = ["messages"]
 
   connect() {
     console.log(`Subscribe to the chatroom with the id ${this.chatroomIdValue}.`)
+    let message = document.querySelector(".messages")
+    message.scrollTop = message.scrollHeight;
     this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       {received: data => this.#insertMessageAndScrollDown(data)}
-      // {received: data => this.#insertAttachmentAndScrollDown(data)}
     )
     console.log(`Subscribed to the chatroom with the id ${this.chatroomIdValue}.`)
   }
 
   #insertMessageAndScrollDown(data) {
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
-    this.messagesTarget.scrollTo(0, this.element.scrollHeight)
+    let message = document.querySelector(".messages")
+    message.scrollTop = message.scrollHeight;
   }
-  // #insertAttachmentAndScrollDown(data) {
-  //   this.attachmentsTarget.insertAdjacentHTML("beforeend", data)
-  //   this.attachmentsTarget.scrollTo(0, this.element.scrollHeight)
-  // }
+
   resetForm(event) {
     event.target.reset()
   }
