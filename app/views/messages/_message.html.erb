@@ -22,6 +22,11 @@
           <div class="message-content">
               <p><%= message.content %></p>
           </div>
+
+          <% message.attachments.each do |attachment| %>
+            <%= link_to attachment.blob.filename.to_s, cl_image_path(attachment.key), target: "_blank" %>
+          <% end %>
+
       </div>
   </div>
 
@@ -47,7 +52,13 @@
         <div class="message-content">
           <p><%= message.content %></p>
         </div>
+
+        <% message.attachments.each do |attachment| %>
+          <%= link_to attachment.blob.filename.to_s, cl_image_path(attachment.key), target: "_blank" %>
+        <% end %>
+
       </div>
   </div>
 
-<% end %>
+<% end %>  
+

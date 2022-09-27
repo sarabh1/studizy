@@ -3,118 +3,229 @@
 <div class="global-dash">
 
   <div class="menu">
-
     <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
-    <hr>
-     <%= link_to "Courses", courses_path, class:"btncourses" %>
-    <hr>
+      <hr>
+
+    <div class="today">
+      <br>
+     <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/o_55/v1663708205/Studeasy/Sans_titre_46_wq4lgq.png", width:"90px"%>
+      <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
+    </div>
+      <br>
+      <hr>
+
+
+    <%= link_to "Courses", courses_path, class:"btncourses" %>
+      <hr>
     <%=  link_to "Documents", documents_path, class:"btndoc" %>
-    <hr>
-    <%= link_to "Results", "#", class:'btnresults' %>
-    <hr>
+      <hr>
+    <%= link_to "Results", results_path, class:'btnresults' %>
+      <hr>
     <%= link_to "Chat", chatrooms_path, class:"btnchat" %>
-    <hr>
-    <br>
-    <br>
-    <br>
-  <div class="today">
-   <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1663155422/Studeasy/Sans_titre_37_ph2ll9.png", width:"120px"%>
-    <p> <% @date= Date.today %> <%= @date.strftime('%A %d %B %Y') %></p>
+      <hr>
+      <br>
+      <br>
+      <br>
+
   </div>
 
-  <%# <div class="avatar">
-    <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1663353326/Studeasy/Sans_titre_45_ksvex8.png', width:"100px" %>
+
+  <div class="week-schedule">
+
+    <h4> <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
+
+
+<%# <%raise %>
+    <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
+      <%= date.day %>
+       <br>
+      <% sessions.sort_by(&:start_date).each do |session| %>
+        <% if session.name.include?("TD")  %>
+        <div class= "event-td">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+          <%# <%= link_to session.name, session.course %>
+          <%# ========================== %>
+
+            <p class="td"><%= link_to session.name, session.course %></p>
+            <style>
+                  .td{
+                    /* background-color: rgb(245, 216, 160); */
+                    margin-bottom: 6px;
+                    border-radius : 8px;
+                  }
+                  .td:hover{
+                    background-color : rgb(242, 202, 121);
+                  }
+                  .event-td{
+                    background-color: rgb(245, 216, 160);
+                    border-radius : 8px;
+                  }
+                  .event-td:hover{
+                    background-color : rgb(242, 202, 121);
+                  }
+                </style>
+
+
+          <% elsif session.name.include?("Exam") %>
+          <div class= "event-exam">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+          <p class="exam"><%= link_to session.name, session.course %></p>
+            <style>
+                  .exam {
+                    /* background-color: rgb(244, 203, 192); */
+                    margin-bottom: 6px;
+                    border-radius : 8px;
+                  }
+                  /* .exam:hover{
+                    background-color: rgb(241, 164, 142);
+                  } */
+                  .event-exam{
+                    background-color: rgb(244, 203, 192);
+                    border-radius : 8px;
+                    margin-bottom: 6px;
+                  }
+                  .event-exam:hover{
+                    background-color: rgb(241, 164, 142);
+                  }
+            </style>
+
+
+          <% elsif session.name.include?("Homework")  %>
+          <div class= "event-hm">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+          <p class="hm"><%= link_to session.name, session.course %></p>
+            <style>
+                  .hm {
+                     /* background-color: rgb(116, 211, 226); */
+                     margin-bottom: 6px;
+                     border-radius : 8px;
+                   }
+                   /* .hm:hover{
+                    background-color:  rgb(201, 233, 238);
+                   } */
+                   .event-hm{
+                     background-color:rgb(201, 233, 238);
+                     border-radius : 8px;
+                     margin-bottom: 6px;
+                   }
+                   .event-hm:hover{
+                    background-color: rgb(116, 211, 226);
+                  }
+            </style>
+
+
+          <% else %>
+          <div class= "event">
+          <p class ="time"><%= session.start_time.to_formatted_s(:time)  %> - <%= session.end_date.to_formatted_s(:time)  %></p>
+           <p class ="ev"> <%= link_to session.name, session.course %> </p>
+            <style>
+                  .ev {
+                      margin-bottom: 0;
+                      margin-bottom: 6px;
+                   }
+                   .ev:hover{
+                    color: rgb(111, 95, 177);
+                   }
+            </style>
+          <% end %>
+
+
+<%#
+          ========================== %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+    <%# </div>
+
+
+  </div> %>
+  <%# <div class="modules"> %>
+
+    <div class="up">
+
+      <div class="deadlines">
+       <%# <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
+        <h6> <i class="fa-solid fa-hourglass-end"> </i> Due dates reminder:</h6>
+        <br>
+
+        <% if @red_sessions %>
+          <% @red_sessions.each do |session|%>
+            <p class ="dead1">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead1 {
+                    background-color: rgb(244, 203, 192);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
+        <% end %>
+
+        <% if @yellow_sessions %>
+          <% @yellow_sessions.each do |session|%>
+            <p class ="dead2">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead2 {
+                    background-color: rgb(246, 245, 196);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
+        <% end %>
+
+        <% if @green_sessions %>
+          <% @green_sessions.each do |session|%>
+            <p class ="dead3">
+              <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
+                <style>
+                  .dead3 {
+                    background-color: rgb(199, 243, 200);
+                    border-radius: 15px;
+                    padding: 2px 4px;
+                  }
+                </style>
+          <%end%>
+        <% end %>
+
+
+
+
+
+
+
+        <%# <div class="reminder4">
+          <p class ="todo"> TODAY : Exam </p>
+        </div>
+        <div class="reminder3">
+          <p class ="todo"> D - 1 : Homework Probs</p>
+        </div>
+        <div class="reminder2">
+          <p class ="todo"> D - 4 : TD Geometry</p>
+        </div>
+        <div class="reminder1">
+          <p class ="todo"> D - 6 : Exam History of Maths</p>
+        </div> %>
+
+      </div>
+<%#
+================================================================================== %>
+
+      <div class="results-graph">
+        <%# <%=  image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662828611/Studeasy/pool_7_mgpdrc.png", width:"150px" %>
+        <div id="container">
+          <%# <p class="chartp">Last exams sessions results</p> %>
+        </div>
+      </div>
+
+    </div>
   <%# </div> %>
 
 
 
-      <%# <input id="Aujourdhui" type="date" name="date" value="" readonly>
-        <script>
-          document.getElementById("Aujourdhui").valueAsDate = new Date();
-        </script> %>
-
-
-  </div>
-
-
-  <div class="modules">
-
-    <div class="up">
-
-      <div class="results-graph">
-
-        <%# <%=  image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662828611/Studeasy/pool_7_mgpdrc.png", width:"150px" %>
-        <div id="container">
-          <p class="chartp">Last exams sessions results</p>
-
-        </div>
-
-      </div>
-
-      <div class="deadlines">
-
-      <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
-
-
-      </div>
-
-    </div>
-
-    <div class="week-schedule">
-    <br>
-      <h4>Your 2 next weeks Schedule for : <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
-
-      <br>
-
-      <%# <%= week_calendar(number_of_weeks: 2) do |date| %>
-        <%# <%= date.day %>
-      <%# <% end %>
-
-      <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
-        <%= date.day %>
-        <br>
-
-
-        <%# <% 8.upto(17).each do |hour| %>
-          <%# <div>
-            <%= Time.parse("#{hour}:00").strftime("%l %P") %>
-          <%# </div>
-        <% end %>
-
-
-        <% sessions.sort_by(&:start_date).each do |session| %>
-          <div class= "event">
-            <%= session.start_time.to_formatted_s(:short)  %> <br> <%= session.end_date.to_formatted_s(:short)  %> <br>
-            <%= link_to session.name, session.course %>
-          </div>
-        <% end %>
-      <% end %>
-
-
-
-
-<%# =============================================================================
-      <%= week_calendar(number_of_weeks:2, attribute: :start_date, events: @sessions) do |date, sessions| %>
-        <%# <%= date.day %>
-
-        <%# <% sessions.each do |session, name| %>
-          <%# <div>
-            <%= @session %>
-          <%# </div>
-        <% end %>
-      <%# <% end %>
-<%# ============================================================================== %>
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
 </div>

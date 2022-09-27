@@ -4,7 +4,7 @@ display: flex;
 border-radius: 6px;
 flex-direction: row;
 padding-bottom: 18px;
-background-color: rgba(251, 217, 204, 0.459);
+// background-color: rgba(240, 206, 191, 0.459);
 
 margin: 0 auto;
 width: 100%;
@@ -97,8 +97,8 @@ a.btnchat:hover{
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 300px;
-  padding: 20px;
+  height: 450px;
+  padding: 16px;
   border-radius: 10px;
   margin: 12px 20px;
   text-align: center;
@@ -117,17 +117,79 @@ a.btnchat:hover{
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 300px;
+  // height: 250px;
   padding: 20px;
   border-radius: 10px;
-  margin: 12px 20px;
-  text-align: center;
+  margin: 26px 20px;
+  // text-align: center;
+  max-width: 400px;
   flex-grow: 1;
+}
+.dead1{
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
 
 }
+.dead1 a{
+  text-decoration: none;
+
+}
+.dead2{
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
+
+}
+.dead2 a{
+  text-decoration: none;
+
+}
+.dead3{
+  font-size: 14px;
+  font-family: sans-serif;
+  color: gray;
+
+}
+.dead3 a{
+  text-decoration: none;
+
+}
+.deadlines p.todo {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 6px;
+}
+.deadlines h6 {
+  color: gray ;
+  font-family: sans-serif;
+}
+
+
+
+// .deadlines .reminder1{
+//   border-radius: 15px;
+//   background-color: rgb(199, 243, 200);
+// }
+// .deadlines .reminder2{
+//   border-radius: 15px;
+//   background-color: rgb(246, 245, 196);
+// }
+// .deadlines .reminder3{
+//   border-radius: 15px;
+//   background-color: rgb(244, 203, 192);
+// }
+// .deadlines .reminder4{
+//   border-radius: 15px;
+//   background-color: rgb(244, 203, 192);
+// }
 .up{
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
+  flex-direction: column;
+  // align-items: center;
 
 }
 
@@ -138,31 +200,40 @@ a.btnchat:hover{
   min-height: 500px;
   padding: 20px;
   border-radius: 10px;
-  margin: 12px 20px;
+  margin: 26px 20px 16px;
   text-align: center;
+  flex-grow: 1;
 
 }
 .week-schedule h4{
   color: rgb(65, 57, 88);
+  // margin: 0;
+  // font-size: 16px;
+}
+.week-schedule .time{
+  font-size: 14px;
+  margin: 0;
 }
 
-.modules{
-  flex-grow: 1;
-}
+// .modules{
+//   flex-grow: 1;
+// }
 #Aujourdhui {
   text-align: center;
   border: none;
   justify-content: center;
   color: rgb(225, 113, 109);
 
+
 }
 .today p{
+  margin-top: 6px;
   color: rgb(225, 113, 109);
   font-weight: bold;
 }
 span.current-month {
-  font-weight: bold;
-  font-size: 30px;
+  font-weight:bold;
+  font-size: 24px;
   color: rgb(225, 113, 109);
 
 }
@@ -180,16 +251,18 @@ p.wel {
   display: none;
 }
 .event {
-  background-color: rgb(211, 225, 252);
+  // background-color: rgb(211, 225, 252);
+  background-color: rgba(243, 244, 255, 0.992);
   border-radius: 8px;
   margin-bottom: 6px;
   padding-bottom: 6px;
-  
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+
 
 }
 .event:hover{
-  background-color: rgb(133, 190, 246);
+  background-color: rgb(231, 236, 250);
   font-weight: 600;
-  color: white;
+  // color: rgb(111, 95, 177);
 
 }

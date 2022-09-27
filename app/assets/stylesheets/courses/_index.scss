@@ -2,7 +2,23 @@
     overflow: hidden;
     background: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
 
+  }
+  .titlecourses{
+    padding: 24px 24px 0px 36px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .upcourses p{
+    padding: 24px 36px;
+    margin-bottom: 0;
+  }
+  .upcourses{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 
   .card-course > img {
@@ -35,8 +51,9 @@
   .result {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 48px;
-    margin: 16px;
+    grid-gap: 36px;
+    margin: 36px 36px 36px 36px;
+    padding-bottom: 36px;
   }
 
   .card-course .btn-flat {

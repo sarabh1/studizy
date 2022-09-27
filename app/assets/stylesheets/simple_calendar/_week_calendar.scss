@@ -1,27 +1,58 @@
 
 .simple-calendar {
   .day a{
-  color: rgb(135, 83, 200);
+  color: rgb(102, 98, 186);
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
   }
   .day a:hover {
-    color: rgb(56, 70, 190);
-  font-weight:600;
+    color: rgb(102, 98, 186);
+    font-weight:bold;
+
+  }
+  .calendar{
+    height: 500px;
+  }
+  .calendar-heading a{
+    text-decoration: none;
+    color: rgb(106, 102, 129);
+    font-weight: bold;
   }
 
-  // .day {}
-  // .day:hover{
+  .calendar-heading a:hover{
+    text-decoration: none;
+    color: rgb(114, 101, 188);
+    font-weight: bold;
+  }
+  // .day {
+  //   background-color: rgba(231, 236, 243, 0.632);
+  // }
+  .day:hover{
+    // border-right: solid gray 1px;
+    border-bottom: solid rgb(65, 67, 66) 1px;
+    // border-left: solid gray 1px;
+
+  }
+  //   background-color:rgba(226, 237, 252, 0.993) ;
+  // }
   //   color: orange;
   // }
+  .lol{
+    color: rgb(242, 169, 121);
+  }
 
   // .wday-0 {}
   // .wday-1 {}
   // .wday-2 {}
   // .wday-3 {}
   // .wday-4 {}
-  // .wday-5 {}
-  // .wday-6 {}
 
-  // .today {}
+
+
+  .today {
+    background-color: #f9f9d4;
+  }
   // .past {}
   // .future {}
 

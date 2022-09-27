@@ -1,19 +1,26 @@
-<h1>List of courses</h1>
+<div class="coursesindex">
 
-<div class= "result">
+  <div class="upcourses">
+    <h1 class ="titlecourses">Your courses</h1>
+    <p><b>Maths Sup L2 </b>- Pythagor University</p>
+  </div>
 
-    <% @courses.each do |course| %>
-        <div class="card-course">
-        <%= cl_image_tag course.photo.key %>
-            <div class="card-course-infos">
-                <h2> <%= course.title %></h2>
-                <p> <%= course.description %></p>
-                <%# <p> Created by Professor (user_id) <%= course.user_id %>
-                <%# <p>Teacher ? <%= current_user.teacher? %>
-                <br>
-                <%= link_to "View course", course_path(course.id), class: "btn btn-flat" %>
-                <img src="https://loremflickr.com/1080/1080/portrait" class="card-course-teacher avatar-bordered" />
-            </div>
-        </div>
-    <% end %>
+  <div class= "result">
+      <% @courses.each do |course| %>
+          <div class="card-course">
+          <%= cl_image_tag course.photo.key %>
+              <div class="card-course-infos">
+                  <h2> <%= course.title %></h2>
+                  <p> <%= course.description %></p>
+                  <%# <p> Created by Professor (user_id) <%= course.user_id %>
+                  <%# <p>Teacher ? <%= current_user.teacher? %>
+                  <br>
+                  <%= link_to "View course", course_path(course.id), class: "btn btn-flat" %>
+                  <img src="https://loremflickr.com/1080/1080/portrait" class="card-course-teacher avatar-bordered" />
+              </div>
+          </div>
+      <% end %>
+  </div>
+
+
 </div>

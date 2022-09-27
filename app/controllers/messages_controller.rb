@@ -1,5 +1,9 @@
 class MessagesController < ApplicationController
   
+  def index
+    @messages = Message.all
+  end
+
   def create
     @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
@@ -19,8 +23,13 @@ class MessagesController < ApplicationController
 
   private
 
-  def message_params
-    params.require(:message).permit(:content)
-  end
+  # def message_params
+  #   params.require(:message).permit(:content)
+  # end
 
+
+
+  def message_params
+    params.require(:message).permit(:content, :body, attachments: [])
+  end
 end

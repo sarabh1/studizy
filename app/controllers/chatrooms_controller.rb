@@ -8,4 +8,10 @@ class ChatroomsController < ApplicationController
     @message = Message.new
     @messages = @chatroom.messages
   end
+
+  # private
+
+  # def chatroom_params
+  #   params.require(:chatroom).permit(:content, :body, attachments: [])
+  # end
 end

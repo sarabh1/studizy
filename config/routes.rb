@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :chatrooms, only: [:show, :index, :destroy] do
-    resources :messages, only: [:create, :destroy]
+    resources :messages, only: [:create, :destroy, :index]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   get 'home', to: 'pages#home'
   get 'documents', to: 'pages#documents'
+  get 'results', to: 'results#index'
 
 
   # get '/courses/:id/', to: 'courses#show'
@@ -23,4 +24,6 @@ Rails.application.routes.draw do
   end
 
   resources :student_courses, only: [ :edit, :update ]
+
+  resources :results
 end
