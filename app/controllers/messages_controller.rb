@@ -1,15 +1,15 @@
 class MessagesController < ApplicationController
+  
   def index
     @messages = Message.all
   end
-
 
   def create
     @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
     @message.user = current_user
-    if @message.save
+    if @message.save!
       ChatroomChannel.broadcast_to(
         @chatroom,
         render_to_string(partial: "message", locals: {message: @message})
@@ -19,6 +19,7 @@ class MessagesController < ApplicationController
       render "chatrooms/show"
     end
   end
+
 
   private
 

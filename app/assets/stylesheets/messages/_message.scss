@@ -1,0 +1,41 @@
+.message-info{
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+
+.message-content{
+    background-color: #F4F4F4;
+    width: fit-content;
+    border-radius: 10px 10px 10px 0px;
+    border: solid;
+    padding: 4px;
+    border-width: thin;
+    border-color: #49497B;
+    margin-bottom: 4px;
+}
+
+.message-content p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current-user-messages {
+    display: flex;
+    justify-content: flex-end;
+
+    .message {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        .message-content {
+            background-color: #E9F2FF;
+            border-radius: 10px 10px 0px 10px;
+            display: flex;
+        }
+    } 
+}
+
+
+
