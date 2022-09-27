@@ -20,21 +20,21 @@ user_1 = User.create!(email: "sarah@studizy.com", nickname: "shbahhar", password
 user_2 = User.create!(email: "ophe@studizy.com", nickname: "ophphng", password: "123456")
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
-course_1 = Course.create!(title: "GEOMETRY", description: "Geometry (from Ancient Greek γεωμετρία (geōmetría) 'land measurement', is, with arithmetic, one of the oldest branches of mathematics.", user: user_1)
+course_1 = Course.create!(title: "GEOMETRY", description: "Geometry (from Ancient Greek γεωμετρία (geōmetría) 'land measurement', is, with arithmetic, one of the oldest branches of mathematics.", user: user_1, average: 13.8)
 course_1.photo.attach(io: file_1, filename: 'geometrie.jpeg', content_type: 'image/jpeg')
 #attach est une méthode d'active storage ! (pour ça qu'on le fait en pls temps)
 
 file_2 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663091017/l7me3qjih824vj0kxkx9.jpg')
-course_2 =  Course.create!(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.", user: user_1)
+course_2 =  Course.create!(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.", user: user_1, average: 12.4)
 course_2.photo.attach(io: file_2, filename: 'algebre.jpeg', content_type: 'image/jpeg')
 
 file_3 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095197/pexels-lil-artsy-1111597_tpmuq3.jpg')
-course_3 =  Course.create!(title: "PROBABILITIES", description: "Probability is the branch of mathematics concerning numerical descriptions of how likely an event is to occur, or how likely it is that a proposition is true.", user: user_1)
+course_3 =  Course.create!(title: "PROBABILITIES", description: "Probability is the branch of mathematics concerning numerical descriptions of how likely an event is to occur, or how likely it is that a proposition is true.", user: user_1, average: 14.1)
 course_3.photo.attach(io: file_3, filename: 'probabilite.jpeg', content_type: 'image/jpeg')
 
 file_4 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095374/800px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes_zwdpo6.jpg')
 course_4 = Course.create!(title: "MATHS HISTORY", description: "
-  Mathematics is used in science for modeling phenomena, which then allows predictions to be made from experimental laws.", user: user_1)
+  Mathematics is used in science for modeling phenomena, which then allows predictions to be made from experimental laws.", user: user_1, average: 12.5)
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
