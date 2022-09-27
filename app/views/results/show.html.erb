@@ -24,8 +24,9 @@
     <div class="avgs">
       <div class="your-avg">
         <h6 class="h6avg">Your average</h6>
-         <p> <%= @results.average(:value) %>  </p>
-        <%# #il faut implémenter le calcul de la moyenne %>
+
+         <p> <%= @results.average(:value).round(1) %>  </p>
+
       </div>
 
       <div class="class-avg">
