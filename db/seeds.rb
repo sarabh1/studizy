@@ -83,15 +83,15 @@ chatroom_5 = Chatroom.create!(name: "History of Maths")
 chatroom_6 = Chatroom.create!(name: "Professors room")
 
 
-geo_1 = Result.create!(value: 15, course: course_2, date: DateTime.now - 3, user: user_1)
-geo_2 = Result.create!(value: 12, course: course_2, date: DateTime.now - 10, user: user_1)
-geo_3 = Result.create!(value: 16, course: course_2, date: DateTime.now - 17, user: user_1)
-geo_4 = Result.create!(value: 14, course: course_2, date: DateTime.now - 21, user: user_1)
+geo_1 = Result.create!(value: 15, course: course_1, date: DateTime.now - 3, user: user_1)
+geo_2 = Result.create!(value: 12, course: course_1, date: DateTime.now - 10, user: user_1)
+geo_3 = Result.create!(value: 16, course: course_1, date: DateTime.now - 17, user: user_1)
+geo_4 = Result.create!(value: 14, course: course_1, date: DateTime.now - 21, user: user_1)
 
-alg_1 = Result.create!(value: 9, course: course_1, date: DateTime.now, user: user_1)
-alg_2 = Result.create!(value: 11, course: course_1, date: DateTime.now - 11,user: user_1)
-alg_3 = Result.create!(value: 9, course: course_1, date: DateTime.now - 18, user: user_1)
-alg_4 = Result.create!(value: 10, course: course_1, date: DateTime.now - 21, user: user_1)
+alg_1 = Result.create!(value: 9, course: course_2, date: DateTime.now, user: user_1)
+alg_2 = Result.create!(value: 11, course: course_2, date: DateTime.now - 11,user: user_1)
+alg_3 = Result.create!(value: 9, course: course_2, date: DateTime.now - 18, user: user_1)
+alg_4 = Result.create!(value: 10, course: course_2, date: DateTime.now - 21, user: user_1)
 
 prob_1 = Result.create!(value: 13, course: course_3, date: DateTime.now - 3, user: user_1)
 prob_2 = Result.create!(value: 12, course: course_3, date: DateTime.now - 10, user: user_1)
