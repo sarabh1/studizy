@@ -24,12 +24,26 @@
     <div class="avgs">
       <div class="your-avg">
         <h6 class="h6avg">Your average</h6>
-        <p> 12,8 </p>
+         <p> 12.8 </p>
+        <%# #il faut implémenter le calcul de la moyenne %>
       </div>
 
       <div class="class-avg">
         <h6 class="h6avg">Class average</h6>
-        <p> 12,4 </p>
+          <p> <%= @course.average %> </p>
+            <%# <% if @course.title == "Geometry"%>
+              <%# <p>  14,1 </p>
+            <% end %>
+            <%# <% if @course.title == "Algebra" %>
+              <%# <p> 12,4 </p>
+            <% end %>
+            <%# <% if @course.title == "Probabilities" %>
+              <%# <p> 13,7 </p>
+            <% end %>
+            <%# <% if @course.title == "Maths History" %>
+              <%# <p> 15,3 </p>
+            <% end %>
+
       </div>
     </div>
   </div>
