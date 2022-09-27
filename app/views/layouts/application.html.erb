@@ -3,6 +3,9 @@
   <head>
     <title>Studizy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Noto+Sans:wght@100;300;500&family=Open+Sans:wght@400;500&family=Poppins:wght@100;200;500&family=Roboto+Serif:opsz,wght@8..144,100&family=Roboto:ital,wght@0,100;0,400;1,700&family=Source+Sans+Pro:wght@200;300;400;600&family=Space+Mono&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8110e6fe91.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -99,11 +102,11 @@
       chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
 
            // create first series
-      chart.line(data1)
+      // chart.line(data1)
       // create second series
       // chart.line(data2)
       // create third series
-      chart.line(data3)
+      // chart.line(data3)
         // create first series
       chart.area(data1).name('9 sept 2022').markers(true).fill("#E55934", 0.3).stroke("#E55934")
       // create second series
@@ -122,4 +125,5 @@
 
     });
   </script>
+
 </html>
