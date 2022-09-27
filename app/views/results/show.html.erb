@@ -1,0 +1,40 @@
+<h1 class="course-title"> <%= @course.title %> </h1>
+
+
+<div class="boardbox">
+  <div class="bg">
+
+
+    <div class="board">
+        <table class="notes">
+              <tr class ="high">
+                <th>Exam's date</th>
+                <th> Result</th>
+              </tr>
+
+              <tr>
+                <%  @results.sort_by(&:date).reverse.each do |result| %>
+                  <td class="datetd"><%= result.date.strftime("%Y-%b-%d")  %></td>
+                  <td class ="notevalue"><%= result.value %></td>
+              </tr>
+                <% end %>
+        </table>
+    </div>
+
+    <div class="avgs">
+      <div class="your-avg">
+        <h6 class="h6avg">Your average</h6>
+        <p> 12,8 </p>
+      </div>
+
+      <div class="class-avg">
+        <h6 class="h6avg">Class average</h6>
+        <p> 12,4 </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+<p> <%= link_to "Back" , results_path %> </p>

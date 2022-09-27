@@ -41,7 +41,7 @@ course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 
 session_1 = Session.create!(course: course_2, name: "Exam - limits X", start_date: DateTime.new(2022, 9, 29, 14, 00), end_date: DateTime.new(2022, 9, 29, 16, 00))
 session_2 = Session.create!(course: course_1, name: "Systems x + y", start_date: DateTime.new(2022, 9, 20, 10, 00), end_date: DateTime.new(2022, 9, 20, 12, 00))
 session_3 = Session.create!(course: course_2, name: "{A + B} + 2", start_date: DateTime.new(2022, 9, 19, 8, 30), end_date: DateTime.new(2022, 9, 19, 10, 30))
-session_4 = Session.create!(course: course_2, name: "ax + cy = d", start_date: DateTime.new(2022, 9, 30, 14, 00), end_date: DateTime.new(2022, 9, 30, 15, 00))
+session_4 = Session.create!(course: course_2, name: "Homework -  (ax + cy = d)", start_date: DateTime.new(2022, 9, 30, 14, 00), end_date: DateTime.new(2022, 9, 30, 15, 00))
 session_5 = Session.create!(course: course_3, name: "Dice Probabilities", start_date: DateTime.new(2022, 9, 23, 8, 30), end_date: DateTime.new(2022, 9, 23, 10, 30))
 session_6 = Session.create!(course: course_3, name: "Loto game", start_date: DateTime.new(2022, 9, 22, 8, 00), end_date: DateTime.new(2022, 9, 22, 10, 00))
 session_7 = Session.create!(course: course_4, name: "Da Vinci", start_date: DateTime.new(2022, 10, 3, 8, 45), end_date: DateTime.new(2022, 10, 3, 10, 15))
@@ -72,7 +72,7 @@ session_30 = Session.create!(course: course_3, name: "TD: Probs", start_date: Da
 session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 10, 8, 45), end_date: DateTime.new(2022, 10, 10, 10, 15))
 session_32 = Session.create!(course: course_1, name: "Calculation", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
 session_33 = Session.create!(course: course_4, name: "Homework - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
-
+session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
 
 
 chatroom_1 = Chatroom.create!(name: "General")
@@ -81,3 +81,23 @@ chatroom_3 = Chatroom.create!(name: "Algebra")
 chatroom_4 = Chatroom.create!(name: "Probabilities")
 chatroom_5 = Chatroom.create!(name: "History of Maths")
 chatroom_6 = Chatroom.create!(name: "Professors room")
+
+
+geo_1 = Result.create!(value: 15, course: course_2, date: DateTime.now - 3, user: user_1)
+geo_2 = Result.create!(value: 12, course: course_2, date: DateTime.now - 10, user: user_1)
+geo_3 = Result.create!(value: 16, course: course_2, date: DateTime.now - 17, user: user_1)
+geo_4 = Result.create!(value: 14, course: course_2, date: DateTime.now - 21, user: user_1)
+
+alg_1 = Result.create!(value: 9, course: course_1, date: DateTime.now, user: user_1)
+alg_2 = Result.create!(value: 11, course: course_1, date: DateTime.now - 11,user: user_1)
+alg_3 = Result.create!(value: 9, course: course_1, date: DateTime.now - 18, user: user_1)
+alg_4 = Result.create!(value: 10, course: course_1, date: DateTime.now - 21, user: user_1)
+
+prob_1 = Result.create!(value: 13, course: course_3, date: DateTime.now - 3, user: user_1)
+prob_2 = Result.create!(value: 12, course: course_3, date: DateTime.now - 10, user: user_1)
+prob_3 = Result.create!(value: 14, course: course_3, date: DateTime.now - 17, user: user_1)
+
+
+hist_1 = Result.create!(value: 14, course: course_4, date: DateTime.now - 5, user: user_1)
+hist_2 = Result.create!(value: 15, course: course_4, date: DateTime.now - 12, user: user_1)
+hist_3 = Result.create!(value: 14, course: course_4, date: DateTime.now - 19, user: user_1)

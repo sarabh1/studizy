@@ -9,6 +9,7 @@
   .day a:hover {
     color: rgb(102, 98, 186);
     font-weight:bold;
+
   }
   .calendar{
     height: 500px;
@@ -24,17 +25,21 @@
     color: rgb(114, 101, 188);
     font-weight: bold;
   }
-  .day {
-    background-color: rgba(231, 236, 243, 0.632);
-  }
+  // .day {
+  //   background-color: rgba(231, 236, 243, 0.632);
+  // }
   .day:hover{
-    border-bottom: solid gray 1px;
-    background-color:rgba(226, 237, 252, 0.993) ;
+    // border-right: solid gray 1px;
+    border-bottom: solid rgb(65, 67, 66) 1px;
+    // border-left: solid gray 1px;
+
   }
+  //   background-color:rgba(226, 237, 252, 0.993) ;
+  // }
   //   color: orange;
   // }
   .lol{
-    color: rgb(231, 232, 234);
+    color: rgb(242, 169, 121);
   }
 
   // .wday-0 {}
@@ -46,7 +51,7 @@
 
 
   .today {
-    background-color: rgb(245, 244, 223);
+    background-color: #f9f9d4;
   }
   // .past {}
   // .future {}

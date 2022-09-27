@@ -6,4 +6,6 @@ class Course < ApplicationRecord
   has_one_attached :photo
   has_many_attached :documents
   has_one :calendar
+
+  has_many :results, dependent: :destroy
 end
