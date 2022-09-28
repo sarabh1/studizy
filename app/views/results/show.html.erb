@@ -1,54 +1,52 @@
 <h1 class="course-title"> <%= @course.title %> </h1>
 
-
 <div class="boardbox">
-  <div class="bg">
 
-
-    <div class="board">
-        <table class="notes">
-              <tr class ="high">
-                <th>Exam's date</th>
-                <th> Result</th>
-              </tr>
-
-              <tr>
-                <%  @results.sort_by(&:date).reverse.each do |result| %>
-                  <td class="datetd"><%= result.date.strftime("%Y-%b-%d")  %></td>
+  <div class="board">
+      <table class="notes">
+            <tr class ="high">
+              <th>Exam's date</th>
+              <th> Result</th>
+            </tr>
+            <tr>
+              <%  @results.sort_by(&:date).reverse.each do |result| %>
+                <td class="datetd"><%= result.date.strftime("%Y-%b-%d")  %></td>
+                <% if result.value < 10 %>
                   <td class ="notevalue"><%= result.value %></td>
-              </tr>
+                    <style>
+                      .notevalue {
+                        color: rgb(237, 109, 89);
+                      }
+                    </style>
+                <% elsif result.value >= 10  %>
+                  <td class ="noteplus"><%= result.value %></td>
                 <% end %>
-        </table>
-    </div>
-
-    <div class="avgs">
-      <div class="your-avg">
-        <h6 class="h6avg">Your average</h6>
-
-         <p> <%= @results.average(:value).round(1) %>  </p>
-
-      </div>
-
-      <div class="class-avg">
-        <h6 class="h6avg">Class average</h6>
-          <p> <%= @course.average %> </p>
-            <%# <% if @course.title == "Geometry"%>
-              <%# <p>  14,1 </p>
-            <% end %>
-            <%# <% if @course.title == "Algebra" %>
-              <%# <p> 12,4 </p>
-            <% end %>
-            <%# <% if @course.title == "Probabilities" %>
-              <%# <p> 13,7 </p>
-            <% end %>
-            <%# <% if @course.title == "Maths History" %>
-              <%# <p> 15,3 </p>
-            <% end %>
-
-      </div>
-    </div>
+            </tr>
+              <% end %>
+      </table>
   </div>
+
+
+
+  <div class="avgs">
+
+    <div class="your-avg">
+      <%= image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664293875/Studeasy/Sans_titre_53_teyxrt.png", width:"100px" %>
+      <h6 class="h6avg">Your average</h6>
+        <p> <%= @results.average(:value).round(1) %>  </p>
+    </div>
+
+    <div class="class-avg">
+      <%= image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664293907/Studeasy/Sans_titre_52_f5e3sg.png", width:"100px" %>
+      <h6 class="h6avg">Class average</h6>
+        <p> <%= @course.average %> </p>
+    </div>
+
+  </div>
+
 </div>
+
+
 
 <br><br><br>
 
