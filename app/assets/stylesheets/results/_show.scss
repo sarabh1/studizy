@@ -11,24 +11,37 @@
 .boardbox{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 800px;
+  justify-content:center;
   margin: 20px auto;
+  background: linear-gradient(#f6cdcd, #bec3f9);
 }
 
 // A tableau de notes
 .board {
-  margin: auto;
+  margin: 48px 0;
+  width: 400px;
 }
 .notes{
   margin: 0 auto;
   background-color: rgba(242, 243, 248, 0.852);
-  border-radius: 6px;
+  border-radius: 10px;
+  // padding: 15px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .high th{
   border-color: rgb(123, 126, 125);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   }
+.topleft{
+  border-top-left-radius: 10px;
+  color: rgb(92, 88, 88);
+}
+.topright
+{
+  border-bottom-right-radius: 10px;
+  color: rgb(92, 88, 88);
+}
 .notes td, th{
   font-family: sans-serif;
   text-align: center;
@@ -54,12 +67,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  width: 200px;
+  margin: 24px 24px;
+  width: 300px;
+
 }
 .your-avg{
-  height: 200px;
-  // width: 300px;
+  height: 250px;
+  width: 300px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 8px;
   display: flex;
@@ -67,12 +81,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 24px 0;
+  margin: auto;
   background-color: rgba(242, 243, 248, 0.852);
 }
 .class-avg{
-  height: 200px;
-  // width: 300px;
+  height: 250px;
+  width: 300px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 8px;
   display: flex;
@@ -80,7 +94,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 24px 0;
+  margin: auto;
   background-color: rgba(242, 243, 248, 0.852);
 }
 .h6avg{
