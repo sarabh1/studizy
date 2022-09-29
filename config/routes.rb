@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
   root to: 'pages#home'
 
@@ -13,11 +12,6 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   get 'documents', to: 'pages#documents'
   get 'results', to: 'results#index'
-
-
-  # get '/courses/:id/', to: 'courses#show'
-
-
 
   resources :courses do
     resources :sessions

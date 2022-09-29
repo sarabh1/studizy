@@ -227,10 +227,10 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Geometry', 'Algebra', 'Probabilities', 'Maths History', 'General'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'average grades',
+            data: [13.8, 12.4, 14.1, 12.5, 13.2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -254,6 +254,7 @@ const myChart = new Chart(ctx, {
         scales: {
             y: {
                 beginAtZero: true
+                
             }
         }
     }
