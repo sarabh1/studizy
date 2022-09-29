@@ -1,12 +1,12 @@
-<% if message.user == current_user %>
-  <div class ="current-user-messages">
-    <div class="message">
+<%# <% if message.user == current_user %>
+  <%# <div class ="current-user-messages"> %>
+    
+    <%# <div class="message"> %>
       <%# <div id="message-<%= message.id %>
       <%# But : Si un user poste plus de 1 message à la suite alors ne plus afficher les infos ou si un message est envoyé dans un lapse de temps ?   %>
         <%# <% last_message = Message.find(@messages.index(message) - 1) %>
         <%# <% last_current_user_message = current_user.messages.last %>
           <% unless message.user == message.prev_message&.user %>
-            
             <div class="message-info">
               <small>
                 <% if message.user.nickname == nil %>
@@ -31,34 +31,34 @@
   </div>
 
 
-<% else %>
+<%# <% else %>
 
-  <div class ="other-messages">
-    <div class="message">
+  <%# <div class ="other-messages"> %>
+    <%# <div class="message"> %>
       <%# <div id="message-<%= message.id %>
-        <% unless message.user == message.prev_message&.user %>
-          <div class="message-info">
-            <small>
-              <img class="avatar-bordered" alt="avatar" src="https://loremflickr.com/400/400" />
-              <% if message.user.nickname == nil %>
-              <strong><%= message.user.email %></strong>
-              <% else %>
-              <strong><%= message.user.nickname %></strong>
-              <% end %>
-              <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-            </small>
-          </div>  
-        <% end %>
-        <div class="message-content">
-          <p><%= message.content %></p>
-        </div>
+        <%# <% unless message.user == message.prev_message&.user %>
+          <%# <div class="message-info"> %>
+            <%# <small> %>
+              <%# <img class="avatar-bordered" alt="avatar" src="https://loremflickr.com/400/400" /> %>
+              <%# <% if message.user.nickname == nil %>
+              <%# <strong><%= message.user.email %>
+              <%# <% else %>
+              <%# <strong><%= message.user.nickname %>
+              <%# <% end %>
+              <%# <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %>
+            <%# </small> %>
+          <%# </div>   %>
+        <%# <% end %>
+        <%# <div class="message-content"> %>
+          <%# <p><%= message.content %>
+        <%# </div> %>
 
-        <% message.attachments.each do |attachment| %>
-          <%= link_to attachment.blob.filename.to_s, cl_image_path(attachment.key), target: "_blank" %>
-        <% end %>
+        <%# <% message.attachments.each do |attachment| %>
+          <%# <%= link_to attachment.blob.filename.to_s, cl_image_path(attachment.key), target: "_blank" %>
+        <%# <% end %>
 
-      </div>
-  </div>
+      <%# </div> %>
+  <%# </div> %>
 
-<% end %>  
+<%# <% end %> 
 
