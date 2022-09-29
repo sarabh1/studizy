@@ -18,6 +18,15 @@ User.destroy_all
 
 user_1 = User.create!(email: "sara@studizy.com", nickname: "shbahhar", password: "123456")
 user_2 = User.create!(email: "ophe@studizy.com", nickname: "ophphng", password: "123456")
+user_3 = User.create!(email: "marc@studizy.com", nickname: "mdurant", password: "123456")
+user_4 = User.create!(email: "caroline@studizy.com", nickname: "cboyer", password: "123456")
+user_5 = User.create!(email: "johanna@studizy.com", nickname: "jcohen", password: "123456")
+user_6 = User.create!(email: "laura@studizy.com", nickname: "ldlt", password: "123456")
+user_7 = User.create!(email: "john@studizy.com", nickname: "jspencer", password: "123456")
+user_8 = User.create!(email: "matt@studizy.com", nickname: "mcombes", password: "123456")
+user_9 = User.create!(email: "alex@studizy.com", nickname: "adebret", password: "123456")
+user_10 = User.create!(email: "willy@studizy.com", nickname: "wgouss", password: "123456")
+
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
 course_1 = Course.create!(title: "GEOMETRY", description: "Geometry (from Ancient Greek γεωμετρία (geōmetría) 'land measurement', is, with arithmetic, one of the oldest branches of mathematics.", user: user_1, average: 13.8)
@@ -62,7 +71,6 @@ session_21 = Session.create!(course: course_2, name: "Arythmetic", start_date: D
 session_22 = Session.create!(course: course_3, name: "Probabilities - Intro", start_date: DateTime.new(2022, 9, 14, 8, 30), end_date: DateTime.new(2022, 9, 14, 10, 30))
 session_23 = Session.create!(course: course_1, name: "Circles", start_date: DateTime.new(2022, 9, 15, 8, 30), end_date: DateTime.new(2022, 9, 15, 10, 30))
 session_24 = Session.create!(course: course_2, name: "Arythmetic", start_date: DateTime.new(2022, 9, 13, 8, 30), end_date: DateTime.new(2022, 9, 13, 10, 30))
-
 session_25 = Session.create!(course: course_2, name: "Homework - Algebra", start_date: DateTime.new(2022, 10, 5, 14,00), end_date: DateTime.new(2022, 10, 5, 15, 00))
 session_26 = Session.create!(course: course_1, name: "Circles area", start_date: DateTime.new(2022, 10, 05, 8, 30), end_date: DateTime.new(2022, 10, 5, 10, 30))
 session_27 = Session.create!(course: course_2, name: "{A + B} ~2Z", start_date: DateTime.new(2022, 10, 05, 15, 30), end_date: DateTime.new(2022, 10, 5, 17, 30))
@@ -74,13 +82,31 @@ session_32 = Session.create!(course: course_1, name: "Calculation", start_date: 
 session_33 = Session.create!(course: course_4, name: "Homework - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
 session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
 
-
 chatroom_1 = Chatroom.create!(name: "General")
 chatroom_2 = Chatroom.create!(name: "Geometry")
 chatroom_3 = Chatroom.create!(name: "Algebra")
 chatroom_4 = Chatroom.create!(name: "Probabilities")
 chatroom_5 = Chatroom.create!(name: "History of Maths")
 chatroom_6 = Chatroom.create!(name: "Professors room")
+
+[user_2, user_10, user_5].each do |user|
+  ChatroomUser.create!(chatroom: chatroom_2, user: user)
+end
+
+[user_6, user_1, user_3].each do |user|
+  ChatroomUser.create!(chatroom: chatroom_4, user: user)
+end
+
+[user_4, user_8, user_9].each do |user|
+  ChatroomUser.create!(chatroom: chatroom_5, user: user)
+end
+
+[user_8, user_1, user_2, user_3].each do |user|
+  ChatroomUser.create!(chatroom: chatroom_6, user: user)
+end
+
+
+
 
 
 geo_1 = Result.create!(value: 15, course: course_1, date: DateTime.now - 3, user: user_1)

@@ -39,5 +39,11 @@
 
   <% end %>
 
+   <div class="classmate-chatroom">
+     <% @chatroom_users.each do |chatroom_user| %>
+     <%= chatroom_user.user.email %>
+      <% end %>
+   </div>
+
 
 </div>
