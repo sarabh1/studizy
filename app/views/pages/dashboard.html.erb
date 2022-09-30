@@ -228,10 +228,10 @@
             const myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: [('Geometry)', 'Algebra', 'Probabilities', 'Maths History', 'General'],
+                    labels: ['<%=Course.find(101).title.capitalize%>','<%=Course.find(102).title.capitalize%>','<%=Course.find(103).title.capitalize%>','<%=Course.find(104).title.capitalize%>', 'General'],
                     datasets: [{
                         label: 'average grades',
-                        data: [13.8, 12.4, 14.1, 12.5, 13.2],
+                        data: ['<%= Course.find(101).results.average(:value).round(1) %>','<%= Course.find(102).results.average(:value).round(1) %>', '<%= Course.find(103).results.average(:value).round(1) %>', '<%= Course.find(104).results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
