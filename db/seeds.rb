@@ -109,6 +109,8 @@ end
 
 
 
+
+
 geo_1 = Result.create!(value: 15, course: course_1, date: DateTime.now - 3, user: user_1)
 geo_2 = Result.create!(value: 12, course: course_1, date: DateTime.now - 10, user: user_1)
 geo_3 = Result.create!(value: 16, course: course_1, date: DateTime.now - 17, user: user_1)
@@ -138,3 +140,7 @@ hist_2 = Result.create!(value: 15, course: course_4, date: DateTime.now - 12, us
 hist_3 = Result.create!(value: 14, course: course_4, date: DateTime.now - 19, user: user_1)
 hist_3 = Result.create!(value: 13, course: course_4, date: DateTime.now - 21, user: user_1)
 hist_3 = Result.create!(value: 15.5, course: course_4, date: DateTime.now - 23, user: user_1)
+
+
+# chatroom_user_1 = ChatroomUser.create!(chatroom: chatroom_1, user: [user_1, user_2, user_6])
+# chatroom_user_2 = ChatroomUser.create!(chatroom: chatroom_2, user: [user_2, user_10, user_5])

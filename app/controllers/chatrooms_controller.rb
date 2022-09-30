@@ -6,7 +6,6 @@ class ChatroomsController < ApplicationController
 
   def show
     @chatroom = Chatroom.find(params[:id])
-    # @users = Chatroom.users
     @message = Message.new
     @messages = @chatroom.messages
     @chatroom_users = ChatroomUser.where(chatroom_id: @chatroom.id)
