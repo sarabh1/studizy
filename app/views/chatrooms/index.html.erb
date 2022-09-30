@@ -21,13 +21,11 @@
     <% end %>
   </div>
 
-  <%# <div class="chatroom-users">
+  <div class="classmate">
+     <% @users.each do |user| %>
+     <%= user.email  %>
+      <% end %>
+   </div>
 
-    <% @chatrooms.each do |chatroom| %>
-      <%# <%= @chatroom_users%>
-    <%# <% end %>
-
-<%#
-  </div> %> 
 
 </div>
