@@ -1,6 +1,9 @@
 class ChatroomsController < ApplicationController
   def index
     @chatrooms = Chatroom.all
+    # @chatroom_users = ChatroomUser.all
+    # @chatroom_users = ChatroomUser.where(chatroom_id: @chatroom.id)
+    # @chatroom_user = ChatroomUSer.find(params[:id])
   end
 
   def show
