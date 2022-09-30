@@ -1,5 +1,7 @@
-<h1 class= "notes-title">Your Results <i class="fa-solid fa-square-poll-vertical"></i> </h1>
-
+<div class="uppage">
+  <h1 class= "notes-title">Your Results <i class="fa-solid fa-square-poll-vertical"></i> </h1>
+  <p> General grades : <span class ="gnl"> <%= @courses.average(:average).round(1) %> </span> </p>
+</div>
 
 <%# <h3> <%= link_to "Algebra" , @results %> </h3>
 

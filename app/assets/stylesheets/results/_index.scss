@@ -1,7 +1,25 @@
-
-.notes-title{
-  text-align: left;
-  margin: 24px 30px;
+.uppage{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px ;
+  align-items: center;
+}
+// .notes-title{
+//   text-align: left;
+//   margin: 24px 30px;
+// }
+.uppage p {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: rgb(84, 82, 87);
+  border-radius: 10px;
+  border: solid gray 1px;
+  padding: 4px 6px;
+}
+.gnl {
+    color: rgb(232, 133, 98) ;
+    font-weight: bold;
 }
 
 .bigbox{
