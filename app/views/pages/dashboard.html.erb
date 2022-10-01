@@ -219,11 +219,10 @@
           <canvas id="myChart" width="400" height="400">
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script></canvas>
             <script>
-            const ctx = document.getElementById('myChart').getContext('2d');
-            const myChart = new Chart(ctx, {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-<<<<<<< HEAD
                     labels: ['<%=Course.find_by(title:"GEOMETRY").title.capitalize%>','<%=Course.find_by(title:"ALGEBRA").title.capitalize%>','<%=Course.find_by(title:"PROBABILITIES").title.capitalize%>','<%=Course.find_by(title:"MATHS HISTORY").title.capitalize%>', 'General'],
                     // labels: ['<%=Course.where(:name => "GEOMETRY").name.capitalize%>','<%=Course.where(:name => "ALGEBRA").name.capitalize%>','<%=Course.where(:name => "PROBABILITIES").name.capitalize%>','<%=Course.where(:name => "MATHS HISTORY").name.capitalize%>', 'General'],
                     datasets: [{
