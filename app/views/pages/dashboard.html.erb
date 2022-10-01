@@ -196,11 +196,6 @@
         <% end %>
 
 
-
-
-
-
-
         <%# <div class="reminder4">
           <p class ="todo"> TODAY : Exam </p>
         </div>
@@ -228,11 +223,13 @@
             const myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
+<<<<<<< HEAD
                     labels: ['<%=Course.find_by(title:"GEOMETRY").title.capitalize%>','<%=Course.find_by(title:"ALGEBRA").title.capitalize%>','<%=Course.find_by(title:"PROBABILITIES").title.capitalize%>','<%=Course.find_by(title:"MATHS HISTORY").title.capitalize%>', 'General'],
                     // labels: ['<%=Course.where(:name => "GEOMETRY").name.capitalize%>','<%=Course.where(:name => "ALGEBRA").name.capitalize%>','<%=Course.where(:name => "PROBABILITIES").name.capitalize%>','<%=Course.where(:name => "MATHS HISTORY").name.capitalize%>', 'General'],
                     datasets: [{
                         label: 'average grades',
                         data: ['<%= Course.find_by(title:"GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title:"ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title:"PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title:"MATHS HISTORY").results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
+
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -249,7 +246,8 @@
                             'rgba(153, 102, 255, 1)',
                             'rgba(255, 159, 64, 1)'
                         ],
-                        borderWidth: 1
+                        label: 'My grades',
+                        borderWidth: 1,
                     }]
                 },
                 options: {
@@ -259,7 +257,9 @@
                         }
                     }
                 }
-            });
+            }
+
+            );
             </script>
         </div>
       </div>
