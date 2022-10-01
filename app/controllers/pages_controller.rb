@@ -38,7 +38,7 @@ class PagesController < ApplicationController
   end
 
   def documents
-     # @messages = Message.all.where(attachments: true)
+    @messages = Message.left_joins(:attachments_attachments).where.not(active_storage_attachments: { id: nil })
   end
 
 
