@@ -7,7 +7,10 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
     @sessions = current_user.sessions
-    @courses = current_user.courses
+    # @courses = current_user.courses
+    # @course = Course.find(params[:id])
+    @courses = Course.all
+    @results = Result.where(course: @course)
 
     # @course = Course.find(params[:id])
     # @results = Results.all
@@ -24,7 +27,7 @@ class PagesController < ApplicationController
 
     start_date = params.fetch(:start_date, Date.today).to_date
     @sessions = Session.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
-    @sessions_fourth = @sessions.select {|session| session.start_date > DateTime.now}.sort_by(&:start_time).first(10)
+    @sessions_fourth = @sessions.select {|session| session.start_date > DateTime.now}.sort_by(&:start_time).first(12)
 
     @red_sessions = @sessions_fourth.select {|session| (session.name.include?("TD") || session.name.include?("Exam") || session.name.include?("Homework")) && session.start_date < DateTime.now + 2}
     @yellow_sessions = @sessions_fourth.select {|session| (session.name.include?("TD") || session.name.include?("Exam") || session.name.include?("Homework")) && session.start_date >= DateTime.now + 2 && session.start_date < DateTime.now + 6}

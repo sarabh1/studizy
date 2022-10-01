@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :courses do
     resources :sessions
   end
+  resources :results
 
   resources :student_courses, only: [ :edit, :update ]
 
