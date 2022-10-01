@@ -14,6 +14,10 @@
     </div>
     <br>
 
+   <% @messages.each do |message|  %>
+     <%= link_to message.attachments.blobs.first.filename, rails_blob_path(message.attachments.blobs.first, disposition: 'preview') %>
+    <% end %>
+
     <div class="documents">
       <a class ="a" href="http://exo7.emath.fr/cours/livre-algebre-1.pdf" target ="blank"> 22/09/02 - Algebra <i class="fa-solid fa-file"></i> </a>
       <a class ="a" href="https://res.cloudinary.com/dhxefoe7j/image/upload/v1663665009/Studeasy/ms111.png_y81npw.png" target="blank"> 22/09/02 - Notes Sofia - Systems - <i class="fa-solid fa-file"></i></a>

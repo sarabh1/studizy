@@ -135,7 +135,9 @@
         </div>
       <% end %>
     <% end %>
+
   </div>
+
 
 
     <%# </div>
@@ -194,11 +196,6 @@
         <% end %>
 
 
-
-
-
-
-
         <%# <div class="reminder4">
           <p class ="todo"> TODAY : Exam </p>
         </div>
@@ -216,10 +213,53 @@
 <%#
 ================================================================================== %>
 
+
       <div class="results-graph">
-        <%# <%=  image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662828611/Studeasy/pool_7_mgpdrc.png", width:"150px" %>
         <div id="container">
-          <%# <p class="chartp">Last exams sessions results</p> %>
+          <canvas id="myChart" width="400" height="400">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script></canvas>
+            <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['<%=Course.find_by(title:"GEOMETRY").title.capitalize%>','<%=Course.find_by(title:"ALGEBRA").title.capitalize%>','<%=Course.find_by(title:"PROBABILITIES").title.capitalize%>','<%=Course.find_by(title:"MATHS HISTORY").title.capitalize%>', 'General'],
+                    // labels: ['<%=Course.where(:name => "GEOMETRY").name.capitalize%>','<%=Course.where(:name => "ALGEBRA").name.capitalize%>','<%=Course.where(:name => "PROBABILITIES").name.capitalize%>','<%=Course.where(:name => "MATHS HISTORY").name.capitalize%>', 'General'],
+                    datasets: [{
+                        label: 'average grades',
+                        data: ['<%= Course.find_by(title:"GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title:"ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title:"PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title:"MATHS HISTORY").results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
+
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        label: 'My grades',
+                        borderWidth: 1,
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+
+            );
+            </script>
         </div>
       </div>
 

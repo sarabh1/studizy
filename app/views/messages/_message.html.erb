@@ -19,4 +19,3 @@
 <% message.attachments.each do |attachment| %>
   <%= link_to attachment.blob.filename.to_s, cl_image_path(attachment.key), target: "_blank" %>
 <% end %>
-
