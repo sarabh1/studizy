@@ -6,7 +6,7 @@
         <%# <% last_message = Message.find(@messages.index(message) - 1) %>
         <%# <% last_current_user_message = current_user.messages.last %>
           <% unless message.user == message.prev_message&.user %>
-            
+
             <div class="message-info">
               <small>
                 <% if message.user.nickname == nil %>
@@ -17,7 +17,7 @@
                 <i><%= message.created_at.strftime("%b %e %l:%M %p") %></i>
                 <img class="avatar-bordered" alt="avatar" src="https://loremflickr.com/300/300" />
               </small>
-            </div> 
+            </div>
           <% end %>
           <div class="message-content">
               <p><%= message.content %></p>
@@ -47,7 +47,7 @@
               <% end %>
               <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
             </small>
-          </div>  
+          </div>
         <% end %>
         <div class="message-content">
           <p><%= message.content %></p>
@@ -60,5 +60,4 @@
       </div>
   </div>
 
-<% end %>  
-
+<% end %>
