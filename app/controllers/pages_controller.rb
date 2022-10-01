@@ -37,6 +37,11 @@ class PagesController < ApplicationController
   def chatroom
   end
 
+  def documents
+     # @messages = Message.all.where(attachments: true)
+  end
+
+
 
 
   # def course
