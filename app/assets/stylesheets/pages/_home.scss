@@ -1,6 +1,7 @@
 // CONTAINER
 .homebox{
   margin: 0 auto;
+
 }
 
 // BANNER
@@ -15,6 +16,7 @@
 .lft{
   text-align: left;
   width: 400px;
+
   // padding: 40px;
   // margin: 40px;
   // background: rgb(46,153,226);
@@ -29,9 +31,40 @@
 
 }
 // .laptop{
-//   // padding: 40px;
-//   // margin: 40px;
+
 // }
+.newlinks{
+  margin-top: 24px;
+  // display: flex;
+  // align-items: flex-start;
+}
+.signup{
+  text-decoration: none;
+  background-color: rgb(240, 164, 109);
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: rgba(64, 69, 118, 0.811);
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 30px;
+}
+.signup:hover{
+  background-color: rgb(149, 209, 149);
+  color: rgb(33, 108, 200);
+}
+.login{
+  text-decoration: none;
+  background-color: rgb(11, 11, 70);
+  border-radius: 8px;
+  padding: 8px 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+.login:hover{
+  background-color: rgb(142, 142, 202);
+  color: aqua;
+}
 
 // BLUE DIV
 .band{
@@ -77,6 +110,9 @@
 .feat img{
   margin-bottom: 10px;
 }
+.feat h6{
+  font-weight: bold;
+}
 
 // BOTTOM - FOOTER
 .btmdiv{
@@ -85,12 +121,25 @@
   justify-content: space-evenly;
   align-items: center;
   height: 500px;
+  position: relative;
+}
+.student{
+
 
 }
-// .student{
-
-// }
+.buble{
+  border-radius: 12px;
+  background: rgba(213, 177, 244, 0.74);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
 .textbox{
   text-align: right;
-
 }
