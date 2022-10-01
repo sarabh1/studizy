@@ -9,18 +9,29 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  height: 600px;
 
 }
 .lft{
   text-align: left;
   width: 400px;
+  // padding: 40px;
+  // margin: 40px;
+  // background: rgb(46,153,226);
+  // background: linear-gradient(90deg, rgba(46,153,226,0.3) 0%, rgba(77,138,216,0.1) 44%, rgba(169,123,245,0.1) 87%, rgba(0,212,255,0.1) 100%);
+  // border-radius: 16px;
+}
+.lft .title{
+  font-size: 70px;
 }
 .lft h1{
   text-align: left;
-}
-.laptop{
 
 }
+// .laptop{
+//   // padding: 40px;
+//   // margin: 40px;
+// }
 
 // BLUE DIV
 .band{
@@ -30,6 +41,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  height: 500px;
 }
 .band h1{
   color: white;
@@ -46,7 +58,7 @@
 .square{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 20px;
 
 }
 .feat{
@@ -54,6 +66,16 @@
   border-radius: 12px;
   width: 160px;
   height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(62, 62, 138);
+  text-align: center;
+  padding: 6px;
+}
+.feat img{
+  margin-bottom: 10px;
 }
 
 // BOTTOM - FOOTER
@@ -62,11 +84,12 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  height: 500px;
 
 }
-.student{
+// .student{
 
-}
+// }
 .textbox{
   text-align: right;
 
