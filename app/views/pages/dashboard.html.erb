@@ -196,11 +196,6 @@
         <% end %>
 
 
-
-
-
-
-
         <%# <div class="reminder4">
           <p class ="todo"> TODAY : Exam </p>
         </div>
@@ -228,10 +223,10 @@
             const myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['<%=Course.find(101).title.capitalize%>','<%=Course.find(102).title.capitalize%>','<%=Course.find(103).title.capitalize%>','<%=Course.find(104).title.capitalize%>', 'General'],
+                    labels: ['<%=Course.find_by(title: "GEOMETRY").title.capitalize%>','<%=Course.find_by(title: "ALGEBRA").title.capitalize%>','<%=Course.find_by(title: "PROBABILITIES").title.capitalize%>','<%=Course.find_by(title: "MATHS HISTORY").title.capitalize%>', 'General'],
                     datasets: [{
-                        label: 'average grades',
-                        data: ['<%= Course.find(101).results.average(:value).round(1) %>','<%= Course.find(102).results.average(:value).round(1) %>', '<%= Course.find(103).results.average(:value).round(1) %>', '<%= Course.find(104).results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
+
+                        data: ['<%= Course.find_by(title: "GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title: "ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title: "PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title: "MATHS HISTORY").results.average(:value).round(1) %>', '<%= Course.all.average(:average).round(1)  %> '],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -248,7 +243,8 @@
                             'rgba(153, 102, 255, 1)',
                             'rgba(255, 159, 64, 1)'
                         ],
-                        borderWidth: 1
+                        label: 'My grades',
+                        borderWidth: 1,
                     }]
                 },
                 options: {
@@ -258,7 +254,9 @@
                         }
                     }
                 }
-            });
+            }
+
+            );
             </script>
         </div>
       </div>
