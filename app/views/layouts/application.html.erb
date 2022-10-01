@@ -24,7 +24,7 @@ The best app for student to succeed graduation!">
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar'unless params[:action] == 'home' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
