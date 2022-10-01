@@ -1,11 +1,73 @@
+// CONTAINER
+.homebox{
+  margin: 0 auto;
+}
+
+// BANNER
+.home-banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.lft{
+  text-align: left;
+  width: 400px;
+}
+.lft h1{
+  text-align: left;
+}
+.laptop{
+
+}
+
+// BLUE DIV
 .band{
   background-color: rgba(19, 26, 101, 0.811);
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .band h1{
   color: white;
 }
+// Text Features
+.features{
+  text-align: left;
+  width: 500px;
+}
+.features h1{
+  text-align: left;
+}
+// Grid squares
+.square{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+}
 .feat{
   background-color: white;
   border-radius: 12px;
+  width: 160px;
+  height: 160px;
+}
+
+// BOTTOM - FOOTER
+.btmdiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.student{
+
+}
+.textbox{
+  text-align: right;
+
 }
