@@ -4,13 +4,17 @@
 
 }
 
+.upband{
+  height: 100px;
+  background-color: rgba(19, 26, 101, 0.811);
+}
 // BANNER
 .home-banner{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 600px;
+  height: 500px;
 
 }
 .lft{
@@ -100,8 +104,8 @@
 .feat{
   background-color: white;
   border-radius: 12px;
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
