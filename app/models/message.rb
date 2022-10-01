@@ -6,6 +6,10 @@ class Message < ApplicationRecord
     chatroom.messages.where("id < ?", id).last
   end
 
+  def sender?(a_user)
+    user.id == a_user.id
+  end
+
   has_many_attached :attachments, dependent: :destroy
 
   # validate :attachments_content_type, if: -> { attachments.attached? }
