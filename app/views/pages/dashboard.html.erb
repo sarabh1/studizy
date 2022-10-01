@@ -223,10 +223,10 @@
             const myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['<%=Course.find(105).title.capitalize%>','<%=Course.find(106).title.capitalize%>','<%=Course.find(107).title.capitalize%>','<%=Course.find(108).title.capitalize%>', 'General'],
+                    labels: ['<%=Course.find_by(title: "GEOMETRY").title.capitalize%>','<%=Course.find_by(title: "ALGEBRA").title.capitalize%>','<%=Course.find_by(title: "PROBABILITIES").title.capitalize%>','<%=Course.find_by(title: "MATHS HISTORY").title.capitalize%>', 'General'],
                     datasets: [{
 
-                        data: ['<%= Course.find(105).results.average(:value).round(1) %>','<%= Course.find(106).results.average(:value).round(1) %>', '<%= Course.find(107).results.average(:value).round(1) %>', '<%= Course.find(108).results.average(:value).round(1) %>', '<%= Course.all.average(:average).round(1)  %> '],
+                        data: ['<%= Course.find_by(title: "GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title: "ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title: "PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title: "MATHS HISTORY").results.average(:value).round(1) %>', '<%= Course.all.average(:average).round(1)  %> '],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
