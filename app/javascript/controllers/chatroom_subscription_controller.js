@@ -7,8 +7,8 @@ export default class extends Controller {
   static targets = ["messages"]
 
   connect() {
-    // let message = document.querySelector(".messages")
-    // message.scrollTop = message.scrollHeight;
+    let message = document.querySelector(".messages")
+    message.scrollTop = message.scrollHeight;
     
     this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
@@ -29,10 +29,10 @@ export default class extends Controller {
 
     // On crée le message depuis la string data.message
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
-
+    console.log(this.messagesTarget)
 
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
-    
+    // this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
     let message = document.querySelector(".messages")
     message.scrollTop = message.scrollHeight;
   }
