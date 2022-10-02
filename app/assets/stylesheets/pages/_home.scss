@@ -121,7 +121,7 @@
   font-weight: bold;
 }
 
-// BOTTOM - FOOTER
+// BOTTOM
 .btmdiv{
   display: flex;
   flex-direction: row;
@@ -179,7 +179,7 @@ span.easy{
     text-align: right;
     background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
     color: rgb(96, 90, 102);
-    font-family:'Roboto';
+    font-family: 'Work Sans', sans-serif;
     font-weight:300;
     font-size:32px;
     padding-top:40vh;
@@ -241,12 +241,14 @@ span.easy{
     color: rgb(96, 90, 102);
     width: max-content;
     text-align: right;
+    font-family: 'Work Sans', sans-serif;;
     // margin-right: 0;
     // padding-right: 0;
   }
   span{
     color:rgb(80, 197, 158);
     font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
   }
 }
 
