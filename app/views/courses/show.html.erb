@@ -2,22 +2,22 @@
 <div class="docbox">
 
   <div class="doctitle">
-    <h1><strong><%= @course.title %></strong></h1>
-    <br>
-    <br>
-    <h5>Description : <%= @course.description %></h5>
-    <br>
-    <hr>
+    <div class="upsession">
+      <h1><strong><%= @course.title %></strong></h1>
+      <div class="desc">
+        <h5><%= @course.description %></h5>
+      </div>
+    </div>
 
- <p> <%= link_to "see your results" , result_path(@course.id) %> </p>
+    <div class="searching">
+      <input type="search" id="research" name="searchQuery" placeholder="Search for documents...">
+    </div>
 
-  <div class="searching">
+    <div class="linksession">
+      <%= link_to "Courses", courses_path, class: "backbtn" %>
+      <%= link_to "Results" , result_path(@course.id) %>
+    </div>
 
-  <input type="search" id="research" name="searchQuery" placeholder="Search for documents...">
-
-  <%# <input id="search" onkeyup="search_documents()" type="text"
-        name="search" placeholder="Search document.."> %>
-  </div>
 
   </div>
 
@@ -27,12 +27,12 @@
 
     <table class="show">
       <tr>
-        <th> Status</th>
+        <th class='stat'> Status</th>
         <th>Session's date</th>
         <th> Course</th>
         <th>Description</th>
-        <th>Download resources</th>
-        <th>Upload a file</th>
+        <th>Resources</th>
+        <th class='ulfile'>Upload a file</th>
       </tr>
 
       <tr>
@@ -62,7 +62,6 @@
 <br>
 
 
-<%= link_to "All courses", courses_path, class: "backbtn" %>
 
 
 
