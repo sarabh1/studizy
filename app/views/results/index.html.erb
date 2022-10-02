@@ -1,40 +1,60 @@
-<div class="uppage">
-  <h1 class= "notes-title">Your Results <i class="fa-solid fa-square-poll-vertical"></i> </h1>
-  <p> General grades : <span class ="gnl"> <%= @courses.average(:average).round(1) %> </span> </p>
-</div>
 
-<%# <h3> <%= link_to "Algebra" , @results %> </h3>
+<div class="yourgrades">
 
-
-<%# <h3><%= link_to "Geometry" , @results%> </h3>
+  <div class="uppage">
+    <h1 class= "notes-title">Your Results <i class="fa-solid fa-square-poll-vertical"></i> </h1>
+    <p> General grades : <span class ="gnl"> <%= @courses.average(:average).round(1) %> </span> </p>
+  </div>
 
 
-<%# <h3><%= link_to "Probabilities" , @results %> </h3>
+  <div class="allgrades">
 
+    <div class="groupegrade">
 
-<%# <h3><%= link_to "History of Maths" , @results %> </h3>
-<div class="bigbox">
-
-  <div class="resultbox">
+      <div class="cour">
         <% @courses.each do |course| %>
-          <div class= "notes-info">
-                    <h2> <%= course.title %></h2>
-                    <br>
-                    <%= link_to "View results", result_path(course.id)%>
-          </div>
-        <% end %>
+            <div class="case">
+              <h3> <%= course.title %></h3>
+              <div class="linkresult">
+                <% if course.title.include?('GEOM') %>
+                  <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664709219/Studeasy/Sans_titre_66_trjjnu.png', width:"80" %>
+                <% end %>
+                <% if course.title.include?('PROB') %>
+                  <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664709259/Studeasy/Sans_titre_69_vlfppn.png', width:"80" %>
+                <% end %>
+                <% if course.title.include?('ALG') %>
+                  <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664709278/Studeasy/Sans_titre_67_txctrt.png', width:"80" %>
+                <% end %>
+                <% if course.title.include?('HIST') %>
+                  <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/o_65/v1664714357/Studeasy/Sans_titre_71_yxqxhh.png', width:"80" %>
+                <% end %>
+
+              <br>
+
+                <%= link_to "View results", result_path(course.id)%>
+              </div>
+
+            </div>
+          <% end %>
+      </div>
+
+    </div>
+
+    <div class="column">
+      <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664709298/Studeasy/Sans_titre_70_sybe7x.png', width:"160" %>
+    </div>
+
+
   </div>
 
-  <div class="photo">
-    <%# <h1 class="stud">
-            <span class ="s">S</span>
-            <span class ="t">t</span>
-            <span class ="u">u</span>
-            <span class ="d">d</span>
-            <span class ="i">i</span>
-            <span class ="z">z</span>
-            <span class ="y">y</span>
-    </h1> %>
-  </div>
+
+
+
+
+
+
+
+
+
 
 </div>
