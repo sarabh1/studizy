@@ -54,7 +54,17 @@
 
   <div class="showww">
     <div class="colonne">
-      LOREM ipsum blabla blabla
+      <h4>Welcome back <span class="userrr"><%= @user.email %></span></h4>
+        <% if @results.average(:value).round(1) > @course.average %>
+          <p>Congratulations ! your grades are higher than the class average !</p>
+          <p>Carry on this way !</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664725424/Studeasy/Sans_titre_72_shvjtq.png', width:"80" %>
+        <% end %>
+        <% if @results.average(:value).round(1) < @course.average %>
+          <p>Your results are under the average !</p>
+          <p>Keep on working hard!</p>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664725369/Studeasy/Sans_titre_73_bzov6b.png', width:"80" %>
+        <% end %>
       <%= link_to"Back", results_path %>
     </div>
 
