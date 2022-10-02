@@ -133,8 +133,10 @@
 .showww{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  height: 600px;
+  margin: 30px;
 }
 
 // column purple
@@ -144,7 +146,8 @@
   color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 240px;
-  height: 600px;
+  height: 100%;
+  margin: 24px;
 }
 
 //BOX : Notes + AVGS
@@ -152,20 +155,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
+  width: 600px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 12px;
+  padding: 16px;
 
 }
 
 // BOARD GRADES
 .notesboard{
-  margin: 0 auto;
+  margin: 0 auto 16px;
 
 }
 
 .moyennes{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 
 }
 
@@ -173,14 +179,41 @@
   border-radius: 12px;
   // background-color:white;
   // color:rgba(19, 26, 101, 0.811);
-  background-color: rgba(19, 26, 101, 0.811);
-  color: white;
+  background: rgb(125,205,246);
+  background: linear-gradient(90deg, rgba(125,205,246,0.4) 70%, rgba(119,108,244,0.4) 100%);
 
+  color:rgba(19, 26, 101, 0.811);
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.valuemoi{
+  color:rgb(66, 146, 251) ;
+  font-weight: bold;
+  font-size: 24px;
 }
 .classmoyenne{
   border-radius: 12px;
   // background-color:white;
   // color:rgba(19, 26, 101, 0.811);
-  background-color: rgba(19, 26, 101, 0.811);
-  color: white;
+  background: rgb(241,193,200);
+  background: linear-gradient(90deg, rgba(241,193,200,0.4) 70%, rgba(244,196,108,0.4) 100%);
+  color:rgba(19, 26, 101, 0.811);
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.valueclass{
+  color:rgb(252, 129, 99) ;
+  font-weight: bold;
+  font-size: 24px;
 }

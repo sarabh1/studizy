@@ -87,13 +87,13 @@
         <div class="mamoyenne">
         <%= image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664293875/Studeasy/Sans_titre_53_teyxrt.png", width:"100px" %>
           <h6 class="h6avg">Your average</h6>
-          <p> <%= @results.average(:value).round(1) %>  </p>
+          <p class='valuemoi'> <%= @results.average(:value).round(1) %>  </p>
         </div>
 
         <div class="classmoyenne">
           <%= image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664293907/Studeasy/Sans_titre_52_f5e3sg.png", width:"100px" %>
           <h6 class="h6avg">Class average</h6>
-          <p> <%= @course.average %> </p>
+          <p class ='valueclass'> <%= @course.average %> </p>
         </div>
       </div>
 
