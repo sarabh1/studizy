@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-<%= favicon_link_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1662821983/Studeasy/pool_2_yremmi.png' %>
+    <%= favicon_link_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1662821983/Studeasy/pool_2_yremmi.png' %>
     <title>Studizy</title>
-<meta name="Description" content="Studizy - the best way to pass your exam, easily !
-Centralize your tools and acces to your schedule, lectures, results, cloud, in one blink !
-The best app for student to succeed graduation!">
-<meta name="Keywords" content="dashboard, students, university, pass exam, interactive calendar, schedule, agenda, chat, cloud">
-<meta name="Identifier-Url" content="www.studizy.com">
+    <meta name="Description" content="Studizy - the best way to pass your exam, easily !
+    Centralize your tools and acces to your schedule, lectures, results, cloud, in one blink !
+    The best app for student to succeed graduation!">
+    <meta name="Keywords" content="dashboard, students, university, pass exam, interactive calendar, schedule, agenda, chat, cloud">
+    <meta name="Identifier-Url" content="www.studizy.com">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Noto+Sans:wght@100;300;500&family=Open+Sans:wght@400;500&family=Poppins:wght@100;200;500&family=Roboto+Serif:opsz,wght@8..144,100&family=Roboto:ital,wght@0,100;0,400;1,700&family=Source+Sans+Pro:wght@200;300;400;600&family=Space+Mono&family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Merriweather:ital@0;1&family=Noto+Sans:wght@100;300;500&family=Open+Sans:wght@400;500&family=Poppins:wght@100;200;500&family=Questrial&family=Roboto+Serif:opsz,wght@8..144,100&family=Roboto:ital,wght@0,100;0,400;1,700&family=Source+Sans+Pro:wght@200;300;400;600&family=Space+Mono&family=Work+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8110e6fe91.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'%>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'%>
 
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar'unless params[:action] == 'home' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>

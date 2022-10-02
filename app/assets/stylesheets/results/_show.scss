@@ -1,112 +1,219 @@
 
-.course-title{
-  text-align: left;
-  padding: 12px 20px 0;
-  margin-bottom: 0;
+// .course-title{
+//   text-align: left;
+//   padding: 12px 20px 0;
+//   margin-bottom: 0;
+// }
+
+// // 0 container : box tableau de notes + moyennes
+// .boardbox{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content:center;
+//   margin: 20px auto;
+//   background: linear-gradient(#f6cdcd, #bec3f9);
+// }
+
+// // A tableau de notes
+// .boardd {
+//   margin: 48px 0;
+//   width: 400px;
+// }
+// .notes{
+//   margin: 0 auto;
+//   background-color: rgba(242, 243, 248, 0.852);
+//   border-radius: 10px;
+//   // padding: 15px;
+//   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+// }
+// .high th{
+//   border-color: rgb(123, 126, 125);
+//   border-top-left-radius: 10px;
+//   border-bottom-right-radius: 10px;
+//   }
+// .topleft{
+//   border-top-left-radius: 10px;
+//   color: rgb(92, 88, 88);
+// }
+// .topright
+// {
+//   border-bottom-right-radius: 10px;
+//   color: rgb(92, 88, 88);
+// }
+// .notes td, th{
+//   font-family: sans-serif;
+//   text-align: center;
+//   padding: 24px;
+// }
+// .notes .noteplus {
+//   color: rgb(7, 151, 218);
+//   font-weight: bold;
+//   border-color: rgb(157, 157, 157);
+// }
+// .notes .notevalue {
+//   color: rgb(237, 109, 89);
+//   font-weight: bold;
+//   border-color: rgb(157, 157, 157);
+// }
+// .notes .datetd{
+//   color: rgb(169, 169, 169);
+//   border-color: rgb(157, 157, 157);
+// }
+
+// // B box moyenne perso + moyenne classe
+// .avgs{
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   margin: 24px 24px;
+//   width: 300px;
+
+// }
+// .your-avg{
+//   height: 200px;
+//   width: 300px;
+//   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+//   border-radius: 8px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   margin: auto;
+//   background-color: rgba(242, 243, 248, 0.852);
+// }
+// .class-avg{
+//   height: 200px;
+//   width: 300px;
+//   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+//   border-radius: 8px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   align-items: center;
+//   margin: auto;
+//   background-color: rgba(242, 243, 248, 0.852);
+// }
+// .h6avg{
+//   color: rgb(109, 109, 121);
+//   font-weight: bold;
+//   font-family: sans-serif;
+// }
+// .your-avg p{
+//   color: rgb(92, 191, 92);
+//   font-weight: bold;
+//   font-size: 24px;
+// }
+// .class-avg p{
+//   color: coral;
+//   font-weight: bold;
+//   font-size: 24px;
+// }
+
+
+
+
+// ======================================================
+
+
+// CONTAINER
+.resultshow{
+  margin: 0 auto;
 }
 
-// 0 container : box tableau de notes + moyennes
-.boardbox{
+// TITLE
+.titleshow{
+  display: flex;
+  justify-content: flex-start;
+  margin: 12px 24px;
+}
+
+// BOX = COLUMN AVG + GRADES BOARD
+.showww{
   display: flex;
   flex-direction: row;
-  justify-content:center;
-  margin: 20px auto;
-  background: linear-gradient(#f6cdcd, #bec3f9);
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  margin: 30px;
 }
 
-// A tableau de notes
-.boardd {
-  margin: 48px 0;
-  width: 400px;
-}
-.notes{
-  margin: 0 auto;
-  background-color: rgba(242, 243, 248, 0.852);
-  border-radius: 10px;
-  // padding: 15px;
+// column purple
+.colonne{
+  border-radius: 12px;
+  background-color: rgba(19, 26, 101, 0.811);
+  color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.high th{
-  border-color: rgb(123, 126, 125);
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  }
-.topleft{
-  border-top-left-radius: 10px;
-  color: rgb(92, 88, 88);
-}
-.topright
-{
-  border-bottom-right-radius: 10px;
-  color: rgb(92, 88, 88);
-}
-.notes td, th{
-  font-family: sans-serif;
-  text-align: center;
-  padding: 24px;
-}
-.notes .noteplus {
-  color: rgb(7, 151, 218);
-  font-weight: bold;
-  border-color: rgb(157, 157, 157);
-}
-.notes .notevalue {
-  color: rgb(237, 109, 89);
-  font-weight: bold;
-  border-color: rgb(157, 157, 157);
-}
-.notes .datetd{
-  color: rgb(169, 169, 169);
-  border-color: rgb(157, 157, 157);
+  width: 240px;
+  height: 100%;
+  margin: 24px;
 }
 
-// B box moyenne perso + moyenne classe
-.avgs{
+//BOX : Notes + AVGS
+.droite{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 24px 24px;
-  width: 300px;
+  width: 600px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 12px;
+  padding: 16px;
 
 }
-.your-avg{
+
+// BOARD GRADES
+.notesboard{
+  margin: 0 auto 16px;
+
+}
+
+.moyennes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.mamoyenne{
+  border-radius: 12px;
+  // background-color:white;
+  // color:rgba(19, 26, 101, 0.811);
+  background: rgb(125,205,246);
+  background: linear-gradient(90deg, rgba(125,205,246,0.4) 70%, rgba(119,108,244,0.4) 100%);
+
+  color:rgba(19, 26, 101, 0.811);
+  font-weight: bold;
+  width: 200px;
   height: 200px;
-  width: 300px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  margin: auto;
-  background-color: rgba(242, 243, 248, 0.852);
+
 }
-.class-avg{
-  height: 200px;
-  width: 300px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  margin: auto;
-  background-color: rgba(242, 243, 248, 0.852);
-}
-.h6avg{
-  color: rgb(109, 109, 121);
-  font-weight: bold;
-  font-family: sans-serif;
-}
-.your-avg p{
-  color: rgb(92, 191, 92);
+.valuemoi{
+  color:rgb(66, 146, 251) ;
   font-weight: bold;
   font-size: 24px;
 }
-.class-avg p{
-  color: coral;
+.classmoyenne{
+  border-radius: 12px;
+  // background-color:white;
+  // color:rgba(19, 26, 101, 0.811);
+  background: rgb(241,193,200);
+  background: linear-gradient(90deg, rgba(241,193,200,0.4) 70%, rgba(244,196,108,0.4) 100%);
+  color:rgba(19, 26, 101, 0.811);
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.valueclass{
+  color:rgb(252, 129, 99) ;
   font-weight: bold;
   font-size: 24px;
 }
