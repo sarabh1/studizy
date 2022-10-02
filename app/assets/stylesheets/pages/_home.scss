@@ -149,7 +149,112 @@
 }
 .textbox{
   text-align: right;
+  font-family:  'Work Sans', sans-serif;
+  color: rgb(96, 90, 102);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.textbox h3{
+  color: rgb(96, 90, 102);
+  font-weight: bold;
+
+}
+span.easy{
+  color: rgb(240, 164, 109);
+  font-weight: bold;
+  font-size: 40px;
+  // background-color: rgb(0, 157, 255);
+}
+.textbox .change{
+  color:rgba(19, 26, 101, 0.811) ;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+}
+.slide {
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+ display: inline-flex;
+  body {
+    text-align: right;
+    background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+    color: rgb(96, 90, 102);
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    padding-top:40vh;
+    height:100vh;
+    overflow:hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  div {
+    display:inline-block;
+    // overflow:hidden;
+    white-space:nowrap;
+    // width: 500px;
+  }
+
+  div:first-of-type {    /* For increasing performance
+                        ID/Class should've been used.
+                        For a small demo
+                        it's okaish for now */
+    animation: showup 7s infinite;
+  }
+
+  div:last-of-type {
+    // width:0px;
+    animation: reveal 7s infinite;
+  }
+
+  div:last-of-type span {
+    // margin-left:-355px;
+    animation: slidein 7s infinite;
+  }
+
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:355px;}
+      80% {opacity:1;}
+      100% {opacity:0;width:355px;}
+  }
+
+  p {
+    font-size:24px;
+    color: rgb(96, 90, 102);
+    width: max-content;
+    text-align: right;
+    // margin-right: 0;
+    // padding-right: 0;
+  }
+  span{
+    color:rgb(80, 197, 158);
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
 .footer {
   // position: fixed;
   // bottom: 0;
