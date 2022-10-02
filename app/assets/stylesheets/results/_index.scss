@@ -87,11 +87,12 @@
 // 1  Box title
 .uppage{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  // align-items: center;
   padding: 10px 24px;
+  text-align: left;
 }
-.uppage p {
+.gnlnote p {
   margin-bottom: 0;
   font-weight: bold;
   color: rgb(84, 82, 87);
@@ -102,6 +103,13 @@
 .gnl {
   color: rgb(232, 133, 98) ;
   font-weight: bold;
+
+}
+.gnlnote p{
+  position: absolute;
+  bottom: 40px;
+  right: 32px;
+  background-color: white;
 }
 
 // 2 Box grades + column
@@ -174,6 +182,11 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 400px;
   // flex-grow: 0;
-  padding: 20px;
+  padding: 24px;
   margin: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-evenly;
+  align-items: center;
+  position: relative;
 }

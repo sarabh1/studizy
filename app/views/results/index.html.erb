@@ -3,7 +3,6 @@
 
   <div class="uppage">
     <h1 class= "notes-title">Your Results <i class="fa-solid fa-square-poll-vertical"></i> </h1>
-    <p> General grades : <span class ="gnl"> <%= @courses.average(:average).round(1) %> </span> </p>
   </div>
 
 
@@ -41,7 +40,18 @@
     </div>
 
     <div class="column">
-      <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664709298/Studeasy/Sans_titre_70_sybe7x.png', width:"160" %>
+
+      <div class="grimg">
+        <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664709298/Studeasy/Sans_titre_70_sybe7x.png', width:"160" %>
+      </div>
+      <div class="columntext">
+        <h3>Take a look at your grades history, and your average grades!</h3>
+      </div>
+
+      <div class="gnlnote">
+        <p> General grades : <span class ="gnl"> <%= @courses.average(:average).round(1) %> </span> </p>
+      </div>
+
     </div>
 
 
