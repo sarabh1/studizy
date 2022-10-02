@@ -174,9 +174,9 @@ span.easy{
 }
 .slide {
   @import url('https://fonts.googleapis.com/css?family=Roboto:300');
- display: inline-flex;
+
   body {
-    text-align: right;
+    // text-align: center;
     background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
     color: rgb(96, 90, 102);
     font-family: 'Work Sans', sans-serif;
@@ -240,7 +240,7 @@ span.easy{
     font-size:24px;
     color: rgb(96, 90, 102);
     width: max-content;
-    text-align: right;
+    // text-align: right;
     font-family: 'Work Sans', sans-serif;;
     // margin-right: 0;
     // padding-right: 0;
@@ -249,6 +249,7 @@ span.easy{
     color:rgb(80, 197, 158);
     font-weight: bold;
     font-family: 'Work Sans', sans-serif;
+    text-align: right;
   }
 }
 
