@@ -202,12 +202,25 @@
   width: 450px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  border: none;
+  // border-color: beige;
   text-align: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .notesboard th {
   border: none;
+  background-color: rgba(19, 26, 101, 0.811);
+  color: rgb(76, 234, 234);
+  height: 40px;
+
+}
+.notesboard td{
+  border: solid 1px rgba(177, 177, 181, 0.811);
+}
+.topleft{
+  border-top-left-radius: 12px;
+}
+.topright{
+  border-top-right-radius: 12px;
 }
 
 
