@@ -7,5 +7,5 @@ class Course < ApplicationRecord
   has_many_attached :documents
   has_one :calendar
 
-  has_many :results
+  has_many :results, dependent: :destroy
 end
