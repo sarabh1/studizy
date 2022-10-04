@@ -176,7 +176,9 @@
 // B Box column
 .column{
   border-radius: 12px;
-  background-color: rgba(19, 26, 101, 0.811);
+  // background-color: rgba(19, 26, 101, 0.811);
+  background: rgb(119,50,171);
+  background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
   color: white;
   height: 500px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
