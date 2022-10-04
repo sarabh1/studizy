@@ -15,7 +15,7 @@ Course.destroy_all
 User.destroy_all
 
 
-user_1 = User.create!(email: "sara@studizy.com", nickname: "shbahhar", password: "123456")
+user_1 = User.create!(email: "saraa@studizy.com", nickname: "shbahhar", password: "123456")
 user_2 = User.create!(email: "ophe@studizy.com", nickname: "ophphng", password: "123456")
 user_3 = User.create!(email: "marc@studizy.com", nickname: "mdurant", password: "123456")
 user_4 = User.create!(email: "caroline@studizy.com", nickname: "cboyer", password: "123456")
