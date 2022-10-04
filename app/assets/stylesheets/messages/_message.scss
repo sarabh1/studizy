@@ -4,7 +4,8 @@
 }
 
 .message-content{
-    background-color: #F4F4F4;
+    background-color: $second_color;
+    color: $third_color;
     width: fit-content;
     border-radius: 10px 10px 10px 0px;
     border: solid;
@@ -29,8 +30,9 @@
 //styling des messages du sender
 .sender-style {
     .message-content {
-    background-color: #E9F2FF;
+    background-color: $first_color;
     border-radius: 10px 10px 0px 10px;
+    color: white;
     }
 }
 
