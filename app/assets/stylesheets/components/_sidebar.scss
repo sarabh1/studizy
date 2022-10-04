@@ -1,0 +1,110 @@
+
+.trame{
+  position: relative;
+}
+
+// .sidebar {
+//   background-color: white;
+//   box-shadow: 0 0 1px rgb(176, 173, 173);
+//   // a degager apres*
+//   // height: 700px;
+//   padding: 20px;
+//   // border-radius: 10px;
+
+//   // margin: 26px 20px 16px;
+//   height: 700px;
+//
+//   width: 200px;
+//   // position: absolute;
+//   // left: 0;
+//   // top: 80px
+//   position: absolute;
+//   left:0;
+//   display:flexbox;
+//   top:24px;
+
+// }
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position:fixed;
+  top: 80px;
+  // position: absolute;
+  // left:0;
+/* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  // top: 0; /* Stay at the top */
+  left: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: white;
+  box-shadow: 0 0 1px rgb(176, 173, 173);
+  // background-color: #111; /* Black */
+  text-align: center;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.sidebar a{
+  margin: 10px 0;
+  display: block;
+}
+a.btncourses{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(232, 187, 132);
+  border-radius: 8px;
+}
+a.btncourses:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(249, 179, 93);
+}
+// **
+
+a.btndoc{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(168, 150, 244);
+  border-radius: 8px;
+}
+a.btndoc:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(181, 133, 244);
+}
+// **
+
+
+a.btnresults{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(249, 133, 133);
+  border-radius: 8px;
+}
+a.btnresults:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(223, 107, 75);
+}
+// **
+
+a.btnchat{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  background-color: rgb(127, 252, 231);
+  border-radius: 8px;
+}
+a.btnchat:hover{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(66, 224, 214);
+}
