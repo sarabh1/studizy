@@ -67,14 +67,14 @@
     font-weight: 400;
   }
   .past {
-    background-color: rgba(233, 233, 233, 0.595);
+    background-color: rgba(233, 233, 233, 0.7);
   }
   .future .curren-month {
     background-color: white;
   }
   .table-striped > tbody > tr:nth-of-type(odd) > * {
-    // --bs-table-accent-bg: var(--bs-table-striped-bg);
-    color: white;
+    // --bs-table-accent-bg: white;
+    color: black;
 }
 
   .table{
@@ -82,6 +82,7 @@
     padding: 0.5rem 0.5rem;
     background-color: white;
     border-bottom-width: 1px;
+    --bs-table-striped-bg: rgba(0,0,0,0);
     /* box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg); */
   }
   // .start-date {}
