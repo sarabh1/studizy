@@ -8,7 +8,7 @@
 
     <div class="today">
       <br>
-     <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/o_55/v1663708205/Studeasy/Sans_titre_46_wq4lgq.png", width:"90px"%>
+     <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917228/Studeasy/Sans_titre_80_n5hekv.png", width:"100px"%>
       <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
     </div>
       <br>
@@ -21,7 +21,7 @@
       <hr>
     <%= link_to "Results", results_path, class:'btnresults' %>
       <hr>
-    <%= link_to "Chat", chatrooms_path, class:"btnchat" %>
+    <%= link_to "Chat", chatrooms_path, id:"btnchat" %>
       <hr>
       <br>
       <br>
@@ -31,6 +31,8 @@
 
 
   <div class="week-schedule">
+
+    <h6>Welcome to your Next 2 weeks schedule ! <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664915343/Studeasy/blink_obo7oh.png', width:'24' %> </h6>
 
     <h4> <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
 
@@ -57,7 +59,7 @@
                     background-color : rgb(242, 202, 121);
                   }
                   .event-td{
-                    background-color: rgb(245, 216, 160);
+                    background-color: #fff3d6;
                     border-radius : 8px;
                   }
                   .event-td:hover{
@@ -80,7 +82,7 @@
                     background-color: rgb(241, 164, 142);
                   } */
                   .event-exam{
-                    background-color: rgb(244, 203, 192);
+                    background-color: #ffd9e1;
                     border-radius : 8px;
                     margin-bottom: 6px;
                   }
@@ -104,7 +106,7 @@
                     background-color:  rgb(201, 233, 238);
                    } */
                    .event-hm{
-                     background-color:rgb(201, 233, 238);
+                     background-color:#ded3f2;
                      border-radius : 8px;
                      margin-bottom: 6px;
                    }
@@ -149,19 +151,22 @@
     <div class="up">
 
       <div class="deadlines">
+      <%# <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917305/Studeasy/Sans_titre_79_afgrdu.png',width:'60'%>
        <%# <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
-        <h6> <i class="fa-solid fa-hourglass-end"> </i> Due dates reminder:</h6>
+        <h6>  Next 4 todo things:  </h6>
         <br>
-
+<%# <i class="fa-solid fa-hourglass-end">  %>
         <% if @red_sessions %>
           <% @red_sessions.each do |session|%>
             <p class ="dead1">
+              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664919778/Studeasy/re%20dot.png', width:'16px' %>
               <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
                 <style>
                   .dead1 {
-                    background-color: rgb(244, 203, 192);
-                    border-radius: 15px;
+                    /* background-color: rgb(244, 203, 192); */
+                    /* border-radius: 15px;
                     padding: 2px 4px;
+                    color: red; */
                   }
                 </style>
           <%end%>
@@ -170,12 +175,14 @@
         <% if @yellow_sessions %>
           <% @yellow_sessions.each do |session|%>
             <p class ="dead2">
+              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664919802/Studeasy/yellow%20dot.png', width:'16px' %>
               <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
                 <style>
                   .dead2 {
-                    background-color: rgb(246, 245, 196);
-                    border-radius: 15px;
-                    padding: 2px 4px;
+                    /* background-color: rgb(246, 245, 196); */
+                    /* border-radius: 15px;
+                    padding: 2px 4px; */
+                    /* color: yellow; */
                   }
                 </style>
           <%end%>
@@ -184,12 +191,14 @@
         <% if @green_sessions %>
           <% @green_sessions.each do |session|%>
             <p class ="dead3">
+              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664919729/Studeasy/green%20dot.png', width:'16px' %>
               <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
                 <style>
                   .dead3 {
-                    background-color: rgb(199, 243, 200);
-                    border-radius: 15px;
+                    /* background-color: rgb(199, 243, 200); */
+                    /* border-radius: 15px;
                     padding: 2px 4px;
+                    color: green; */
                   }
                 </style>
           <%end%>
