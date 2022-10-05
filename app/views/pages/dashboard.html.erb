@@ -55,15 +55,15 @@
                     margin-bottom: 6px;
                     border-radius : 8px;
                   }
-                  .td:hover{
+                  /* .td:hover{
                     background-color : rgb(242, 202, 121);
-                  }
+                  } */
                   .event-td{
                     background-color: #fff3d6;
                     border-radius : 8px;
                   }
                   .event-td:hover{
-                    background-color : rgb(242, 202, 121);
+                    background-color :rgb(255, 248, 186);
                   }
                 </style>
 
@@ -87,7 +87,7 @@
                     margin-bottom: 6px;
                   }
                   .event-exam:hover{
-                    background-color: rgb(241, 164, 142);
+                    background-color: rgb(255, 196, 208);
                   }
             </style>
 
@@ -111,7 +111,7 @@
                      margin-bottom: 6px;
                    }
                    .event-hm:hover{
-                    background-color: rgb(116, 211, 226);
+                    background-color: rgb(215, 201, 242);
                   }
             </style>
 
@@ -126,7 +126,7 @@
                       margin-bottom: 6px;
                    }
                    .ev:hover{
-                    color: rgb(111, 95, 177);
+                    color: rgb(14, 64, 182);
                    }
             </style>
           <% end %>
@@ -239,7 +239,7 @@
                         data: ['<%= Course.find_by(title:"GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title:"ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title:"PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title:"MATHS HISTORY").results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
 
                         backgroundColor: [
-                            'rgba(233, 245, 254, 0.622)'
+                            'rgba(233, 245, 254, 0.8)'
                             // 'rgba(255, 99, 132, 0.2)',
                             // 'rgba(54, 162, 235, 0.2)',
                             // 'rgba(255, 206, 86, 0.2)',
