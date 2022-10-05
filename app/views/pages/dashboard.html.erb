@@ -152,7 +152,7 @@
       <div class="deadlines">
       <%# <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917305/Studeasy/Sans_titre_79_afgrdu.png',width:'60'%>
        <%# <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
-        <h6>  Next 4 todo things:  </h6>
+        <h6> Next 5 Upcoming exams:  </h6>
         <br>
 <%# <i class="fa-solid fa-hourglass-end">  %>
         <% if @red_sessions %>
@@ -238,7 +238,8 @@
                         data: ['<%= Course.find_by(title:"GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title:"ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title:"PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title:"MATHS HISTORY").results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
 
                         backgroundColor: [
-                            'rgba(233, 245, 254, 0.8)'
+                            // 'rgba(233, 245, 254, 0.8)'
+                            'rgba(168, 196, 245, 0.6)'
                             // 'rgba(255, 99, 132, 0.2)',
                             // 'rgba(54, 162, 235, 0.2)',
                             // 'rgba(255, 206, 86, 0.2)',
