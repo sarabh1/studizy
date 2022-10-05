@@ -22,9 +22,6 @@ class PagesController < ApplicationController
     # @chatroom_users = ChatroomUser.where(chatroom_id: @chatroom.id)
     # @chatrooms = Chatroom.all
 
-
-
-
     start_date = params.fetch(:start_date, Date.today).to_date
     @sessions = Session.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
     @sessions_fourth = @sessions.select {|session| session.start_date > DateTime.now}.sort_by(&:start_time).first(8)

@@ -76,6 +76,17 @@
     // --bs-table-accent-bg: white;
     color: black;
 }
+th:first-child {
+  -moz-border-radius: 10px 0 0 0;
+  -webkit-border-radius: 10px 0 0 0;
+  border-radius: 10px 0 0 0;
+}
+
+th:last-child {
+  -moz-border-radius: 0 10px 0 0;
+  -webkit-border-radius: 0 10px 0 0;
+  border-radius: 0 610x 0 0;
+}
 
   .table{
     box-shadow: white;
