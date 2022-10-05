@@ -46,7 +46,7 @@ course_4 = Course.create!(title: "MATHS HISTORY", description: "
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
 
 
-session_1 = Session.create!(course: course_2, name: "Exam - limits X", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
+session_1 = Session.create!(course: course_2, name: "Exam - limits X", start_date: DateTime.new(2022, 10, 13, 16, 00), end_date: DateTime.new(2022, 10, 13, 18, 00))
 session_2 = Session.create!(course: course_1, name: "Systems x + y", start_date: DateTime.new(2022, 10, 11, 10, 00), end_date: DateTime.new(2022, 10, 11, 12, 00))
 session_3 = Session.create!(course: course_2, name: "{A + B} + 2", start_date: DateTime.new(2022, 10, 17, 8, 30), end_date: DateTime.new(2022, 10, 17, 10, 30))
 session_4 = Session.create!(course: course_2, name: "Homework -  (ax + cy = d)", start_date: DateTime.new(2022, 10, 12, 14, 00), end_date: DateTime.new(2022, 10, 12, 15, 00))
@@ -76,7 +76,7 @@ session_27 = Session.create!(course: course_2, name: "{A + B} ~2Z", start_date: 
 session_28 = Session.create!(course: course_2, name: "Functions & systems", start_date: DateTime.new(2022, 10, 6, 14, 00), end_date: DateTime.new(2022, 10, 6, 15, 00))
 session_29 = Session.create!(course: course_3, name: "Exam - Part 2", start_date: DateTime.new(2022, 10, 7, 14, 00), end_date: DateTime.new(2022, 10, 7, 16, 00))
 session_30 = Session.create!(course: course_3, name: "TD: Probs", start_date: DateTime.new(2022, 10, 7, 8, 00), end_date: DateTime.new(2022, 10, 7, 10, 00))
-session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 10, 8, 45), end_date: DateTime.new(2022, 10, 10, 10, 15))
+session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 15, 8, 45), end_date: DateTime.new(2022, 10, 15, 10, 15))
 session_32 = Session.create!(course: course_1, name: "Calculation", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
 session_33 = Session.create!(course: course_4, name: "Homework - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
 session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))

@@ -32,14 +32,13 @@
 
   <div class="week-schedule">
 
-    <h6>Welcome to your Next 2 weeks schedule ! <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664915343/Studeasy/blink_obo7oh.png', width:'24' %> </h6>
+    <h6>Take a look at your schedule ! <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664915343/Studeasy/blink_obo7oh.png', width:'24' %> </h6>
+  <br>
+    <%# <h4> <span class='current-month'>  <% @date=Date.today <%= @date.strftime('%B %Y') %>
 
-    <h4> <span class='current-month'>  <% @date=Date.today%> <%= @date.strftime('%B %Y') %></h4></span>
 
-
-<%# <%raise %>
-    <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date, sessions| %>
-      <%= date.day %>
+    <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date_range, sessions| %>
+      <%= date_range.day %>
        <br>
       <% sessions.sort_by(&:start_date).each do |session| %>
         <% if session.name.include?("TD")  %>
@@ -159,11 +158,11 @@
         <% if @red_sessions %>
           <% @red_sessions.each do |session|%>
             <p class ="dead1">
-              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664919778/Studeasy/re%20dot.png', width:'16px' %>
+              <i class="fa-solid fa-circle" id="reddd" width='10px'>  </i>
               <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
                 <style>
-                  .dead1 {
-                    /* background-color: rgb(244, 203, 192); */
+                  #reddd {
+                   /* color: rgb(248, 77, 77); */
                     /* border-radius: 15px;
                     padding: 2px 4px;
                     color: red; */
@@ -175,11 +174,11 @@
         <% if @yellow_sessions %>
           <% @yellow_sessions.each do |session|%>
             <p class ="dead2">
-              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664919802/Studeasy/yellow%20dot.png', width:'16px' %>
+              <i class="fa-solid fa-circle" id="yellowww" width='10px'>  </i>
               <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
                 <style>
-                  .dead2 {
-                    /* background-color: rgb(246, 245, 196); */
+                  #yellowww {
+                    /* color: rgb(243, 231, 110); */
                     /* border-radius: 15px;
                     padding: 2px 4px; */
                     /* color: yellow; */
@@ -191,11 +190,11 @@
         <% if @green_sessions %>
           <% @green_sessions.each do |session|%>
             <p class ="dead3">
-              <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664919729/Studeasy/green%20dot.png', width:'16px' %>
+              <i class="fa-solid fa-circle" id="blueee" width='10px'>  </i>
               <%=link_to session.start_time.to_formatted_s(:short), session.course %> - <%= session.course.title %> : <%= session.name %>  </p>
                 <style>
-                  .dead3 {
-                    /* background-color: rgb(199, 243, 200); */
+                  #blueee {
+                    /* color: rgb(77, 248, 137); */
                     /* border-radius: 15px;
                     padding: 2px 4px;
                     color: green; */
