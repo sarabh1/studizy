@@ -15,8 +15,8 @@ class PagesController < ApplicationController
     # @course = Course.find(params[:id])
     # @results = Results.all
     # @chatroom = Chatroom.find(params[:id])
-    # @message = Message.new
-    # @messages = @chatroom.messages
+    # # @message = Message.new
+    # # @messages = @chatroom.messages
     # @chatroom_users = ChatroomUser.where(chatroom_id: @chatroom.id)
     # @chatrooms = Chatroom.all
     start_date = params.fetch(:start_date, Date.today).to_date
