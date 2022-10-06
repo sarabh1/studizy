@@ -63,7 +63,7 @@
   text-align: center;
   font-family: 'Open sans';
   color:   white;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
 }
 .menu{
@@ -107,11 +107,11 @@
 .documents{
   display: flex;
   flex-direction: column;
-  // overflow-y: scroll;
-  // scrollbar-width: thin;
-  height: 360px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  height: 550px;
   margin: 0 auto;
-  width: 400px;
+  width: 500px;
 }
 // .documents a{
 //   text-decoration: none;
