@@ -129,18 +129,19 @@
 .buddies{
   background-color: white;
   border-radius: 12px;
-  padding: 20px 16px;
+  // padding: 20px 16px;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   min-width: 250px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
 //   align-items: center;
 }
 
 .faces{
   display: flex;
   flex-direction: column;
+  padding: 20px 16px;
 
 }
 .faces img{
@@ -151,7 +152,7 @@
 .bud{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .bud img{
@@ -165,3 +166,19 @@
 //   display: flex;
 //   flex-direction: column;
 // }
+.purplebud{
+  background: rgb(119,50,171);
+  background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.purplebud p{
+  color: rgb(232, 210, 48);
+  font-weight: bold;
+  font-size: 20px;
+}
