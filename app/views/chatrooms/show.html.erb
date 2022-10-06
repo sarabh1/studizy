@@ -1,50 +1,69 @@
-<h1>Chatroom</h1>
-
-<p>Welcome <%= current_user.nickname %>, let's chat and share with your classmates !</p>
-<%= link_to "chatrooms", chatrooms_path %>
 
 
-<div class="container chatroom"
-  data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
-  data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
+<div class="container-users-and-chat" >
+  
+  <div class="classmate-table">
+    <table>
+    <thead>
+      <tr>
+        <th><h2>Total students in this class : <%= @chatroom_users.count%></h2></th>
+      </tr>
+    </thead>
 
-  <h1>#<%= @chatroom.name %></h1>
-
-  <div class="messages" data-chatroom-subscription-target="messages">
-    <% @chatroom.messages.each do |message| %>
-        <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-          <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-            <%= render "messages/message", message: message %>
-          </div>
-        </div>
-    <% end %>
+    <tbody>
+    <% @chatroom_users.each do |chatroom_user| %>
+      <tr>
+        <td class="classmate"><img class="avatar-bordered" alt="avatar" src="https://loremflickr.com/300/300" /><%= chatroom_user.user.email %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <td><p>Other <%= link_to "chatrooms", chatrooms_path %></p></td>
+      </tr>
+    </tbody> 
+    </table>
   </div>
+  
 
-<%# ==== %>
+  <div class="container chatroom"
+    data-controller="chatroom-subscription"
+    data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+    data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 
-  <%# <div class="attachments" data-chatroom-subscription-target="attachments">
-      <% @message.attachments.each do |attachment| %>
-          <%# <%= render "attachments/attachment", attachment: attachment %>
-      <%# <% end %>
-  <%# </div> %>
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @chatroom.messages.each do |message| %>
+          <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+            <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+              <%= render "messages/message", message: message %>
+            </div>
+          </div>
+      <% end %>
+    </div>
 
-<%# === %>
 
-<div>
+
   <%= simple_form_for [@chatroom, @message], remote: true,
    html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f| %>
-    <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}", wrapper_html: {class: "flex-grow-1"} %>
-    <%= f.input :attachments, as: :file, input_html: { multiple: true } %>
-    <%= f.submit "Send", class: "btn btn-primary" %>
+    <%= f.input :content, label: false, placeholder: "Send a message for the #{@chatroom.name} channel", wrapper_html: {class: "flex-grow-1"} %>
+    <%= f.input :attachments, as: :file, input_html: { multiple: true }, class: "attachement-image", title: "" %>
+    
+    
+    <%# La ligne au dessus créé ce bousin en dessous -----> %>
+    <%# <div class="mb-3 file optional message_attachments">
+      <label class="form-label file optional" for="message_attachments">Attachments</label>
+      <input class="form-control file optional" multiple="multiple" type="file" name="message[attachments][]" id="message_attachments">
+    </div> %>
+    
+
+    <%# <%= f.submit "Send", class: "btn btn-primary"  %>
+    <%# Remplacé par les lignes suivantes pour juste foutre un logo %>
+    <%= button_tag type: 'submit', class: "button my-button", id: "sending-button" do %>
+      <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+    <% end %>
 
   <% end %>
 
-   <div class="classmate-chatroom">
-     <% @chatroom_users.each do |chatroom_user| %>
-     <%= chatroom_user.user.email %>
-      <% end %>
-   </div>
 
 
 </div>
+
+<div>
