@@ -36,3 +36,97 @@
     }
 }
 
+#sending-button {
+    border: none;
+    background-color: $first_color;
+    border-radius: 50% 50% 50% 50%;
+    color: white;
+    width: 35px;
+    height: 35px;
+}
+
+.form-label {
+    //j'enlève le mot "attachement"
+    display: none;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  padding: 6px 10px;  /* Make it pretty. */
+  /* …other prettification like background color… */
+
+  /* Make room for icon. */
+  padding-left: 35px;
+}
+
+input[type=file] {
+  position: relative;
+}
+
+input[type=file]:before {
+  font-family: "FontAwesome";
+  /* http://fortawesome.github.io/Font-Awesome/icon/picture-o/ */
+  content: "\f03e";
+  color: $first_color;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 6px 10px;  /* NOTE: Same padding as on the upload button. */
+  line-height: 21px;  /* Magic number :/ Modify this until it looks good. */
+}
+
+
+.chatroom #new_message {
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 0 1rem 0;
+    height: 70px;
+}
+
+.form-control {
+    width: 98%;
+}
+
+.container-users-and-chat {
+    display: flex;
+    margin: 32px;
+    padding-top: 9px
+}
+
+.chatroom {
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+// .classmate {
+//     padding: 16px 0 16px 0;
+//     border-top: solid;
+//     border-bottom: solid;
+// }
+
+.classmate-table {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.classmate {
+    padding: 16px 4px;
+    border-radius: 50px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  
+  .classmate:hover {
+    opacity: 1;
+    color: $third_color;
+  }
+
+.classmate-table h2{
+    color: $third_color;
+    padding: 4px
+}
+
+

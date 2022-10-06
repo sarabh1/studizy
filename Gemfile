@@ -36,7 +36,7 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'acts-as-taggable-on', '~> 9.0'
 
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem "font-awesome-sass", "~> 6.2.0"
 gem 'simple_form', github: 'heartcombo/simple_form'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
