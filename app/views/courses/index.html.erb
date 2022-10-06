@@ -5,6 +5,34 @@
     <p><b>Maths Sup L2 </b>- Pythagor University</p>
   </div>
 
+<div class="container">
+  <div class="menu2">
+      <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
+        <hr>
+
+      <div class="today">
+        <br>
+      <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917228/Studeasy/Sans_titre_80_n5hekv.png", width:"100px"%>
+        <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
+      </div>
+        <br>
+        <hr>
+
+
+      <%= link_to "Courses", courses_path, class:"btncourses" %>
+        <hr>
+      <%=  link_to "Documents", documents_path, class:"btndoc" %>
+        <hr>
+      <%= link_to "Results", results_path, class:'btnresults' %>
+        <hr>
+      <%= link_to "Chat", chatrooms_path, id:"btnchat" %>
+        <hr>
+      <%= link_to "Home", dashboard_path, id:"btndash" %>
+        <br>
+        <br>
+        <br>
+    </div>
+
   <div class= "result">
       <% @courses.each do |course| %>
           <div class="card-course">
@@ -22,5 +50,7 @@
       <% end %>
   </div>
 
+
+</div>
 
 </div>
