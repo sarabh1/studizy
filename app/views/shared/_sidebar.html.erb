@@ -1,0 +1,29 @@
+<div class="trame">
+  <div class="sidebar">
+    <% if user_signed_in? %>
+      <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
+    <% end %>
+        <hr>
+
+      <div class="today">
+        <br>
+      <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/o_55/v1663708205/Studeasy/Sans_titre_46_wq4lgq.png", width:"90px"%>
+        <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
+      </div>
+        <br>
+        <hr>
+
+
+      <%= link_to "Courses", courses_path, class:"btncourses" %>
+        <hr>
+      <%=  link_to "Documents", documents_path, class:"btndoc" %>
+        <hr>
+      <%= link_to "Results", results_path, class:'btnresults' %>
+        <hr>
+      <%= link_to "Chat", chatrooms_path, class:"btnchat" %>
+        <hr>
+        <br>
+        <br>
+        <br>
+  </div>
+</div>

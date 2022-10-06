@@ -17,9 +17,9 @@
       <h1>for all student</h1>
       <h1>activity.</h1>
       <div class="newlinks">
-        <%= link_to "Sign Up", new_user_registration_path, class:'signup'  %>
+        <%# <%= link_to "Sign Up", new_user_registration_path, class:'signup'  %>
         <% if user_signed_in? %>
-          <%= link_to "Home", dashboard_path, class:'homepath' %>
+          <%= link_to "Enter my Dashboard", dashboard_path, class:'homepath' %>
         <% else %>
           <%= link_to "Login", new_user_session_path, class:'login' %>
         <% end %>
@@ -40,7 +40,7 @@
     <div class="square">
         <div class="feat">
           <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664652506/Studeasy/Sans_titre_60_ofok2h.png', width:"40" %>
-          <h6>Callendar</h6>
+          <h6>Calendar</h6>
           <p>Get a global view in one blink! </p>
         </div>
         <div class="feat">
