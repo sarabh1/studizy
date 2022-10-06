@@ -36,10 +36,10 @@
   <br>
     <%# <h4> <span class='current-month'>  <% @date=Date.today <%= @date.strftime('%B %Y') %>
 
+    <%= SimpleCalendar::BusinessWeekCalendar.new(self, {number_of_weeks: 2, events: @sessions}).render do |date, sessions| %>
 
-
-    <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date_range, sessions| %>
-      <%= date_range.day %>
+    <%#= week_calendar(number_of_weeks: 2, events: @sessions, number_of_days: 5) do |date, sessions| %>
+      <%= date.day %>
        <br>
       <% sessions.sort_by(&:start_date).each do |session| %>
         <% if session.name.include?("TD")  %>

@@ -43,7 +43,7 @@ class PagesController < ApplicationController
   #   (beginning..ending).to_a
   # end
 
-  private
+  # private
 
 
   # private
