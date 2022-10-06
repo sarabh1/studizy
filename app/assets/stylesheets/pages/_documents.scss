@@ -173,7 +173,7 @@
 
 // }
 
-.btndash a{
+#btndash{
   margin: 10px 0;
   display: block;
   background: #0E40B6;
@@ -182,7 +182,7 @@
   color: white;
   text-decoration: none;
 }
-.btndash a:hover{
+#btndash:hover{
   // background: rgb(75,7,124);
   // background: linear-gradient(0deg, rgba(75,7,124,0.4) 26%, rgba(101,35,148,0.4) 31%, rgba(127,102,146,0.4) 40%);
   background: #4879ed;
