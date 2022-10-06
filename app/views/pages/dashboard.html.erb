@@ -37,6 +37,7 @@
     <%# <h4> <span class='current-month'>  <% @date=Date.today <%= @date.strftime('%B %Y') %>
 
 
+
     <%= week_calendar(number_of_weeks: 2, events: @sessions) do |date_range, sessions| %>
       <%= date_range.day %>
        <br>
@@ -152,7 +153,7 @@
       <div class="deadlines">
       <%# <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917305/Studeasy/Sans_titre_79_afgrdu.png',width:'60'%>
        <%# <%= image_tag "https://res.cloudinary.com/dhxefoe7j/image/upload/v1662830008/Studeasy/Your_weekly_deadlines_1_cbuckl.png", width:"400px" %>
-        <h6> Next 5 Upcoming exams:  </h6>
+        <h6> Next Upcoming exams:  </h6>
         <br>
 <%# <i class="fa-solid fa-hourglass-end">  %>
         <% if @red_sessions %>
@@ -223,6 +224,10 @@
 
 
       <div class="results-graph">
+        <div class="bot">
+         <%# <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/o_62/v1665004016/Studeasy/Sans_titre_86_dkc1aj.png', width:'100px' %>
+         <p class="eye">Keep an eye on your evolution !</p>
+        </div>
         <div id="container">
           <canvas id="myChart" width="400" height="400">
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script></canvas>
@@ -273,7 +278,6 @@
             </script>
         </div>
         <br>
-        <p class="eye">Keep an eye on your grades evolution !</p>
 
 
       </div>

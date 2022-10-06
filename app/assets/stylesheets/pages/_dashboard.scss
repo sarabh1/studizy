@@ -133,7 +133,7 @@ width: 100%;
   background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  height: 200px;
+  height: 250px;
   padding: 30px;
   border-radius: 10px;
   margin: 26px 20px;
@@ -313,6 +313,14 @@ p.wel {
 .results-graph p {
   color:   #0E40B6;
   font-family: 'Open sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+  // padding-right: 30px;
+}
+.results-graph .bot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
