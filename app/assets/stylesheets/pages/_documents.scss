@@ -2,8 +2,9 @@
 .bbbox{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px 24px 0;
 
 }
 
@@ -21,7 +22,7 @@
 }
 .titlesearch{
   height: 400px;
-  width: 400px;
+  width: 500px;
   background-color: white;
   border-radius: 12px;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -45,7 +46,7 @@
   color: white;
   font-weight: bold;
   border-radius: 12px;
-  width: 400px;
+  width: 500px;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -63,7 +64,7 @@
   text-align: center;
   font-family: 'Open sans';
   color:   white;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -71,19 +72,19 @@
   background-color: white;
   box-shadow: 0 0 1px rgb(176, 173, 173);
   // a degager apres*
-  // height: 700px;
+  height: 700px;
   padding: 20px;
   border-radius: 10px;
-  margin: 26px 20px 16px;
+  margin: 26px 20px;
   text-align: center;
   max-width: 200px;
 
 }
-.menu1{
-  position: absolute;
-  left:0;
-  height: 700px;
-}
+// .menu1{
+//   position: absolute;
+//   left:0;
+//   height: 700px;
+// }
 .menu1 a{
   margin: 10px 0;
   display: block;
@@ -109,6 +110,7 @@
   background-color: rgba(255, 255, 255, .6);
   border-radius: 12px;
   box-shadow: 0 0 1px rgb(137, 135, 135);
+
 }
 .head1{
   border-bottom: 1px solid grey;
@@ -137,12 +139,12 @@
 .documents{
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  height: 550px;
-  margin: 0 auto;
+  // height: 100%;
+  margin: 26px 20px 0 auto;
   width: 500px;
   padding-top: 30px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 .documents a{
   text-decoration: none;
@@ -164,6 +166,12 @@
   text-align: right;
   // border-radius: 12px;
 
+}
+#searchbar{
+  border-radius: 12px;
+  // padding: 8px;
+  width: 200px;
+  text-align: center;
 }
 // .documents{
 
