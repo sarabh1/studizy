@@ -257,6 +257,13 @@ width: 100%;
   font-size: 14px;
   margin: 0;
 }
+.wday-6, .wday-0 {
+  display: none;
+}
+.simple-calendar thead th:last-child,
+.simple-calendar thead th:nth-child(6){
+  display:none;
+}
 
 // .modules{
 //   flex-grow: 1;
