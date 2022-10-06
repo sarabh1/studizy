@@ -62,7 +62,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 36px;
     margin: 0 36px;
-    padding-bottom: 36px;
+    padding-bottom: 0 20px;
 
   }
 
@@ -131,7 +131,7 @@
   border-radius: 12px;
   padding: 20px 16px;
   box-shadow: 0 0 1px rgb(176, 173, 173);
-  min-width: 300px;
+  min-width: 250px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -148,9 +148,14 @@
   margin-top: 4px;
 
 }
-.usersss{
+.bud{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bud img{
+  margin-right: 10px;
 }
 // .usersss p{
 //   margin-bottom: 10px;
