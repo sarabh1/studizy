@@ -5,12 +5,14 @@
 .show th, td {
   border-color: #96D4D4;
   padding: 15px;
+  color: rgba(19, 26, 101, 0.811)
 }
 
 .show th {
   text-align: left;
   border: none;
   background-color:#aae3e3;
+  color: rgba(19, 26, 101, 0.811)
 }
 // .show table{
 //   border:none;
@@ -55,17 +57,21 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .linksession{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-direction: row;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   padding: 20px;
+  margin: 10px;
 }
 .linksession a{
   text-decoration: none;
+  text-align: center;
   background: rgb(60,246,165);
   background: linear-gradient(90deg, rgba(60,246,165,0.4) 70%, rgba(0,212,255,0.4) 100%);
   border-radius: 10px;
   padding: 6px 10px;
+  margin: 5px;
   color: rgba(19, 26, 101, 0.811);
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
@@ -122,6 +128,14 @@
 .searching {
   text-align: center;
   margin: 16px;
+  border-radius: 80px;
+  padding: 30px;
+}
+
+#research {
+  border-radius: 80px;
+  padding: 7px;
+  margin: 30px;
 }
 .doctitle h1{
   padding: 24px 0;
