@@ -39,9 +39,13 @@
     <div class="chatindex">
       <% @chatrooms.each do |chatroom| %>
         <div class="classroom">
-          <%= link_to chatroom.name, chatroom_path(chatroom)  %>
-          <br>
-          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665142364/Studeasy/Sans_titre_99_qi2g9s.png' , width:'90px'%>
+          <h5><%= chatroom.name %></h5>
+          <%= link_to chatroom_path(chatroom) do %>
+            <br>
+            <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665142364/Studeasy/Sans_titre_99_qi2g9s.png' , width:'90px'%>
+          <% end %>
+
+
         </div>
       <% end %>
     </div>
