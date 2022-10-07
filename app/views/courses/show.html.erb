@@ -50,7 +50,9 @@
           <td class="dl"><a href="http://exo7.emath.fr/cours/livre-algebre-1.pdf" target = "blank"download>
             <i class="fa-solid fa-download" width="50px"></i>
               </a></td>
-          <td><%= link_to "Add file", edit_student_course_path(@course) %></td>
+          <td><%= link_to edit_student_course_path(@course) do %>
+             <i class="fa-solid fa-cloud-arrow-up"></i>
+             <% end %> </td>
       </tr>
       <% end %>
     </table>
