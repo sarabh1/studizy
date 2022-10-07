@@ -1,61 +1,61 @@
-.show, th, td {
+.showw, th, td {
   // border: 1px solid rgb(181, 181, 181);
   border-collapse: collapse;
   text-align: center;
 }
-.show th, td {
+.showw th, td {
   border-color: #96D4D4;
   padding: 15px;
   color: rgba(19, 26, 101, 0.811)
 }
 
-.show th {
+.showw th {
   text-align: center;
   border: none;
   background: rgb(119,50,171);
   background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
   color: white;
 }
-// .show table{
+// .showw table{
 //   border:none;
 // }
-.show .ulfile{
+.showw .ulfile{
   border-top-right-radius: 12px;
   border-top: none;
 }
-.show .stat{
+.showw .stat{
   border-top-left-radius: 12px;
   border-top: none;
 }
 
-.show tr {
+.showw tr {
   border-bottom: 1px solid #ddd;
 }
-.show tr:hover {background-color: #D6EEEE;
+.showw tr:hover {background-color: #D6EEEE;
 }
-.show td.dl{
+.showw td.dl{
   text-align: center;
 }
 
-.show td.inc{
+.showw td.inc{
   color: rgb(31, 193, 31);
   font-weight: bold;
 }
-.show td.today{
+.showw td.today{
   color: orange
 }
 
-.show td.passed{
+.showw td.passed{
   color: rgb(90, 93, 119);
 }
-.show i{
+.showw i{
   text-align: center;
   color: rgb(47, 53, 91);
 }
-.show i:hover{
+.showw i:hover{
   color: rgb(78, 138, 234);
 }
-.show{
+.showw{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 600px;
   border-bottom-right-radius: 12px;
