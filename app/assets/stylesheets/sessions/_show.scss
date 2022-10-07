@@ -58,6 +58,8 @@
 .show{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 600px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 .linksession{
   display: grid;
@@ -172,7 +174,8 @@
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 
 }
 .cool{
