@@ -70,13 +70,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: white;
+  // background: rgb(63,94,251);
+// background: linear-gradient(90deg, rgba(63,94,251,0.1) 0%, rgba(252,70,107,0.014740930551908282) 100%);
   border-radius: 10px;
   max-height: 500px;
   align-items: center;
   margin: 100px 16px 0;
   color: rgb(130, 110, 185);
-  box-shadow: 0 0 1px rgb(176, 173, 173);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }
 .mates {
@@ -97,7 +98,10 @@
 }
 
 .classroom{
-  background-color: white;
+  // background: rgb(233,222,246);
+  // background: linear-gradient(0deg, rgba(233,222,246,0.4) 0%, rgba(241,231,254,0.3) 100%);
+  background: rgb(171,210,237);
+  background: linear-gradient(90deg, rgba(171,210,237,0.12958686892725846) 11%, rgba(223,194,255,0.051155496378238796) 100%);
   border-radius: 10px;
   min-width: 220px;
   height: 300px;
@@ -105,7 +109,11 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 0 1px rgb(165, 163, 163);
+  box-shadow: 0 0 15px rgba(16, 16, 16, 0.2);
+}
+.classroom img:hover {
+width: 95px;
+
 }
 .classroom h5{
   color: #0E40B6;
@@ -113,7 +121,7 @@
 }
 .menu4 {
   background-color: white;
-  box-shadow: 0 0 1px rgb(176, 173, 173);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   // a degager apres*
   // height: 700px;
   padding: 20px;
