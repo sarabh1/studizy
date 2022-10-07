@@ -146,6 +146,9 @@ width: 100%;
   font-family: 'Open sans', sans-serif;
   color: aliceblue;
 }
+.dead1:hover {
+  color: rgb(251, 106, 74);
+}
 .dead1 a{
   text-decoration: none;
   // background-color: #e9f5fec1;
@@ -160,6 +163,9 @@ width: 100%;
   font-family: 'Open sans', sans-serif;
   color: aliceblue;
 
+}
+.dead2:hover {
+  color: rgb(255, 242, 0);
 }
 .dead2 a{
   text-decoration: none;
@@ -178,6 +184,9 @@ width: 100%;
   color: aliceblue;
 
 
+}
+.dead3:hover {
+  color: rgb(67, 217, 134);
 }
 .dead3 a{
   text-decoration: none;
@@ -264,6 +273,10 @@ width: 100%;
 .simple-calendar thead th:nth-child(6){
   display:none;
 }
+.simple-calendar th{
+  text-align: center;
+  color:#0E40B6;
+}
 
 // .modules{
 //   flex-grow: 1;
@@ -311,12 +324,14 @@ p.wel {
 
 
 }
-// .event:hover{
-//   background-color: rgb(231, 236, 250);
-//   font-weight: 600;
-//   // color: rgb(111, 95, 177);
+.event:hover{
+  background-color: rgba(213, 233, 248, 0.701);
+  // font-weight: 600;
+  // color: rgb(111, 95, 177);
 
-// }
+
+
+}
 .results-graph p {
   color:   #0E40B6;
   font-family: 'Open sans', sans-serif;

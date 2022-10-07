@@ -3,29 +3,64 @@
 <div class="chatchat">
 
 
-  <div class="chatitle">
-    <h1>Chatrooms</h1>
-    <p>Select your channel!</p>
+   <div class="menu4">
+      <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
+        <hr>
+
+      <div class="today">
+        <br>
+      <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917228/Studeasy/Sans_titre_80_n5hekv.png", width:"100px"%>
+        <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
+      </div>
+        <br>
+        <hr>
+
+
+      <%= link_to "Courses", courses_path, class:"btncourses" %>
+        <hr>
+      <%=  link_to "Documents", documents_path, class:"btndoc" %>
+        <hr>
+      <%= link_to "Results", results_path, class:'btnresults' %>
+        <hr>
+      <%= link_to "Chat", chatrooms_path, id:"btnchat" %>
+        <hr>
+      <%= link_to "Home", dashboard_path, id:"btndash" %>
 
   </div>
+
 
   <div class="study">
     <p class="classs">The Pythagor University - class Maths L2</p>
     <p class="usermail"><%= current_user.email %> </p>
   </div>
 
-  <div class="chatindex">
-    <% @chatrooms.each do |chatroom| %>
-      <%= link_to chatroom.name, chatroom_path(chatroom)  %>
-      <br>
-    <% end %>
-  </div>
 
-  <div class="classmate">
-     <% @users.each do |user| %>
-     <%= user.email  %>
+
+    <div class="chatindex">
+      <% @chatrooms.each do |chatroom| %>
+        <div class="classroom">
+          <%= link_to chatroom.name, chatroom_path(chatroom)  %>
+          <br>
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665142364/Studeasy/Sans_titre_99_qi2g9s.png' , width:'90px'%>
+        </div>
       <% end %>
-   </div>
+    </div>
+
+    <div class="classmates">
+      <div class="upmate">
+      <br>
+        Online classmates
+      </div>
+
+      <% @users.each do |user| %>
+        <div class="mates">
+          <%= user.email  %>
+
+        </div>
+
+      <% end %>
+    </div>
+
 
 
 </div>

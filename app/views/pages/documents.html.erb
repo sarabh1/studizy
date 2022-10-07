@@ -35,9 +35,13 @@
         <br>
         <div class="documents">
           <% @messages.each do |message|  %>
-            <%= link_to message.attachments.blobs.first.filename, rails_blob_path(message.attachments.blobs.first, disposition: 'preview', class:'file') %>
+            <%#= link_to attachment.blob.filename.to_s, cl_image_path(attachment.key), target: "_blank" %>
+            <%= link_to message.attachments.blobs.first.filename, rails_blob_path(message.attachments.blobs.first, disposition: 'preview'), target:"_blank", class:'file' %>
           <% end %>
+
         </div>
+
+
       </div>
 
 
@@ -45,24 +49,6 @@
 
 
         <div class="hhh">
-
-         <script>
-          function search_documents() {
-              let input = document.getElementById('searchbar').value
-              input=input.toLowerCase();
-              let x = document.getElementsByClassName('a');
-
-              for (i = 0; i < x.length; i++) {
-                  if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                      x[i].style.display="none";
-                  }
-                  else {
-                      x[i].style.display="list-item";
-                  }
-              }
-          }
-            </script>
-
           <h6 class ="doctitlee">What are you looking for ?</h6>
           <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665081600/Studeasy/Sans_titre_88_po6s3f.png', width:'60px' %>
           <div class="search">
@@ -70,6 +56,9 @@
             name="search" placeholder="Search file..">
           </div>
         </div>
+
+
+
 
         <div class="titlesearch">
           <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665058256/Studeasy/Sans_titre_87_cvflbd.png', width:'500px' %>
@@ -82,3 +71,19 @@
    </div>
 
 </div>
+<%# <script>
+      function search_documents() {
+          let input = document.getElementById('searchbar').value
+          input=input.toLowerCase();
+          let x = document.getElementsByClassName('a');
+
+          for (i = 0; i < x.length; i++) {
+              if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                  x[i].style.display="none";
+              }
+              else {
+                  x[i].style.display="list-item";
+              }
+          }
+      }
+    </script> %>
