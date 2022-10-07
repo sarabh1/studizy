@@ -9,13 +9,14 @@
       </div>
     </div>
 
-    <div class="searching">
+    <div class="searching-course">
       <input type="search" id="research" name="searchQuery" placeholder="Search for documents...">
     </div>
 
     <div class="linksession">
       <%= link_to "Courses", courses_path, class: "backbtn" %>
       <%= link_to "Results" , result_path(@course.id) %>
+      <%= link_to "Chatroom" , chatroom_path %>
     </div>
 
 
@@ -29,7 +30,6 @@
       <tr>
         <th class='stat'> Status</th>
         <th>Session's date</th>
-        <th> Course</th>
         <th>Description</th>
         <th>Resources</th>
         <th class='ulfile'>Upload a file</th>
@@ -45,7 +45,7 @@
           <td class ="passed"> <%= session.status = "Passed" %></td>
         <% end %>
           <td> <%= session.start_date.strftime('%d-%b-%Y')%> - <%= session.start_time.to_formatted_s(:time)%> </td>
-          <td> <%= @course.title %> </td>
+
           <td class ="searched"><%= session.name %> </td>
           <td class="dl"><a href="http://exo7.emath.fr/cours/livre-algebre-1.pdf" target = "blank"download>
             <i class="fa-solid fa-download" width="50px"></i>
