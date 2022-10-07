@@ -44,7 +44,7 @@
           <% else %>
           <td class ="passed"> <%= session.status = "Passed" %></td>
         <% end %>
-          <td> <%= session.start_date %> </td>
+          <td> <%= session.start_date.strftime('%d-%b-%Y')%> - <%= session.start_time.to_formatted_s(:time)%> </td>
           <td> <%= @course.title %> </td>
           <td class ="searched"><%= session.name %> </td>
           <td class="dl"><a href="http://exo7.emath.fr/cours/livre-algebre-1.pdf" target = "blank"download>
