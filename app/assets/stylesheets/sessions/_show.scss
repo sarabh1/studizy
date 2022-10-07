@@ -57,6 +57,7 @@
 }
 .show{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 600px;
 }
 .linksession{
   display: grid;
@@ -69,14 +70,13 @@
 .linksession a{
   text-decoration: none;
   text-align: center;
-
   border-radius: 10px;
-  padding: 6px 10px;
+  padding: 40px 30px;
   margin: 5px;
   color: white;
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
-  background:rgb(5, 5, 95);;
+  background:rgb(5, 5, 95);
 }
 .linksession a:hover{
   background: #0E40B6;
@@ -126,6 +126,9 @@
   // max-width: 800px;
   // text-align: center;
 }
+.doctitle h1{
+  color:rgb(5, 5, 95);
+}
 .searching-course {
   text-align: center;
   margin: 16px;
@@ -156,3 +159,29 @@
   color: rgb(250, 121, 91);
   font-weight: bold;
  }
+.rgtside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 320px;
+  height: 600px;
+  border-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.buttonz{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+
+
+}
+.cool{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 100%;
+  background: rgb(119,50,171);
+  background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
+}

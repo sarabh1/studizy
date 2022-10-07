@@ -13,11 +13,9 @@
       <input type="search" id="research" name="searchQuery" placeholder="Search for documents...">
     </div>
 
-    <div class="linksession">
-      <%= link_to "Courses", courses_path, class: "backbtn" %>
-      <%= link_to "Results" , result_path(@course.id) %>
-      <%= link_to "Chatroom" , chatroom_path %>
-    </div>
+
+
+
 
 
   </div>
@@ -57,6 +55,30 @@
       <% end %>
     </table>
   </div>
+
+  <div class="rgtside">
+
+    <div class="cool">
+      <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665171176/Studeasy/Sans_titre_-_2022-10-07T213223.850_ixyyzb.png', width:'270' %>
+
+    </div>
+
+    <div class="buttonz">
+      <div class="linksession">
+        <%= link_to "Courses", courses_path, class: "backbtn" %>
+        <%= link_to "Results" , result_path(@course.id) %> <%= link_to "Chat" , chatroom_path %>
+      </div>
+      <%# <div class="linksession">
+
+      </div> %>
+    </div>
+
+
+
+
+
+  </div>
+
 
 </div>
 
