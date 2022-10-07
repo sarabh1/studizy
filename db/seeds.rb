@@ -40,7 +40,7 @@ file_3 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095197
 course_3 =  Course.create!(title: "PROBABILITIES", description: "Probability is the branch of mathematics concerning numerical descriptions of how likely an event is to occur, or how likely it is that a proposition is true.", user: user_1, average: 14.1)
 course_3.photo.attach(io: file_3, filename: 'probabilite.jpeg', content_type: 'image/jpeg')
 
-file_4 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095374/800px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes_zwdpo6.jpg')
+file_4 = URI.open('https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1665124914/Studeasy/800px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes_zwdpo6_kmqliu.jpg')
 course_4 = Course.create!(title: "MATHS HISTORY", description: "
   Mathematics is used in science for modeling phenomena, which then allows predictions to be made from experimental laws.", user: user_1, average: 12.5)
 course_4.photo.attach(io: file_4, filename: 'histoire_math.jpeg', content_type: 'image/jpeg')
