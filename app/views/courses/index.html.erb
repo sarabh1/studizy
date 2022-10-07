@@ -1,55 +1,107 @@
 <div class="coursesindex">
 
   <div class="upcourses">
-    <h1 class ="titlecourses">Your courses</h1>
+    <%# <h1 class ="titlecourses">Your courses</h1> %>
     <p><b>Maths Sup L2 </b>- Pythagor University</p>
   </div>
 
-<div class="container1">
-  <div class="menu2">
-      <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
-        <hr>
+  <div class="container1">
+    <div class="menu3">
+        <p class="wel">Welcome <span class="user"><%= current_user.email %></span> </p>
+          <hr>
 
-      <div class="today">
-        <br>
-      <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917228/Studeasy/Sans_titre_80_n5hekv.png", width:"100px"%>
-        <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
+        <div class="today">
+          <br>
+        <%=  image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1664917228/Studeasy/Sans_titre_80_n5hekv.png", width:"100px"%>
+          <p> <% @date= Date.today %> <%= @date.strftime('%a %d %B %Y') %></p>
+        </div>
+          <br>
+          <hr>
+
+
+        <%= link_to "Courses", courses_path, class:"btncourses" %>
+          <hr>
+        <%=  link_to "Documents", documents_path, class:"btndoc" %>
+          <hr>
+        <%= link_to "Results", results_path, class:'btnresults' %>
+          <hr>
+        <%= link_to "Chat", chatrooms_path, id:"btnchat" %>
+          <hr>
+        <%= link_to "Home", dashboard_path, id:"btndash" %>
+          <br>
+          <br>
+          <br>
       </div>
-        <br>
-        <hr>
 
-
-      <%= link_to "Courses", courses_path, class:"btncourses" %>
-        <hr>
-      <%=  link_to "Documents", documents_path, class:"btndoc" %>
-        <hr>
-      <%= link_to "Results", results_path, class:'btnresults' %>
-        <hr>
-      <%= link_to "Chat", chatrooms_path, id:"btnchat" %>
-        <hr>
-      <%= link_to "Home", dashboard_path, id:"btndash" %>
-        <br>
-        <br>
-        <br>
+    <div class= "result">
+        <% @courses.each do |course| %>
+            <div class="card-course">
+            <%= cl_image_tag course.photo.key %>
+                <div class="card-course-infos">
+                    <h2> <%= course.title %></h2>
+                    <p> <%= course.description %></p>
+                    <%# <p> Created by Professor (user_id) <%= course.user_id %>
+                    <%# <p>Teacher ? <%= current_user.teacher? %>
+                    <br>
+                    <%= link_to "View course", course_path(course.id), class: "btn btn-flat" %>
+                </div>
+            </div>
+        <% end %>
     </div>
 
-  <div class= "result">
-      <% @courses.each do |course| %>
-          <div class="card-course">
-          <%= cl_image_tag course.photo.key %>
-              <div class="card-course-infos">
-                  <h2> <%= course.title %></h2>
-                  <p> <%= course.description %></p>
-                  <%# <p> Created by Professor (user_id) <%= course.user_id %>
-                  <%# <p>Teacher ? <%= current_user.teacher? %>
-                  <br>
-                  <%= link_to "View course", course_path(course.id), class: "btn btn-flat" %>
-              </div>
-          </div>
-      <% end %>
+    <div class="buddies">
+
+      <div class="faces">
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1661857073/Nanny%20N%20Kids/profile4_bs5yu6.jpg', width:'55px' %>
+          <p> Laura Peterson</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg', width:'55px' %>
+          <p> Ophe Nguyen</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1661857073/Nanny%20N%20Kids/profile3_crt6jn.jpg', width:'55px' %>
+          <p>Johana Williams</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1661857073/Nanny%20N%20Kids/profile2_dbkayh.jpg', width:'55px' %>
+          <p>Jennifer Ross</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1661857074/Nanny%20N%20Kids/profile1_jfyqn5.jpg', width:'55px' %>
+          <p>Peter White</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1665090635/Studeasy/Sans_titre_89_qehzjs.png', width:'55px' %>
+          <p>Andrew Smith </p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1665090737/Studeasy/Sans_titre_93_howkhj.png', width:'55px' %>
+          <p>Mickael Evans</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1665090737/Studeasy/Sans_titre_92_fmpz1c.png', width:'55px' %>
+          <p>Tommy Pierce</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1665090737/Studeasy/Sans_titre_94_ypor7q.png', width:'55px' %>
+          <p>John Pirelli</p>
+        </div>
+        <div class="bud">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white/v1665090798/Studeasy/Sans_titre_96_sazq9u.png', width:'55px' %>
+          <p>Andrea Clifford</p>
+        </div>
+
+      </div>
+
+      <div class="purplebud">
+        <p>Class buddies</p>
+        <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1665094982/Studeasy/Sans_titre_98_mkqgq9.png', width:'80' %>
+      </div>
+    </div>
+
+
   </div>
-
-
-</div>
 
 </div>

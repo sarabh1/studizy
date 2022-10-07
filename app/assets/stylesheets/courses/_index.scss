@@ -59,10 +59,11 @@
 
   .result {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 36px;
-    margin: 36px 36px 36px 36px;
-    padding-bottom: 36px;
+    margin: 0 36px;
+    padding-bottom: 0 20px;
+
   }
 
   .card-course .btn-flat {
@@ -88,24 +89,19 @@
     font-weight: bold;
   }
 
-  .menu2 {
+  .menu3 {
     background-color: white;
     box-shadow: 0 0 1px rgb(176, 173, 173);
     // a degager apres*
     // height: 700px;
     padding: 20px;
     border-radius: 10px;
-    margin: 26px 20px 16px;
     text-align: center;
     max-width: 200px;
 
   }
-  // .menu2{
-  //   position: absolute;
-  //   left:0;
-  //   height: 700px;
-  // }
-  .menu2 a{
+
+  .menu3 a{
     margin: 10px 0;
     display: block;
     background: rgb(119,50,171);
@@ -115,7 +111,7 @@
     color: white;
     text-decoration: none;
   }
-  .menu2 a:hover{
+  .menu3 a:hover{
     // background: rgb(75,7,124);
     // background: linear-gradient(0deg, rgba(75,7,124,0.4) 26%, rgba(101,35,148,0.4) 31%, rgba(127,102,146,0.4) 40%);
     background: #0E40B6;
@@ -125,4 +121,70 @@
 .container1{
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+
+.buddies{
+  background-color: white;
+  border-radius: 12px;
+  // padding: 20px 16px;
+  box-shadow: 0 0 1px rgb(176, 173, 173);
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+//   align-items: center;
+}
+
+.faces{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+
+}
+.faces img{
+  margin-bottom: 10px;
+  margin-top: 4px;
+
+}
+.bud{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bud img{
+  margin-right: 10px;
+}
+.bud p{
+  color: #0E40B6;
+  }
+  .bud p:hover{
+    color: rgb(87, 149, 243);
+  }
+// .usersss p{
+//   margin-bottom: 10px;
+//   margin-top: 4px;
+// }
+// .details{
+//   display: flex;
+//   flex-direction: column;
+// }
+.purplebud{
+  background: rgb(119,50,171);
+  background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.purplebud p{
+  color: rgb(232, 210, 48);
+  font-weight: bold;
+  font-size: 20px;
 }
