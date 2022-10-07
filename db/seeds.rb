@@ -33,7 +33,7 @@ course_1.photo.attach(io: file_1, filename: 'geometrie.jpeg', content_type: 'ima
 #attach est une méthode d'active storage ! (pour ça qu'on le fait en pls temps)
 
 file_2 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663091017/l7me3qjih824vj0kxkx9.jpg')
-course_2 =  Course.create!(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.", user: user_1, average: 12.4)
+course_2 =  Course.create!(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.One of the mathematics favorite.", user: user_1, average: 12.4)
 course_2.photo.attach(io: file_2, filename: 'algebre.jpeg', content_type: 'image/jpeg')
 
 file_3 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095197/pexels-lil-artsy-1111597_tpmuq3.jpg')
