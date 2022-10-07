@@ -37,7 +37,6 @@
     <%# <h4> <span class='current-month'>  <% @date=Date.today <%= @date.strftime('%B %Y') %>
 
     <%= SimpleCalendar::BusinessWeekCalendar.new(self, {number_of_weeks: 2, events: @sessions}).render do |date, sessions| %>
-
     <%#= week_calendar(number_of_weeks: 2, events: @sessions, number_of_days: 5) do |date, sessions| %>
       <%= date.day %>
        <br>
