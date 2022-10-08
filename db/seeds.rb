@@ -15,16 +15,16 @@ Course.destroy_all
 User.destroy_all
 
 
-user_1 = User.create!(email: "sara@phytagore.uni.com", nickname: "Sara Bahhar", password: "123456")
-user_2 = User.create!(email: "ophe@phytagore.uni.com", nickname: "Ophé Ng", password: "123456")
-user_3 = User.create!(email: "andy@phytagore.uni.com", nickname: "Andrea Clifford", password: "123456")
-user_4 = User.create!(email: "John.p@phytagore.uni.com", nickname: "John Pirelli", password: "123456")
-user_5 = User.create!(email: "t.pierce@phytagore.uni.com", nickname: "Tommy Pierce", password: "123456")
-user_6 = User.create!(email: "mickaelevans@phytagore.uni.com", nickname: "Mickael Evans", password: "123456")
-user_7 = User.create!(email: "a.smith@phytagore.uni.com", nickname: "Andrew Smith", password: "123456")
-user_8 = User.create!(email: "ulysse.g@phytagore.uni.com", nickname: "Ulysse GALET", password: "123456")
-user_9 = User.create!(email: "jennyross@phytagore.uni.com", nickname: "Jennifer Ross", password: "123456")
-user_10 = User.create!(email: "jojow@phytagore.uni.com", nickname: "Johana Williams", password: "123456")
+user_1 = User.create!(email: "sara@pythagore.com", nickname: "Sara Bahhar", password: "123456")
+user_2 = User.create!(email: "ophe@pythagore.com", nickname: "Ophé Ng", password: "123456")
+user_3 = User.create!(email: "andy@pythagore.com", nickname: "Andrea Clifford", password: "123456")
+user_4 = User.create!(email: "John.p@pythagore.com", nickname: "John Pirelli", password: "123456")
+user_5 = User.create!(email: "t.pierce@pythagore.com", nickname: "Tommy Pierce", password: "123456")
+user_6 = User.create!(email: "mickaelevans@pythagore.com", nickname: "Mickael Evans", password: "123456")
+user_7 = User.create!(email: "a.smith@pythagore.com", nickname: "Andrew Smith", password: "123456")
+user_8 = User.create!(email: "ulysse.g@pythagore.com", nickname: "Ulysse GALET", password: "123456")
+user_9 = User.create!(email: "jennyross@pythagore.com", nickname: "Jennifer Ross", password: "123456")
+user_10 = User.create!(email: "jojow@pythagore.com", nickname: "Johana Williams", password: "123456")
 
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
