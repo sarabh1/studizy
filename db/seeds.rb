@@ -22,7 +22,7 @@ user_4 = User.create!(email: "John.p@phytagore.uni.com", nickname: "John Pirelli
 user_5 = User.create!(email: "t.pierce@phytagore.uni.com", nickname: "Tommy Pierce", password: "123456")
 user_6 = User.create!(email: "mickaelevans@phytagore.uni.com", nickname: "Mickael Evans", password: "123456")
 user_7 = User.create!(email: "a.smith@phytagore.uni.com", nickname: "Andrew Smith", password: "123456")
-user_8 = User.create!(email: "wp@phytagore.uni.com", nickname: "Peter White", password: "123456")
+user_8 = User.create!(email: "ulysse.g@phytagore.uni.com", nickname: "Ulysse GALET", password: "123456")
 user_9 = User.create!(email: "jennyross@phytagore.uni.com", nickname: "Jennifer Ross", password: "123456")
 user_10 = User.create!(email: "jojow@phytagore.uni.com", nickname: "Johana Williams", password: "123456")
 
@@ -105,8 +105,8 @@ end
   ChatroomUser.create!(chatroom: chatroom_6, user: user)
 end
 
-[user_10, user_1, user_2, user_4].each do |user|
-  ChatroomUser.create!(chatroom: chatroom_6, user: user)
+[user_10, user_1, user_8].each do |user|
+  ChatroomUser.create!(chatroom: chatroom_3, user: user)
 end
 
 
