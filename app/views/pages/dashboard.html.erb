@@ -222,7 +222,8 @@
 ================================================================================== %>
 
 
-      <div class="results-graph">
+
+     <div class="results-graph">
         <div class="bot">
          <%# <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/o_62/v1665004016/Studeasy/Sans_titre_86_dkc1aj.png', width:'100px' %>
          <p class="eye">Keep an eye on your evolution !</p>
@@ -240,7 +241,6 @@
                     datasets: [{
                         label: 'average grades',
                         data: ['<%= Course.find_by(title:"GEOMETRY").results.average(:value).round(1) %>','<%= Course.find_by(title:"ALGEBRA").results.average(:value).round(1) %>', '<%= Course.find_by(title:"PROBABILITIES").results.average(:value).round(1) %>', '<%= Course.find_by(title:"MATHS HISTORY").results.average(:value).round(1) %>', '<%= Result.all.average(:value).round(1)  %> '],
-
                         backgroundColor: [
                             // 'rgba(233, 245, 254, 0.8)'
                             'rgba(168, 196, 245, 0.6)'
@@ -272,10 +272,30 @@
                     }
                 }
             }
-
             );
             </script>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <br>
 
 
