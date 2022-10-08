@@ -1,60 +1,65 @@
-.show, th, td {
+.showw, th, td {
   // border: 1px solid rgb(181, 181, 181);
   border-collapse: collapse;
+  text-align: center;
 }
-.show th, td {
+.showw th, td {
   border-color: #96D4D4;
   padding: 15px;
   color: rgba(19, 26, 101, 0.811)
 }
 
-.show th {
-  text-align: left;
+.showw th {
+  text-align: center;
   border: none;
-  background-color:#aae3e3;
-  color: rgba(19, 26, 101, 0.811)
+  background: rgb(119,50,171);
+  background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
+  color: white;
 }
-// .show table{
+// .showw table{
 //   border:none;
 // }
-.show .ulfile{
+.showw .ulfile{
   border-top-right-radius: 12px;
   border-top: none;
 }
-.show .stat{
+.showw .stat{
   border-top-left-radius: 12px;
   border-top: none;
 }
 
-.show tr {
+.showw tr {
   border-bottom: 1px solid #ddd;
 }
-.show tr:hover {background-color: #D6EEEE;
+.showw tr:hover {background-color: #D6EEEE;
 }
-.show td.dl{
+.showw td.dl{
   text-align: center;
 }
 
-.show td.inc{
+.showw td.inc{
   color: rgb(31, 193, 31);
   font-weight: bold;
 }
-.show td.today{
+.showw td.today{
   color: orange
 }
 
-.show td.passed{
+.showw td.passed{
   color: rgb(90, 93, 119);
 }
-.show i{
+.showw i{
   text-align: center;
   color: rgb(47, 53, 91);
 }
-.show i:hover{
+.showw i:hover{
   color: rgb(78, 138, 234);
 }
-.show{
+.showw{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 600px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 .linksession{
   display: grid;
@@ -67,18 +72,16 @@
 .linksession a{
   text-decoration: none;
   text-align: center;
-  background: rgb(60,246,165);
-  background: linear-gradient(90deg, rgba(60,246,165,0.4) 70%, rgba(0,212,255,0.4) 100%);
   border-radius: 10px;
-  padding: 6px 10px;
+  padding: 40px 30px;
   margin: 5px;
-  color: rgba(19, 26, 101, 0.811);
+  color: white;
   font-weight: bold;
   font-family: 'Work Sans', sans-serif;
+  background:rgb(5, 5, 95);
 }
 .linksession a:hover{
-  background: rgb(60,246,165);
-  background: linear-gradient(90deg, rgba(53, 16, 189, 0.4) 70%, rgba(63, 5, 79, 0.4) 100%);
+  background: #0E40B6;
   color: white;
   font-weight: bold;
 }
@@ -125,11 +128,14 @@
   // max-width: 800px;
   // text-align: center;
 }
-.searching {
+.doctitle h1{
+  color:rgb(5, 5, 95);
+}
+.searching-course {
   text-align: center;
   margin: 16px;
   border-radius: 80px;
-  padding: 30px;
+  // padding: 30px;
 }
 
 #research {
@@ -155,3 +161,30 @@
   color: rgb(250, 121, 91);
   font-weight: bold;
  }
+.rgtside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 320px;
+  height: 600px;
+  border-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.buttonz{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+}
+.cool{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 100%;
+  background: rgb(119,50,171);
+  background: linear-gradient(0deg, rgba(119,50,171,1) 68%, rgba(138,72,189,1) 80%, rgba(146,94,185,1) 90%, rgba(166,124,198,1) 100%);
+}

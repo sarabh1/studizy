@@ -33,7 +33,7 @@ course_1.photo.attach(io: file_1, filename: 'geometrie.jpeg', content_type: 'ima
 #attach est une méthode d'active storage ! (pour ça qu'on le fait en pls temps)
 
 file_2 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663091017/l7me3qjih824vj0kxkx9.jpg')
-course_2 =  Course.create!(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.", user: user_1, average: 12.4)
+course_2 =  Course.create!(title: "ALGEBRA", description: "Algebra (from Arabic (al-jabr) 'reunion of broken parts,[1] bonesetting')[2] is one of the broad areas of mathematics.One of the mathematics favorite.", user: user_1, average: 12.4)
 course_2.photo.attach(io: file_2, filename: 'algebre.jpeg', content_type: 'image/jpeg')
 
 file_3 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095197/pexels-lil-artsy-1111597_tpmuq3.jpg')
@@ -63,7 +63,7 @@ session_14 = Session.create!(course: course_2, name: "Functions - Basis", start_
 session_15 = Session.create!(course: course_2, name: "Functions - theory", start_date: DateTime.new(2022, 9, 20, 10, 30), end_date: DateTime.new(2022, 9, 29, 12, 30))
 session_16 = Session.create!(course: course_1, name: "Exam - Triangles", start_date: DateTime.new(2022, 10, 5, 16, 00), end_date: DateTime.new(2022, 10, 5, 16, 00))
 session_17 = Session.create!(course: course_1, name: "Revisions Triangles", start_date: DateTime.new(2022, 9, 25, 10, 00), end_date: DateTime.new(2022, 9, 25, 12, 00))
-session_18 = Session.create!(course: course_3, name: "Probabilties in work", start_date: DateTime.new(2022, 10, 11, 8, 30), end_date: DateTime.new(2022, 10, 11, 10, 30))
+session_18 = Session.create!(course: course_3, name: "Exam - Probs in work", start_date: DateTime.new(2022, 10, 11, 8, 30), end_date: DateTime.new(2022, 10, 11, 10, 30))
 session_19 = Session.create!(course: course_1, name: "Squares", start_date: DateTime.new(2022, 9, 19, 8, 30), end_date: DateTime.new(2022, 9, 19, 10, 30))
 session_20 = Session.create!(course: course_4, name: "Vasco de Gama", start_date: DateTime.new(2022, 9, 16, 8, 30), end_date: DateTime.new(2022, 9, 16, 10, 30))
 session_21 = Session.create!(course: course_2, name: "Arythmetic", start_date: DateTime.new(2022, 9, 20, 8, 30), end_date: DateTime.new(2022, 9, 20, 10, 30))
@@ -78,7 +78,7 @@ session_29 = Session.create!(course: course_3, name: "Exam - Part 2", start_date
 session_30 = Session.create!(course: course_3, name: "TD: Probs", start_date: DateTime.new(2022, 10, 7, 8, 00), end_date: DateTime.new(2022, 10, 7, 10, 00))
 session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 17, 8, 45), end_date: DateTime.new(2022, 10, 17, 10, 15))
 session_32 = Session.create!(course: course_1, name: "Calculation", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
-session_33 = Session.create!(course: course_4, name: "Homework - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
+session_33 = Session.create!(course: course_4, name: "Exam - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
 session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
 
 chatroom_1 = Chatroom.create!(name: "General")
