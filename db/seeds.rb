@@ -15,6 +15,7 @@ Course.destroy_all
 User.destroy_all
 
 
+<<<<<<< HEAD
 user_1 = User.create!(email: "saraaa@studizy.com", nickname: "shbahhar", password: "123456")
 user_2 = User.create!(email: "ophe@studizy.com", nickname: "ophphng", password: "123456")
 user_3 = User.create!(email: "marc@studizy.com", nickname: "mdurant", password: "123456")
@@ -25,6 +26,18 @@ user_7 = User.create!(email: "john@studizy.com", nickname: "jspencer", password:
 user_8 = User.create!(email: "matt@studizy.com", nickname: "mcombes", password: "123456")
 user_9 = User.create!(email: "alex@studizy.com", nickname: "adebret", password: "123456")
 user_10 = User.create!(email: "willy@studizy.com", nickname: "wgouss", password: "123456")
+=======
+user_1 = User.create!(email: "sara@pythagore.com", nickname: "Sara Bahhar", password: "123456")
+user_2 = User.create!(email: "ophe@pythagore.com", nickname: "Ophé Ng", password: "123456")
+user_3 = User.create!(email: "andy@pythagore.com", nickname: "Andrea Clifford", password: "123456")
+user_4 = User.create!(email: "John.p@pythagore.com", nickname: "John Pirelli", password: "123456")
+user_5 = User.create!(email: "t.pierce@pythagore.com", nickname: "Tommy Pierce", password: "123456")
+user_6 = User.create!(email: "mickaelevans@pythagore.com", nickname: "Mickael Evans", password: "123456")
+user_7 = User.create!(email: "a.smith@pythagore.com", nickname: "Andrew Smith", password: "123456")
+user_8 = User.create!(email: "ulysse.g@pythagore.com", nickname: "Ulysse GALET", password: "123456")
+user_9 = User.create!(email: "jennyross@pythagore.com", nickname: "Jennifer Ross", password: "123456")
+user_10 = User.create!(email: "jojow@pythagore.com", nickname: "Johana Williams", password: "123456")
+>>>>>>> 8dfab525b262d2b38e6cd89aa79f09388e2a3f8c
 
 
 file_1 = URI.open('https://res.cloudinary.com/dowjpvgfk/image/upload/v1663095623/pexels-dawid-ma%C5%82ecki-21661_asdois.jpg')
@@ -78,8 +91,9 @@ session_29 = Session.create!(course: course_3, name: "Exam - Part 2", start_date
 session_30 = Session.create!(course: course_3, name: "TD: Probs", start_date: DateTime.new(2022, 10, 7, 8, 00), end_date: DateTime.new(2022, 10, 7, 10, 00))
 session_31 = Session.create!(course: course_4, name: "History of sinus", start_date: DateTime.new(2022, 10, 17, 8, 45), end_date: DateTime.new(2022, 10, 17, 10, 15))
 session_32 = Session.create!(course: course_1, name: "Calculation", start_date: DateTime.new(2022, 10, 10, 14, 00), end_date: DateTime.new(2022, 10, 10, 16, 00))
-session_33 = Session.create!(course: course_4, name: "Exam - Theorems", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 17, 00))
-session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 9, 26, 10, 00), end_date: DateTime.new(2022, 9, 10, 12, 00))
+session_33 = Session.create!(course: course_4, name: "Exam - Theorems", start_date: DateTime.new(2022, 10, 18, 16, 00), end_date: DateTime.new(2022, 10, 18, 17, 00))
+session_34 = Session.create!(course: course_1, name: "Exam - (a + b):x", start_date: DateTime.new(2022, 10, 19, 10, 00), end_date: DateTime.new(2022, 10, 19, 12, 00))
+session_34 = Session.create!(course: course_2, name: "Exam - Functions X", start_date: DateTime.new(2022, 10, 10, 16, 00), end_date: DateTime.new(2022, 10, 10, 18, 00))
 
 chatroom_1 = Chatroom.create!(name: "General")
 chatroom_2 = Chatroom.create!(name: "Geometry")
@@ -104,6 +118,9 @@ end
   ChatroomUser.create!(chatroom: chatroom_6, user: user)
 end
 
+[user_10, user_1, user_8].each do |user|
+  ChatroomUser.create!(chatroom: chatroom_3, user: user)
+end
 
 
 
