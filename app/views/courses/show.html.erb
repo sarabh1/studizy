@@ -66,7 +66,7 @@
     <div class="buttonz">
       <div class="linksession">
         <%= link_to "Courses", courses_path, class: "backbtn" %>
-        <%= link_to "Results" , result_path(@course.id) %> <%= link_to "Chat" , chatroom_path %>
+        <%= link_to "Results" , result_path(@course.id) %> <%= link_to "Chat" , Chatroom.find_by(name: 'Algebra') %>
       </div>
       <%# <div class="linksession">
 
