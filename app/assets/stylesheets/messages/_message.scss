@@ -89,12 +89,12 @@ input[type=file]:before {
 
 .container-users-and-chat {
     display: flex;
-    margin: 32px;
+    margin: 8px;
     padding-top: 9px
 }
 
 .chatroom {
-    margin: auto;
+    margin: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     border-radius: 5px;
 }
@@ -110,6 +110,7 @@ input[type=file]:before {
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
     padding: 8px;
     border-radius: 5px;
+    margin: 8px;
 }
 
 .classmate {
@@ -117,7 +118,13 @@ input[type=file]:before {
     border-radius: 50px;
     opacity: 0.6;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
   }
+
+td.classmate p {
+    margin: 0 8px;
+}
   
   .classmate:hover {
     opacity: 1;
@@ -127,6 +134,31 @@ input[type=file]:before {
 .classmate-table h2{
     color: $third_color;
     padding: 4px
+}
+
+.classmate-table a {
+    margin: 10px 0;
+    background: #7732ab;
+    background: linear-gradient(0deg, #7732ab 68%, #8a48bd 80%, #925eb9 90%, #a67cc6 100%);
+    border-radius: 10px;
+    padding: 6px 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    justify-content: space-between;
+}
+
+.classmate-table a:hover {
+    background: #0E40B6;
+    color: white;
+    font-weight: bold;
+}
+
+.chatroom-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 
