@@ -13,15 +13,19 @@
     <tbody>
     <% @chatroom_users.each do |chatroom_user| %>
       <tr>
-        <td class="classmate"><img class="avatar-bordered" alt="avatar" src="https://loremflickr.com/300/300" /><%= chatroom_user.user.email %></td>
+        <td class="classmate"><i class="fa-solid fa-user-tie"></i> <p><%= chatroom_user.user.email %></p></td>
         <% end %>
       </tr>
       <tr>
-        <td><p>Other <%= link_to "chatrooms", chatrooms_path %></p></td>
+        <td></td>
       </tr>
     </tbody>
     </table>
+  <div class="chatroom-button">
+    <%= link_to "Other chatrooms", chatrooms_path %>
   </div>
+  </div>
+
 
 
   <div class="container chatroom"
