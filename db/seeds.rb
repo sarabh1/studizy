@@ -160,3 +160,4 @@ hist_3 = Result.create!(value: 15.5, course: course_4, date: DateTime.now - 23, 
 
 # chatroom_user_1 = ChatroomUser.create!(chatroom: chatroom_1, user: [user_1, user_2, user_6])
 # chatroom_user_2 = ChatroomUser.create!(chatroom: chatroom_2, user: [user_2, user_10, user_5])
+# ...
